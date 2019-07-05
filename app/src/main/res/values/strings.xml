@@ -1,3 +1,35 @@
 <resources>
-    <string name="app_name">FoodSQLiteDemo</string>
+    <!--<string name="app_name">App Agro Sin Deforestacion</string>-->
+    <string name="app_name">Amazonía Resiliente</string>
+    <string name="title_activity_seleccion">Seleccion</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_mapa">MapaActivity</string>
+    <string name="title_activity_maps">Map</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="hint_word">Word…</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Word not saved because it is empty.</string>
+    <string name="hint_employee_firstname">First Name</string>
+    <string name="hint_employee_title">Title</string>
+    <string name="hint_employee_department">Department</string>
+    <string name="hint_employee_city">City</string>
+    <string name="hint_employee_phone">Phone Number</string>
+    <string name="hint_employee_email">Email</string>
+    <string name="hint_employee_lastname">Last Name</string>
+    <string name="employee_name">Employee Name</string>
+    <string name="category_gender">Gender</string>
+    <string name="category_title">Employee Title</string>
+    <string name="category_department">Employee Department</string>
+    <string name="category_city">Employee City</string>
+    <string name="category_phone">Employee Phone</string>
+    <string name="category_email">Employee Email</string>
 </resources>

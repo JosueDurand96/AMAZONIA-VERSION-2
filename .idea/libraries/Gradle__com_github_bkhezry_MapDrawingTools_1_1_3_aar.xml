@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.bkhezry:MapDrawingTools:1.1.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/MapDrawingTools-1.1.3.aar/27d38d86afeca626e98e38062536f6ea/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/MapDrawingTools-1.1.3.aar/27d38d86afeca626e98e38062536f6ea/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bkhezry/MapDrawingTools/1.1.3/ca194e0beb2c7db48b350b829c8dd93160e67d18/MapDrawingTools-1.1.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

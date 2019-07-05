@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.schibstedspain.android:android-reactive-location:0.10.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-reactive-location-0.10.1.aar/3aa752fd1aa8905e91e8e6700da91111/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-reactive-location-0.10.1.aar/3aa752fd1aa8905e91e8e6700da91111/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.schibstedspain.android/android-reactive-location/0.10.1/7a12c1dc48b51708e7910ebeb680c8da66a4e1cc/android-reactive-location-0.10.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

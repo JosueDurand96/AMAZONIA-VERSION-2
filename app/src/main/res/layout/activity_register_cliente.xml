@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Inicio.RegisterClienteActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="50dp"
+            app:title="ÁREA EN EVALUACIÓN"
+            android:layout_height="?attr/actionBarSize" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Paso 1: Datos generales">
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Registrar Cliente">
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="59dp" />
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="391dp"
+                    android:layout_height="?attr/dropdownListPreferredItemHeight"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/spinner_bg"
+                    android:dropDownWidth="300dp"
+                    android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+                    android:paddingRight="8dp"
+                    android:popupBackground="@android:color/white"
+                    android:popupElevation="3dp"
+                    android:stateListAnimator="@drawable/spinner_sla"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <EditText
+                    android:id="@+id/etPrimerNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Primer Nombre"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/etSegundoNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Segundo Nombre"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/etApellidoPaterno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Apellido Paterno"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/etapellidomaterno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Apellido Materno"
+                    android:inputType="textPersonName" />
+                <EditText
+                    android:id="@+id/etEstadoCivil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Estado Civil"
+                    android:inputType="textPersonName" />
+                <EditText
+                    android:id="@+id/etDni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:maxLength="8"
+                    android:hint="Dni"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/etPredioCliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:ems="10"
+                    android:hint="Referencia de Predio"
+                    android:inputType="textPersonName" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Space
+                        android:layout_width="431dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnCliente"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Registrar Cliente" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
