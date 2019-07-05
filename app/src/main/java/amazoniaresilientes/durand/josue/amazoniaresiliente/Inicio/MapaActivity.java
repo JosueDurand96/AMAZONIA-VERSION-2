@@ -754,8 +754,8 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
                     currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
                     if (currentLocation != null) {
                         //TODO:PROBANDO PRECISIÓN
-                    //    lengthTextView.setText("Precision: " + currentLocation.getSpeedAccuracyMetersPerSecond());
-                      //  float precision = currentLocation.getSpeedAccuracyMetersPerSecond();
+                        lengthTextView.setText("Precision: " + currentLocation.getSpeedAccuracyMetersPerSecond());
+                        float precision = currentLocation.getSpeedAccuracyMetersPerSecond();
                     }
                     btnMarker.setVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
                 } catch (SecurityException e) {

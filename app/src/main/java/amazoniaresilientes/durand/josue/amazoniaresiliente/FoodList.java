@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 
@@ -39,7 +40,7 @@ import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
 
 public class FoodList extends AppCompatActivity {
 
-    GridView gridView;
+    ListView gridView;
     ArrayList<Food> list;
     FoodListAdapter adapter = null;
 
@@ -49,7 +50,7 @@ public class FoodList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.food_list_activity);
 
-        gridView = (GridView) findViewById(R.id.gridView);
+        gridView = (ListView) findViewById(R.id.gridView);
         list = new ArrayList<>();
         adapter = new FoodListAdapter(this, R.layout.food_items, list);
         gridView.setAdapter(adapter);
