@@ -789,6 +789,7 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
                         Bundle bundle = new Bundle();
                         Intent intent = new Intent(MapaActivity.this, PhotoActivity.class);
                         intent.putExtra("region",regionSeleccionado);
+                        intent.putExtra("cultivo",cultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);

@@ -391,6 +391,15 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                               Intent intent = new Intent(PhotoActivity.this, SaveClient.class);
+                        intent.putExtra("region",regionSeleccionado);
+                        intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                             intent.putExtra("GeoJson", geoJson);
                             startActivity(intent);
                         finish();

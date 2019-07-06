@@ -163,13 +163,6 @@
                         android:layout_weight="1"
                         android:text="Registrar Cliente" />
 
-                    <Button
-                        android:id="@+id/btnCliente2"
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="ok" />
                 </LinearLayout>
 
             </LinearLayout>

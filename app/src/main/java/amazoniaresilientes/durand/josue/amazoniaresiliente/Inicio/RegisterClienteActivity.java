@@ -20,7 +20,6 @@ public class RegisterClienteActivity extends AppCompatActivity {
     EditText etPrimerNombre,etSegundoNombre,etApellidoPaterno,etapellidomaterno,etEstadoCivil,etDni,etPredioCliente;
 
 
-    Button btnCliente2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

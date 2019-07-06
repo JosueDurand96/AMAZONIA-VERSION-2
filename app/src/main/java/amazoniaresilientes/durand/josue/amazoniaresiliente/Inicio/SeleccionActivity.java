@@ -54,6 +54,7 @@ public class SeleccionActivity extends AppCompatActivity {
                     if (spinner.getSelectedItemPosition() == 1) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","AMAZONAS");
+                        intent.putExtra("cultivo",cultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
@@ -80,6 +81,7 @@ public class SeleccionActivity extends AppCompatActivity {
                     if (spinner.getSelectedItemPosition() == 3) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","CAJAMARCA");
+                        intent.putExtra("cultivo",cultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
@@ -93,6 +95,7 @@ public class SeleccionActivity extends AppCompatActivity {
                     if (spinner.getSelectedItemPosition() == 4) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","CUSCO");
+                        intent.putExtra("cultivo",cultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
@@ -106,6 +109,7 @@ public class SeleccionActivity extends AppCompatActivity {
                     if (spinner.getSelectedItemPosition() == 5) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","HUANCAVELICA");
+                        intent.putExtra("cultivo",cultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
@@ -119,6 +123,7 @@ public class SeleccionActivity extends AppCompatActivity {
                     if (spinner.getSelectedItemPosition() == 6) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","HUANUCO");
+                        intent.putExtra("cultivo",cultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
@@ -132,6 +137,7 @@ public class SeleccionActivity extends AppCompatActivity {
                     if (spinner.getSelectedItemPosition() == 7) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","JUNIN");
+                        intent.putExtra("cultivo",cultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
@@ -145,6 +151,7 @@ public class SeleccionActivity extends AppCompatActivity {
                     if (spinner.getSelectedItemPosition() == 8) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","PASCO");
+                        intent.putExtra("cultivo",cultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
@@ -158,6 +165,7 @@ public class SeleccionActivity extends AppCompatActivity {
                     if (spinner.getSelectedItemPosition() == 9) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","LORETO_A");
+                        intent.putExtra("cultivo",cultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
@@ -171,6 +179,7 @@ public class SeleccionActivity extends AppCompatActivity {
                     if (spinner.getSelectedItemPosition() == 10) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","LORETO_B");
+                        intent.putExtra("cultivo",cultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
@@ -184,6 +193,7 @@ public class SeleccionActivity extends AppCompatActivity {
                     if (spinner.getSelectedItemPosition() == 11) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","MADRE_DE_DIOS");
+                        intent.putExtra("cultivo",cultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
@@ -197,6 +207,7 @@ public class SeleccionActivity extends AppCompatActivity {
                     if (spinner.getSelectedItemPosition() == 12) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","PIURA");
+                        intent.putExtra("cultivo",cultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
@@ -210,6 +221,7 @@ public class SeleccionActivity extends AppCompatActivity {
                     if (spinner.getSelectedItemPosition() == 13) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","PIURA_2");
+                        intent.putExtra("cultivo",cultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
@@ -223,6 +235,7 @@ public class SeleccionActivity extends AppCompatActivity {
                     if (spinner.getSelectedItemPosition() == 14) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","PUNO");
+                        intent.putExtra("cultivo",cultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
@@ -236,6 +249,7 @@ public class SeleccionActivity extends AppCompatActivity {
                     if (spinner.getSelectedItemPosition() == 15) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","SAN_MARTIN");
+                        intent.putExtra("cultivo",cultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
@@ -249,6 +263,7 @@ public class SeleccionActivity extends AppCompatActivity {
                     if (spinner.getSelectedItemPosition() == 16) {
                         Intent intent = new Intent(SeleccionActivity    .this, MapaActivity.class);
                         intent.putExtra("region","UCAYALI");
+                        intent.putExtra("cultivo",cultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);

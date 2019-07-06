@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
@@ -29,18 +30,38 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 public class SaveClient extends AppCompatActivity {
-    EditText edtName, edtPrice;
+    TextView txtnombres, txtregion,txtcultivo,txtdni;
     Button btnAdd;
     ImageView imageView;
 
     final int REQUEST_CODE_GALLERY = 999;
 
     public static SQLiteHelper2 sqLiteHelper;
+    String cultivo,primerNombre,segundoNombre,apellidoPaterno,apellidoMaterno,estadoCivil,dni,referenciaPredio,regionSeleccionado,geoJson;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        regionSeleccionado = getIntent().getStringExtra("region");
+        cultivo = getIntent().getStringExtra("cultivo");
+        primerNombre = getIntent().getStringExtra("primerNombre");
+        segundoNombre = getIntent().getStringExtra("segundoNombre");
+        apellidoPaterno = getIntent().getStringExtra("apellidoPaterno");
+        apellidoMaterno = getIntent().getStringExtra("apellidoMaterno");
+        estadoCivil = getIntent().getStringExtra("estadoCivil");
+        dni = getIntent().getStringExtra("dni");
+        referenciaPredio = getIntent().getStringExtra("referenciaPredio");
+        geoJson = getIntent().getStringExtra("GeoJson");
         setContentView(R.layout.activity_save_client);
         init();
+
+        txtnombres =(TextView)findViewById(R.id.txtnombres);
+        txtnombres.setText(primerNombre+" "+apellidoPaterno);
+        txtregion =(TextView)findViewById(R.id.txtdepartamento);
+        txtregion.setText(regionSeleccionado);
+        txtcultivo =(TextView)findViewById(R.id.txtcultivo);
+        txtcultivo.setText(cultivo);
+        txtdni =(TextView)findViewById(R.id.txtdni);
+        txtdni.setText(dni);
 
         sqLiteHelper = new SQLiteHelper2(this, "AmazoniaDB.sqlite", null, 1);
 
@@ -81,8 +102,7 @@ public class SaveClient extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "AGREGADO!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(SaveClient.this, SincronizarPoligono.class);
                     startActivity(intent);
-                    edtName.setText("");
-                    edtPrice.setText("");
+
                     imageView.setImageResource(R.mipmap.ic_launcher);
                 }
                 catch (Exception e){
