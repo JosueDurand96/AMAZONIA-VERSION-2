@@ -30,7 +30,7 @@ import androidx.core.app.ActivityCompat;
 
 public class SaveClient extends AppCompatActivity {
     EditText edtName, edtPrice;
-    Button btnChoose, btnAdd, btnList;
+    Button btnAdd;
     ImageView imageView;
 
     final int REQUEST_CODE_GALLERY = 999;
@@ -46,16 +46,6 @@ public class SaveClient extends AppCompatActivity {
 
         sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS AMAZONIA(Id INTEGER PRIMARY KEY AUTOINCREMENT, cultivo VARCHAR, primer_nombre VARCHAR, segundo_nombre VARCHAR, apellido_paterno VARCHAR, apellido_materno VARCHAR, estado_civil VARCHAR, dni VARCHAR, referencia_predio VARCHAR, departamento_cliente VARCHAR, poligono VARCHAR, area VARCHAR, precision VARCHAR, imagen1 BLOB, lat1 VARCHAR, lng1 VARCHAR, imagen2 BLOB, lat2 VARCHAR, lng2 VARCHAR, imagen3 BLOB, lat3 VARCHAR, lng3 VARCHAR, imagen4 BLOB, lat4 VARCHAR, lng4 VARCHAR)");
 
-        btnChoose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ActivityCompat.requestPermissions(
-                        SaveClient.this,
-                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                        REQUEST_CODE_GALLERY
-                );
-            }
-        });
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +79,8 @@ public class SaveClient extends AppCompatActivity {
 
                     );
                     Toast.makeText(getApplicationContext(), "AGREGADO!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(SaveClient.this, SincronizarPoligono.class);
+                    startActivity(intent);
                     edtName.setText("");
                     edtPrice.setText("");
                     imageView.setImageResource(R.mipmap.ic_launcher);
@@ -99,13 +91,7 @@ public class SaveClient extends AppCompatActivity {
             }
         });
 
-        btnList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SaveClient.this, SincronizarPoligono.class);
-                startActivity(intent);
-            }
-        });
+
     }
     public static byte[] imageViewToByte(ImageView image) {
         Bitmap bitmap = ((BitmapDrawable)image.getDrawable()).getBitmap();
@@ -154,12 +140,9 @@ public class SaveClient extends AppCompatActivity {
     }
 
     private void init(){
-        edtName = (EditText) findViewById(R.id.edtName);
-        edtPrice = (EditText) findViewById(R.id.edtPrice);
-        btnChoose = (Button) findViewById(R.id.btnChoose);
+
         btnAdd = (Button) findViewById(R.id.btnAdd);
-        btnList = (Button) findViewById(R.id.btnList);
-        imageView = (ImageView) findViewById(R.id.imageView);
+
     }
 
 }

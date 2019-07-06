@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Toast;
 import java.util.ArrayList;
 
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Bd.SaveClient;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -54,10 +55,22 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
     private ArrayList<String> permissions = new ArrayList<>();
     // integer for permissions results request
     private static final int ALL_PERMISSIONS_RESULT = 1011;
-
+    String cultivo,primerNombre,segundoNombre,apellidoPaterno,apellidoMaterno,estadoCivil,dni,referenciaPredio,regionSeleccionado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        regionSeleccionado = getIntent().getStringExtra("region");
+        cultivo = getIntent().getStringExtra("cultivo");
+        primerNombre = getIntent().getStringExtra("primerNombre");
+        segundoNombre = getIntent().getStringExtra("segundoNombre");
+        apellidoPaterno = getIntent().getStringExtra("apellidoPaterno");
+        apellidoMaterno = getIntent().getStringExtra("apellidoMaterno");
+        estadoCivil = getIntent().getStringExtra("estadoCivil");
+        dni = getIntent().getStringExtra("dni");
+        referenciaPredio = getIntent().getStringExtra("referenciaPredio");
+        geoJson = getIntent().getStringExtra("GeoJson");
+        Log.i("GeoJson", geoJson);
+        Toast.makeText(this, "Aquii " + referenciaPredio, Toast.LENGTH_SHORT).show();
         setContentView(R.layout.activity_photo);
 
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
@@ -163,9 +176,7 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
 
         setUpButtons();
 
-        geoJson = getIntent().getStringExtra("GeoJson");
-        Log.i("GeoJson", geoJson);
-        Toast.makeText(this, "Aquii " + geoJson, Toast.LENGTH_SHORT).show();
+
     }
 
     private ArrayList<String> permissionsToRequest(ArrayList<String> wantedPermissions) {
@@ -379,7 +390,7 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
                 builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                              Intent intent = new Intent(PhotoActivity.this, MainActivity.class);
+                              Intent intent = new Intent(PhotoActivity.this, SaveClient.class);
                             intent.putExtra("GeoJson", geoJson);
                             startActivity(intent);
                         finish();

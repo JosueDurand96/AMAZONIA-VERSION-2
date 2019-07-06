@@ -10,14 +10,32 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
+import androidx.appcompat.app.AppCompatDelegate;
 
 public class SeleccionActivity extends AppCompatActivity {
 
+
+    String cultivo,primerNombre,segundoNombre,apellidoPaterno,apellidoMaterno,estadoCivil,dni,referenciaPredio;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seleccion);
 
+        cultivo = getIntent().getStringExtra("cultivo");
+        primerNombre = getIntent().getStringExtra("primerNombre");
+        segundoNombre = getIntent().getStringExtra("segundoNombre");
+        apellidoPaterno = getIntent().getStringExtra("apellidoPaterno");
+        apellidoMaterno = getIntent().getStringExtra("apellidoMaterno");
+        estadoCivil = getIntent().getStringExtra("estadoCivil");
+        dni = getIntent().getStringExtra("dni");
+        referenciaPredio = getIntent().getStringExtra("referenciaPredio");
+
+
+
+        setContentView(R.layout.activity_seleccion);
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+
+    //    Toast.makeText(this, "Holaa "+regionSeleccionado, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Holaa "+apellidoPaterno, Toast.LENGTH_SHORT).show();
         final Button loginButton = findViewById(R.id.login);
         final Spinner spinner = (Spinner) findViewById(R.id.spinner);
         loginButton.setEnabled(true);
@@ -36,96 +54,208 @@ public class SeleccionActivity extends AppCompatActivity {
                     if (spinner.getSelectedItemPosition() == 1) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","AMAZONAS");
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("regionTitulo","AMAZONAS");
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 2) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","AYACUCHO");
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("regionTitulo","AYACUCHO");
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 3) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","CAJAMARCA");
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("regionTitulo","CAJAMARCA");
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 4) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","CUSCO");
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("regionTitulo","CUSCO");
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 5) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","HUANCAVELICA");
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("regionTitulo","HUANCAVELICA");
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 6) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","HUANUCO");
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("regionTitulo","HUANUCO");
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 7) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","JUNIN");
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("regionTitulo","JUNIN");
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 8) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","PASCO");
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("regionTitulo","PASCO");
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 9) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","LORETO_A");
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("regionTitulo","LORETO A");
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 10) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","LORETO_B");
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("regionTitulo","LORETO B");
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 11) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","MADRE_DE_DIOS");
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("regionTitulo","MADRE DE DIOS");
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 12) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","PIURA");
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("regionTitulo","PIURA");
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 13) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","PIURA_2");
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("regionTitulo","PIURA 2");
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 14) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","PUNO");
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("regionTitulo","PUNO");
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 15) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","SAN_MARTIN");
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("regionTitulo","SAN MARTIN");
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 16) {
                         Intent intent = new Intent(SeleccionActivity    .this, MapaActivity.class);
                         intent.putExtra("region","UCAYALI");
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("regionTitulo","UCAYALI");
                         startActivity(intent);
                     }

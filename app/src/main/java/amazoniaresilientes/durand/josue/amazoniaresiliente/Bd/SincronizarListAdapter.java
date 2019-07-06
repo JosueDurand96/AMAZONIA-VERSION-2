@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -66,8 +67,14 @@ public class SincronizarListAdapter extends BaseAdapter {
 
         Ntch_Amazonia food = foodsList.get(position);
 
-        holder.txtName.setText(food.getPrimer_nombre());
+        holder.txtName.setText(food.getPrimer_nombre()+" "+food.getApellido_paterno());
         holder.txtPrice.setText(food.getSegundo_nombre());
+        holder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Esperando...", Toast.LENGTH_SHORT).show();
+            }
+        });
 
    //     byte[] foodImage = food.getImage();
     //    Bitmap bitmap = BitmapFactory.decodeByteArray(foodImage, 0, foodImage.length);

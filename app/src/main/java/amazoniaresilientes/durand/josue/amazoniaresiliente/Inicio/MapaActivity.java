@@ -97,12 +97,22 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
     String regionSeleccionado;
     String regionSeleccionadoTitulo;
     Toolbar toolbar4;
-
+    String cultivo,primerNombre,segundoNombre,apellidoPaterno,apellidoMaterno,estadoCivil,dni,referenciaPredio;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         regionSeleccionado = getIntent().getStringExtra("region");
         regionSeleccionadoTitulo = getIntent().getStringExtra("regionTitulo");
+
+
+        cultivo = getIntent().getStringExtra("cultivo");
+        primerNombre = getIntent().getStringExtra("primerNombre");
+        segundoNombre = getIntent().getStringExtra("segundoNombre");
+        apellidoPaterno = getIntent().getStringExtra("apellidoPaterno");
+        apellidoMaterno = getIntent().getStringExtra("apellidoMaterno");
+        estadoCivil = getIntent().getStringExtra("estadoCivil");
+        dni = getIntent().getStringExtra("dni");
+        referenciaPredio = getIntent().getStringExtra("referenciaPredio");
         setContentView(R.layout.activity_mapa);
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
 //        Toolbar toolbar = findViewById(R.id.toolbar);
@@ -110,6 +120,7 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         //    setSupportActionBar(toolbar);
         currentDrawingType = DrawingOption.DrawingType.POLYGON;
 
+        Toast.makeText(this, "dni:  " +referenciaPredio, Toast.LENGTH_SHORT).show();
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -777,6 +788,14 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onClick(DialogInterface dialog, int which) {
                         Bundle bundle = new Bundle();
                         Intent intent = new Intent(MapaActivity.this, PhotoActivity.class);
+                        intent.putExtra("region",regionSeleccionado);
+                        intent.putExtra("primerNombre",primerNombre);
+                        intent.putExtra("segundoNombre",segundoNombre);
+                        intent.putExtra("apellidoPaterno",apellidoPaterno);
+                        intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("estadoCivil",estadoCivil);
+                        intent.putExtra("dni",dni);
+                        intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("GeoJson", JSON_OBJECT_COLLECTION.toString());
                         startActivity(intent);
                         finish();
