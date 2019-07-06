@@ -24,10 +24,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Inicio.RegisterClienteActivity"></activity>
+        <activity android:name=".Bd.SincronizarPoligono"></activity>
+        <activity android:name=".Bd.SaveClient" />
+        <activity android:name=".Inicio.RegisterClienteActivity" />
         <activity android:name=".Inicio.SeleccionActivity" />
         <activity android:name=".Inicio.PhotoActivity" />
         <activity android:name=".Inicio.MapaActivity" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
