@@ -10,7 +10,6 @@ import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -19,9 +18,7 @@ import android.widget.Toast;
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Bd.SQLiteHelper2;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Bd.SaveClient;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Bd.SincronizarPoligono;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.SQLiteHelper2;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -30,7 +27,6 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.MainActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -39,33 +35,9 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
-import android.Manifest;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.net.Uri;
-import android.os.Bundle;
-import android.view.View;
+
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.io.ByteArrayOutputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-
-import amazoniaresilientes.durand.josue.amazoniaresiliente.FoodList;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.MainActivity;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
-
-import amazoniaresilientes.durand.josue.amazoniaresiliente.SQLiteHelper;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener, LocationListener {
@@ -126,7 +98,7 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
         imagePhoto = findViewById(R.id.imagePhoto);
         imagePhoto2 = findViewById(R.id.imagePhoto2);
         imagePhoto3 = findViewById(R.id.imagePhoto3);
-        imagePhoto4 = findViewById(R.id.imagePhoto4);
+        imagePhoto4 = findViewById(R.id.imagePhoto44);
 
 
         objregister.sqLiteHelper = new SQLiteHelper2(this, "AmazoniaDB.sqlite", null, 1);
@@ -134,49 +106,55 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
         objregister.sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS AMAZONIA(Id INTEGER PRIMARY KEY AUTOINCREMENT, cultivo VARCHAR, primer_nombre VARCHAR, segundo_nombre VARCHAR, apellido_paterno VARCHAR, apellido_materno VARCHAR, estado_civil VARCHAR, dni VARCHAR, referencia_predio VARCHAR, departamento_cliente VARCHAR, poligono VARCHAR, area VARCHAR, precision VARCHAR, imagen1 BLOB, lat1 VARCHAR, lng1 VARCHAR, imagen2 BLOB, lat2 VARCHAR, lng2 VARCHAR, imagen3 BLOB, lat3 VARCHAR, lng3 VARCHAR, imagen4 BLOB, lat4 VARCHAR, lng4 VARCHAR)");
 
 
-//
-//        imagePhoto4.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.i("Clicked", "YES");
-//                Log.i("PhotoActivity", "Latitude " + latitude4 + " longitude " + longitude4);
-//                if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//                    if (ContextCompat.checkSelfPermission(PhotoActivity.this,
-//                            Manifest.permission.CAMERA)
-//                            == PackageManager.PERMISSION_GRANTED) {
-//                        openCamera4();
-//                    }
-//                } else {
-//                    openCamera4();
-//                }
-//            }
-//        });
-//
-//        imagePhoto3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.i("Clicked", "YES");
-//                Log.i("PhotoActivity", "Latitude " + latitude3 + " longitude " + longitude3);
-//                if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//                    if (ContextCompat.checkSelfPermission(PhotoActivity.this,
-//                            Manifest.permission.CAMERA)
-//                            == PackageManager.PERMISSION_GRANTED) {
-//                        openCamera3();
-//                    }
-//                } else {
-//                    openCamera3();
-//                }
-//            }
-//        });
-//
-        imagePhoto2.setOnClickListener(new View.OnClickListener() {
+        imagePhoto4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PhotoActivity.this, SincronizarPoligono.class);
-                            startActivity(intent);
+                Log.i("Clicked", "YES");
+                Log.i("PhotoActivity", "Latitude " + latitude4 + " longitude " + longitude4);
+                if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    if (ContextCompat.checkSelfPermission(PhotoActivity.this,
+                            Manifest.permission.CAMERA)
+                            == PackageManager.PERMISSION_GRANTED) {
+                        openCamera4();
+                    }
+                } else {
+                    openCamera4();
+                }
             }
         });
 
+        imagePhoto3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("Clicked", "YES");
+                Log.i("PhotoActivity", "Latitude " + latitude3 + " longitude " + longitude3);
+                if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    if (ContextCompat.checkSelfPermission(PhotoActivity.this,
+                            Manifest.permission.CAMERA)
+                            == PackageManager.PERMISSION_GRANTED) {
+                        openCamera3();
+                    }
+                } else {
+                    openCamera3();
+                }
+            }
+        });
+        imagePhoto2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("Clicked", "YES");
+                Log.i("PhotoActivity", "Latitude " + latitude2 + " longitude " + longitude2);
+                if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    if (ContextCompat.checkSelfPermission(PhotoActivity.this,
+                            Manifest.permission.CAMERA)
+                            == PackageManager.PERMISSION_GRANTED) {
+                        openCamera2();
+                    }
+                } else {
+                    openCamera2();
+                }
+            }
+        });
 
         imagePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -390,29 +368,29 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
         }
     }
 
-//    private void openCamera2() {
-//        Intent takePicture2 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//        if (takePicture2.resolveActivity(getPackageManager()) != null) {
-//            startActivityForResult(takePicture2, REQUEST_CODE2);
-//        }
-//    }
-//
-//    private void openCamera3() {
-//        Intent takePicture3 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//        if (takePicture3.resolveActivity(getPackageManager()) != null) {
-//            startActivityForResult(takePicture3, REQUEST_CODE3);
-//        }
-//    }
-//
-//    private void openCamera4() {
-//        Intent takePicture4 = new Intent(MediaStore.EXTRA_MEDIA_ALBUM);
-//        if (takePicture4.resolveActivity(getPackageManager()) != null) {
-//            startActivityForResult(takePicture4, REQUEST_CODE4);
-//        }
-//    }
+    private void openCamera2() {
+        Intent takePicture2 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePicture2.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePicture2, REQUEST_CODE2);
+        }
+    }
+
+    private void openCamera3() {
+        Intent takePicture3 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePicture3.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePicture3, REQUEST_CODE3);
+        }
+    }
+
+    private void openCamera4() {
+        Intent takePicture4 = new Intent(MediaStore.EXTRA_MEDIA_ALBUM);
+        if (takePicture4.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePicture4, REQUEST_CODE4);
+        }
+    }
 
 
-//
+
     public static byte[] imageViewToByte(ImageView image) {
 
         Bitmap bitmap = ((BitmapDrawable)image.getDrawable()).getBitmap();
@@ -427,9 +405,7 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         /*Photo 1*/
-
         if (resultCode == RESULT_OK && requestCode == REQUEST_CODE && data != null) {
-
             Bitmap imageBitmap = (Bitmap) data.getExtras().get("data");
             imagePhoto.setImageBitmap(imageBitmap);
         }

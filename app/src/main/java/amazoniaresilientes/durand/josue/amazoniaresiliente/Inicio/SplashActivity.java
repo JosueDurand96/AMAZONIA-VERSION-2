@@ -7,9 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Bd.SaveClient;
 import androidx.appcompat.app.AppCompatActivity;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.MainActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
 
 public class SplashActivity extends AppCompatActivity {

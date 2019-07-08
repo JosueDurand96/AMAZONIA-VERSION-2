@@ -1,4 +1,4 @@
-package amazoniaresilientes.durand.josue.amazoniaresiliente.Bd;
+package amazoniaresilientes.durand.josue.amazoniaresiliente.Room;
 
 public class Ntch_Amazonia {
     //TODO: PANTALLA 1

@@ -1,4 +1,4 @@
-package amazoniaresilientes.durand.josue.amazoniaresiliente.Bd;
+package amazoniaresilientes.durand.josue.amazoniaresiliente.Room;
 
 import android.content.Context;
 import android.database.Cursor;

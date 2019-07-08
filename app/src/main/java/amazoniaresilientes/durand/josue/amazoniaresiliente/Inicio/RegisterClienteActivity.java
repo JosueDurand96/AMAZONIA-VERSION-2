@@ -3,18 +3,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
-import android.R.*;
-
-import android.R.layout;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Bd.SQLiteHelper2;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Bd.SincronizarPoligono;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.SQLiteHelper2;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.SincronizarPoligono;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
@@ -147,11 +143,5 @@ public class RegisterClienteActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public void onBackPressed()
-    {
-        // code here to show dialog
-        finish();
-        super.onBackPressed();  // optional depending on your needs
-    }
+
 }

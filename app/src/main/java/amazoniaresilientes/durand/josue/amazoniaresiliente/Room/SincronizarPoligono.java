@@ -1,7 +1,8 @@
-package amazoniaresilientes.durand.josue.amazoniaresiliente.Bd;
+package amazoniaresilientes.durand.josue.amazoniaresiliente.Room;
 
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -99,5 +100,16 @@ public class SincronizarPoligono extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        // code here to show dialog
+        Intent intent = new Intent(SincronizarPoligono.this, RegisterClienteActivity.class);
+
+        startActivity(intent);
+        finish();
+        super.onBackPressed();  // optional depending on your needs
     }
 }
