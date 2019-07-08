@@ -10,26 +10,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07365545-64aa-4cef-8f1a-33d73b448772" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_cloud_black_24dp.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Bd/SaveClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Bd/SaveClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Bd/SincronizarListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Bd/SincronizarListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Bd/SincronizarPoligono.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Bd/SincronizarPoligono.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/MapaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/MapaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/PhotoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/PhotoActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/RegisterClienteActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/RegisterClienteActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_photo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_photo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_cliente.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_cliente.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_save_client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_save_client.xml" afterDir="false" />
-    </list>
+    <list default="true" id="07365545-64aa-4cef-8f1a-33d73b448772" name="Default" comment="" />
     <ignored path="FoodSQLiteDemo.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -131,7 +112,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="56" />
-          <entry key="java" value="3837" />
+          <entry key="java" value="3843" />
           <entry key="md" value="12" />
           <entry key="txt" value="146" />
           <entry key="xml" value="455" />
@@ -140,7 +121,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="56" />
-          <entry key="JAVA" value="3837" />
+          <entry key="JAVA" value="3843" />
           <entry key="PLAIN_TEXT" value="158" />
           <entry key="XML" value="455" />
         </counts>
@@ -191,7 +172,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Bd/SincronizarPoligono.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-644">
@@ -215,11 +196,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/RegisterClienteActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="22" column="36" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="36" />
+            <state relative-caret-position="150">
+              <caret line="157" selection-start-line="157" selection-end-line="157" />
             </state>
           </provider>
         </entry>
@@ -2548,9 +2529,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_photo.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Bd/SincronizarListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Bd/SQLiteHelper2.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/RegisterClienteActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/PhotoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Bd/SincronizarPoligono.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/RegisterClienteActivity.java" />
       </list>
     </option>
   </component>
@@ -2952,14 +2933,14 @@
       <window_info id="Nl-Palette" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32879046" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4988645" visible="true" weight="0.23679727" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4988645" visible="true" weight="0.46507666" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Gradle Console" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Android Monitor" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4988645" weight="0.097103916" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4988645" weight="0.7563884" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5011355" side_tool="true" weight="0.6609881" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="12" />
@@ -3418,13 +3399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/RegisterClienteActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/PhotoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
@@ -3444,6 +3418,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/RegisterClienteActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
         </state>
       </provider>
     </entry>
