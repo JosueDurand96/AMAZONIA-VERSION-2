@@ -76,9 +76,9 @@ public class SincronizarListAdapter extends BaseAdapter {
             }
         });
 
-   //     byte[] foodImage = food.getImage();
-    //    Bitmap bitmap = BitmapFactory.decodeByteArray(foodImage, 0, foodImage.length);
-      //  holder.imageView.setImageBitmap(bitmap);
+        byte[] foodImage = food.getImagen1();
+        Bitmap bitmap = BitmapFactory.decodeByteArray(foodImage, 0, foodImage.length);
+        holder.imageView.setImageBitmap(bitmap);
 
         return row;
     }

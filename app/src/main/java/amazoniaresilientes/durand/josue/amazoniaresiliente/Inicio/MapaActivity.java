@@ -797,6 +797,7 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("area", areaTextView.getText().toString());
                         intent.putExtra("GeoJson", JSON_OBJECT_COLLECTION.toString());
                         startActivity(intent);
                         finish();

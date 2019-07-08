@@ -37,11 +37,19 @@ public class SaveClient extends AppCompatActivity {
     final int REQUEST_CODE_GALLERY = 999;
 
     public static SQLiteHelper2 sqLiteHelper;
-    String cultivo,primerNombre,segundoNombre,apellidoPaterno,apellidoMaterno,estadoCivil,dni,referenciaPredio,regionSeleccionado,geoJson;
+    String segundoNombre="";
+    String area;
+    String latitude, longitude,latitude2, longitude2,latitude3, longitude3,latitude4, longitude4;
+    String cultivo,primerNombre,apellidoPaterno,apellidoMaterno,estadoCivil,dni,referenciaPredio,regionSeleccionado,geoJson;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //imagenes
+        latitude=getIntent().getStringExtra("lat");
+
+
         regionSeleccionado = getIntent().getStringExtra("region");
+        area=getIntent().getStringExtra("area");
         cultivo = getIntent().getStringExtra("cultivo");
         primerNombre = getIntent().getStringExtra("primerNombre");
         segundoNombre = getIntent().getStringExtra("segundoNombre");
@@ -54,6 +62,8 @@ public class SaveClient extends AppCompatActivity {
         setContentView(R.layout.activity_save_client);
         init();
 
+
+        Toast.makeText(this, "LAtitud: "+latitude, Toast.LENGTH_SHORT).show();
         txtnombres =(TextView)findViewById(R.id.txtnombres);
         txtnombres.setText(primerNombre+" "+apellidoPaterno);
         txtregion =(TextView)findViewById(R.id.txtdepartamento);
@@ -63,53 +73,53 @@ public class SaveClient extends AppCompatActivity {
         txtdni =(TextView)findViewById(R.id.txtdni);
         txtdni.setText(dni);
 
-        sqLiteHelper = new SQLiteHelper2(this, "AmazoniaDB.sqlite", null, 1);
-
-        sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS AMAZONIA(Id INTEGER PRIMARY KEY AUTOINCREMENT, cultivo VARCHAR, primer_nombre VARCHAR, segundo_nombre VARCHAR, apellido_paterno VARCHAR, apellido_materno VARCHAR, estado_civil VARCHAR, dni VARCHAR, referencia_predio VARCHAR, departamento_cliente VARCHAR, poligono VARCHAR, area VARCHAR, precision VARCHAR, imagen1 BLOB, lat1 VARCHAR, lng1 VARCHAR, imagen2 BLOB, lat2 VARCHAR, lng2 VARCHAR, imagen3 BLOB, lat3 VARCHAR, lng3 VARCHAR, imagen4 BLOB, lat4 VARCHAR, lng4 VARCHAR)");
-
-
-        btnAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try{
-                    sqLiteHelper.insertData(
-                            "hola",
-                            "josue",
-                            "josue",
-                            "josue",
-                            "josue",
-                            "josue",
-                            "josue",
-                            "josue",
-                            "josue",
-                            "josue",
-                            "josue",
-                            "josue",
-                            imageViewToByte(imageView),
-                            "josue",
-                            "josue",
-                            imageViewToByte(imageView),
-                            "josue",
-                            "josue",
-                            imageViewToByte(imageView),
-                            "josue",
-                            "josue",
-                            imageViewToByte(imageView),
-                            "josue",
-                            "josue"
-
-                    );
-                    Toast.makeText(getApplicationContext(), "AGREGADO!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(SaveClient.this, SincronizarPoligono.class);
-                    startActivity(intent);
-
-                    imageView.setImageResource(R.mipmap.ic_launcher);
-                }
-                catch (Exception e){
-                    e.printStackTrace();
-                }
-            }
-        });
+//        sqLiteHelper = new SQLiteHelper2(this, "AmazoniaDB.sqlite", null, 1);
+//
+//        sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS AMAZONIA(Id INTEGER PRIMARY KEY AUTOINCREMENT, cultivo VARCHAR, primer_nombre VARCHAR, segundo_nombre VARCHAR, apellido_paterno VARCHAR, apellido_materno VARCHAR, estado_civil VARCHAR, dni VARCHAR, referencia_predio VARCHAR, departamento_cliente VARCHAR, poligono VARCHAR, area VARCHAR, precision VARCHAR, imagen1 BLOB, lat1 VARCHAR, lng1 VARCHAR, imagen2 BLOB, lat2 VARCHAR, lng2 VARCHAR, imagen3 BLOB, lat3 VARCHAR, lng3 VARCHAR, imagen4 BLOB, lat4 VARCHAR, lng4 VARCHAR)");
+//
+//
+//        btnAdd.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                try{
+//                    sqLiteHelper.insertData(
+//                            cultivo,
+//                            primerNombre,
+//                            segundoNombre,
+//                            apellidoPaterno,
+//                            apellidoPaterno,
+//                            estadoCivil,
+//                            dni,
+//                            referenciaPredio,
+//                            regionSeleccionado,
+//                            geoJson,
+//                            area,
+//                            "1.0",
+//                            imageViewToByte(imageView),
+//                            "josue",
+//                            "josue",
+//                            imageViewToByte(imageView),
+//                            "josue",
+//                            "josue",
+//                            imageViewToByte(imageView),
+//                            "josue",
+//                            "josue",
+//                            imageViewToByte(imageView),
+//                            "josue",
+//                            "josue"
+//
+//                    );
+//                    Toast.makeText(getApplicationContext(), "AGREGADO!", Toast.LENGTH_SHORT).show();
+//                    Intent intent = new Intent(SaveClient.this, SincronizarPoligono.class);
+//                    startActivity(intent);
+//
+//                    imageView.setImageResource(R.mipmap.ic_launcher);
+//                }
+//                catch (Exception e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
 
 
     }

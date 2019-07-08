@@ -10,7 +10,9 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import amazoniaresilientes.durand.josue.amazoniaresiliente.MainActivity;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio.PhotoActivity;
+
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio.RegisterClienteActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,7 +31,7 @@ public class SincronizarPoligono extends AppCompatActivity {
         gridView.setAdapter(adapter);
 
         // get all data from sqlite
-        Cursor cursor = SaveClient.sqLiteHelper.getData("SELECT * FROM AMAZONIA");
+        Cursor cursor = RegisterClienteActivity.sqLiteHelper.getData("SELECT * FROM AMAZONIA");
         list.clear();
         while (cursor.moveToNext()) {
             int id = cursor.getInt(0);
@@ -74,7 +76,7 @@ public class SincronizarPoligono extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int item) {
                         if (item == 0) {
                             // update
-                            Cursor c = MainActivity.sqLiteHelper.getData("SELECT id FROM FOOD");
+                            Cursor c = PhotoActivity.sqLiteHelper.getData("SELECT id FROM FOOD");
                             ArrayList<Integer> arrID = new ArrayList<Integer>();
                             while (c.moveToNext()){
                                 arrID.add(c.getInt(0));
@@ -84,7 +86,7 @@ public class SincronizarPoligono extends AppCompatActivity {
 
                         } else {
                             // delete
-                            Cursor c = MainActivity.sqLiteHelper.getData("SELECT id FROM FOOD");
+                            Cursor c = PhotoActivity.sqLiteHelper.getData("SELECT id FROM FOOD");
                             ArrayList<Integer> arrID = new ArrayList<Integer>();
                             while (c.moveToNext()){
                                 arrID.add(c.getInt(0));
