@@ -108,17 +108,17 @@ public class AdapterSincronizar extends BaseAdapter {
             public void onClick(View v) {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(v.getRootView().getContext());
-                builder.setTitle("App");
-                builder.setMessage("¿Desea continuar registrando los datos");
+                builder.setTitle("SINCRONIZAR");
+                builder.setMessage("¿Desea Sincronizar");
                 builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(context, "Esperando..."+id+" ok", Toast.LENGTH_SHORT).show();
                         try{
+                            //ELIMINAR REGISTRO SQLITE
+                            RegisterClienteActivity.sqLiteHelper.deleteData2(id);
+                            Toast.makeText(context, "Registro Eliminado!!!",Toast.LENGTH_SHORT).show();
 
-
-//                            Intent intent = new Intent(PhotoActivity.this, SincronizarPoligono.class);
-//                            startActivity(intent);
 
                             // imageView.setImageResource(R.mipmap.ic_launcher);
                         }

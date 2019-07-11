@@ -63,6 +63,17 @@ public class SQLiteHelper2 extends SQLiteOpenHelper {
         statement.execute();
         database.close();
     }
+    public  void deleteData2(String id) {
+        SQLiteDatabase database = getWritableDatabase();
+
+        String sql = "DELETE FROM AMAZONIA WHERE id = ?";
+        SQLiteStatement statement = database.compileStatement(sql);
+        statement.clearBindings();
+        statement.bindString(1, (String) id);
+
+        statement.execute();
+        database.close();
+    }
 
     public  void deleteData(int id) {
         SQLiteDatabase database = getWritableDatabase();
