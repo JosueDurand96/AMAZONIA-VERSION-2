@@ -50,7 +50,8 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
     public static final String CAMERA_PREF = "camera_pref";
     ImageView imagePhoto, imagePhoto2, imagePhoto3, imagePhoto4;
     private Location location;
-    double latitude, longitude,latitude2, longitude2,latitude3, longitude3,latitude4, longitude4;
+    String latitude, longitude,latitude2, longitude2,latitude3, longitude3,latitude4, longitude4;
+
     private GoogleApiClient googleApiClient;
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
     private LocationRequest locationRequest;
@@ -64,7 +65,7 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
     String area;
     String cultivo,primerNombre,segundoNombre,apellidoPaterno,apellidoMaterno,estadoCivil,dni,referenciaPredio,regionSeleccionado;
 
-
+    String lat1;
     TextView txtnombres, txtregion,txtcultivo,txtdni;
     Button btnAdd;
     ImageView imageView;
@@ -97,7 +98,7 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
         imagePhoto = findViewById(R.id.imagePhoto);
         imagePhoto2 = findViewById(R.id.imagePhoto2);
         imagePhoto3 = findViewById(R.id.imagePhoto3);
-        imagePhoto4 = findViewById(R.id.imagePhoto44);
+        imagePhoto4 = findViewById(R.id.imagePhoto4);
 
 
         objregister.sqLiteHelper = new SQLiteHelper2(this, "AmazoniaDB.sqlite", null, 1);
@@ -271,14 +272,15 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
         location = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
 
         if (location != null) {
-            latitude = location.getLatitude();
-            longitude = location.getLongitude();
-            latitude2 = location.getLatitude();
-            longitude2 = location.getLongitude();
-            latitude3 = location.getLatitude();
-            longitude3 = location.getLongitude();
-            latitude4 = location.getLatitude();
-            longitude4 = location.getLongitude();
+            latitude = String.valueOf(location.getLatitude());
+            longitude = String.valueOf(location.getLongitude());
+            latitude2 = String.valueOf(location.getLatitude());
+            longitude2 = String.valueOf(location.getLongitude());
+            latitude3 = String.valueOf(location.getLatitude());
+            longitude3 = String.valueOf(location.getLongitude());
+            latitude4 = String.valueOf(location.getLatitude());
+            longitude4 = String.valueOf(location.getLongitude());
+
         }
 
         startLocationUpdates();
@@ -311,14 +313,14 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
     @Override
     public void onLocationChanged(Location location) {
         if (location != null) {
-            latitude = location.getLatitude();
-            longitude = location.getLongitude();
-            latitude2 = location.getLatitude();
-            longitude2 = location.getLongitude();
-            latitude3 = location.getLatitude();
-            longitude3 = location.getLongitude();
-            latitude4 = location.getLatitude();
-            longitude4 = location.getLongitude();
+            latitude = String.valueOf(location.getLatitude());
+            longitude = String.valueOf(location.getLongitude());
+            latitude2 = String.valueOf(location.getLatitude());
+            longitude2 = String.valueOf(location.getLongitude());
+            latitude3 = String.valueOf(location.getLatitude());
+            longitude3 = String.valueOf(location.getLongitude());
+            latitude4 = String.valueOf(location.getLatitude());
+            longitude4 = String.valueOf(location.getLongitude());
         }
     }
 
@@ -382,14 +384,14 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
     }
 
     private void openCamera4() {
-        Intent takePicture4 = new Intent(MediaStore.EXTRA_MEDIA_ALBUM);
+        Intent takePicture4 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePicture4.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePicture4, REQUEST_CODE4);
         }
     }
 
 
-
+    //CONVERTIDOR
     public static byte[] imageViewToByte(ImageView image) {
 
         Bitmap bitmap = ((BitmapDrawable)image.getDrawable()).getBitmap();
@@ -453,17 +455,17 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
                                     area,
                                     "1.0",
                                     imageViewToByte(imagePhoto),
-                                    "josue",
-                                    "josue",
-                                    imageViewToByte(imagePhoto),
-                                    "josue",
-                                    "josue",
-                                    imageViewToByte(imagePhoto),
-                                    "josue",
-                                    "josue",
-                                    imageViewToByte(imagePhoto),
-                                    "josue",
-                                    "josue"
+                                    latitude,
+                                    longitude,
+                                    imageViewToByte(imagePhoto2),
+                                    latitude2,
+                                    longitude,
+                                    imageViewToByte(imagePhoto3),
+                                    latitude3,
+                                    longitude3,
+                                    imageViewToByte(imagePhoto4),
+                                    latitude4,
+                                    longitude4
 
                             );
                             Toast.makeText(getApplicationContext(), "AGREGADO!", Toast.LENGTH_SHORT).show();
