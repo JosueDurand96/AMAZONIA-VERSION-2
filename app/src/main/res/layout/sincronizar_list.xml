@@ -21,34 +21,34 @@
             android:layout_alignRight="@+id/imgFood"
             android:layout_marginEnd="33dp"
             android:layout_marginRight="33dp"
-            android:text="Food name"
+            android:text="Nombres"
             android:textAlignment="center"
             android:textColor="#0e11d1"
             android:textSize="17sp" />
 
         <TextView
             android:id="@+id/txtPrice"
-            android:layout_width="155dp"
+            android:layout_width="163dp"
             android:layout_height="44dp"
             android:layout_below="@+id/txtName"
             android:layout_alignEnd="@+id/txtName"
             android:layout_alignRight="@+id/txtName"
             android:layout_marginEnd="30dp"
             android:layout_marginRight="30dp"
-            android:text="Price"
+            android:text="Dni"
             android:textAlignment="center"
             android:textColor="#ce1309"
             android:textSize="17sp" />
 
         <ImageView
             android:id="@+id/imgFood"
-            android:layout_width="196dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_width="41dp"
+            android:layout_height="42dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            app:srcCompat="@drawable/baseline_gesture_24" />
+            android:layout_weight="1"
+            app:srcCompat="@drawable/sincro" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

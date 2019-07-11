@@ -69,8 +69,8 @@ public class SincronizarListAdapter extends BaseAdapter {
 
         final Ntch_Amazonia food = foodsList.get(position);
 
-        holder.txtName.setText(food.getLat2()+" "+food.getApellido_paterno());
-        holder.txtPrice.setText(food.getLat1());
+        holder.txtName.setText(food.getPrimer_nombre()+" "+food.getApellido_paterno());
+        holder.txtPrice.setText(food.getDni());
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
