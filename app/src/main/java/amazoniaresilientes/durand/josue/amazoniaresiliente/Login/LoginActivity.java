@@ -59,13 +59,13 @@ public class LoginActivity extends AppCompatActivity {
         final String password = etPassword.getText().toString();
         //validating inputs
         if (TextUtils.isEmpty(correo)) {
-            etName.setError("Please enter your username");
+            etName.setError("No puede estar en blanco");
             etName.requestFocus();
             return;
         }
 
         if (TextUtils.isEmpty(password)) {
-            etPassword.setError("Please enter your password");
+            etPassword.setError("No puede estar en blanco");
             etPassword.requestFocus();
             return;
         }
