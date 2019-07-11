@@ -1,6 +1,7 @@
 package amazoniaresilientes.durand.josue.amazoniaresiliente.Room;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.LoginActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
 
 public class SincronizarListAdapter extends BaseAdapter {
@@ -65,20 +67,23 @@ public class SincronizarListAdapter extends BaseAdapter {
             holder = (ViewHolder) row.getTag();
         }
 
-        Ntch_Amazonia food = foodsList.get(position);
+        final Ntch_Amazonia food = foodsList.get(position);
 
         holder.txtName.setText(food.getPrimer_nombre()+" "+food.getApellido_paterno());
-        holder.txtPrice.setText(food.getSegundo_nombre());
+        holder.txtPrice.setText(food.getDni());
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Esperando...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Por favor debe iniciar Sesión ...", Toast.LENGTH_SHORT).show();
+                Intent in = new Intent(context, LoginActivity.class);
+                context.startActivity(in);
+
             }
         });
 
-        byte[] foodImage = food.getImagen1();
-        Bitmap bitmap = BitmapFactory.decodeByteArray(foodImage, 0, foodImage.length);
-        holder.imageView.setImageBitmap(bitmap);
+//        byte[] foodImage = food.getImagen1();
+//        Bitmap bitmap = BitmapFactory.decodeByteArray(foodImage, 0, foodImage.length);
+//        holder.imageView.setImageBitmap(bitmap);
 
         return row;
     }

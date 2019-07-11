@@ -1,11 +1,11 @@
-package com.amazoniaresiliente.loginregistervolley;
+package amazoniaresilientes.durand.josue.amazoniaresiliente.Login;
 
 public class nthc_Admin {
-    private int id;
+    private int idnthc_usuario;
     private String primer_nombre, segundo_nombre, apellido_paterno, apellido_materno,estado_civil,dni,correo,password,celular;
 
-    public nthc_Admin(int id, String primer_nombre, String segundo_nombre, String apellido_paterno, String apellido_materno, String estado_civil, String dni, String correo,  String celular) {
-        this.id = id;
+    public nthc_Admin(int idnthc_usuario, String primer_nombre, String segundo_nombre, String apellido_paterno, String apellido_materno, String estado_civil, String dni, String correo, String celular) {
+        this.idnthc_usuario = idnthc_usuario;
         this.primer_nombre = primer_nombre;
         this.segundo_nombre = segundo_nombre;
         this.apellido_paterno = apellido_paterno;
@@ -18,11 +18,11 @@ public class nthc_Admin {
     }
 
     public int getId() {
-        return id;
+        return idnthc_usuario;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int idnthc_usuario) {
+        this.idnthc_usuario = idnthc_usuario;
     }
 
     public String getPrimer_nombre() {

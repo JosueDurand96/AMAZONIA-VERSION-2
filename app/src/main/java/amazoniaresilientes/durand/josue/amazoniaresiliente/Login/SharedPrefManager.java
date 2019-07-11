@@ -14,7 +14,7 @@ public class SharedPrefManager {
     private static final String KEY_ESTADO_CIVIL = "keyestadoCivil";
     private static final String KEY_DNI = "keydni";
     private static final String KEY_CORREO = "keycorreo";
-    private static final String KEY_PASSWORD = "keypassword";
+
     private static final String KEY_CELULAR = "keycelular";
     private static final String KEY_ID = "keyid";
     private static SharedPrefManager mInstance;
@@ -66,7 +66,6 @@ public class SharedPrefManager {
                 sharedPreferences.getString(KEY_DNI, null),
                 sharedPreferences.getString(KEY_CORREO, null),
                 sharedPreferences.getString(KEY_CELULAR, null)
-
         );
     }
 

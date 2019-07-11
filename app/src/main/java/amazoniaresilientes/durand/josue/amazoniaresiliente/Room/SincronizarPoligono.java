@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio.PhotoActivity;
 
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio.RegisterClienteActivity;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.SharedPrefManager;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -64,51 +65,53 @@ public class SincronizarPoligono extends AppCompatActivity {
         }
         adapter.notifyDataSetChanged();
 
-        gridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-
-                CharSequence[] items = {"Update", "Delete"};
-                AlertDialog.Builder dialog = new AlertDialog.Builder(SincronizarPoligono.this);
-
-                dialog.setTitle("Choose an action");
-                dialog.setItems(items, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int item) {
-                        if (item == 0) {
-                            // update
-                            Cursor c = PhotoActivity.sqLiteHelper.getData("SELECT id FROM FOOD");
-                            ArrayList<Integer> arrID = new ArrayList<Integer>();
-                            while (c.moveToNext()){
-                                arrID.add(c.getInt(0));
-                            }
-                            // show dialog update at here
-                         //   showDialogUpdate(FoodList.this, arrID.get(position));
-
-                        } else {
-                            // delete
-                            Cursor c = PhotoActivity.sqLiteHelper.getData("SELECT id FROM FOOD");
-                            ArrayList<Integer> arrID = new ArrayList<Integer>();
-                            while (c.moveToNext()){
-                                arrID.add(c.getInt(0));
-                            }
-                          //  showDialogDelete(arrID.get(position));
-                        }
-                    }
-                });
-                dialog.show();
-                return true;
-            }
-        });
+//        gridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//            @Override
+//            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+//
+//                CharSequence[] items = {"Update", "Delete"};
+//                AlertDialog.Builder dialog = new AlertDialog.Builder(SincronizarPoligono.this);
+//
+//                dialog.setTitle("Choose an action");
+//                dialog.setItems(items, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int item) {
+//                        if (item == 0) {
+//                            // update
+//                            Cursor c = PhotoActivity.sqLiteHelper.getData("SELECT id FROM FOOD");
+//                            ArrayList<Integer> arrID = new ArrayList<Integer>();
+//                            while (c.moveToNext()){
+//                                arrID.add(c.getInt(0));
+//                            }
+//                            // show dialog update at here
+//                         //   showDialogUpdate(FoodList.this, arrID.get(position));
+//
+//                        } else {
+//                            // delete
+//                            Cursor c = PhotoActivity.sqLiteHelper.getData("SELECT id FROM FOOD");
+//                            ArrayList<Integer> arrID = new ArrayList<Integer>();
+//                            while (c.moveToNext()){
+//                                arrID.add(c.getInt(0));
+//                            }
+//                          //  showDialogDelete(arrID.get(position));
+//                        }
+//                    }
+//                });
+//                dialog.show();
+//                return true;
+//            }
+//        });
     }
 
     @Override
     public void onBackPressed()
     {
+        View v;
         // code here to show dialog
         Intent intent = new Intent(SincronizarPoligono.this, RegisterClienteActivity.class);
-
+        //SharedPrefManager.getInstance(getApplicationContext()).logout();
         startActivity(intent);
+
         finish();
         super.onBackPressed();  // optional depending on your needs
     }
