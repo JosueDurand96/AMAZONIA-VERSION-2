@@ -88,8 +88,7 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
         dni = getIntent().getStringExtra("dni");
         referenciaPredio = getIntent().getStringExtra("referenciaPredio");
         geoJson = getIntent().getStringExtra("GeoJson");
-        Log.i("GeoJson", geoJson);
-        Toast.makeText(this, "Aquii " + area, Toast.LENGTH_SHORT).show();
+
         setContentView(R.layout.activity_photo);
 
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
@@ -432,10 +431,6 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
             @Override
             public void onClick(View v) {
 
-
-
-
-
                 AlertDialog.Builder builder = new AlertDialog.Builder(PhotoActivity.this);
                 builder.setTitle("App");
                 builder.setMessage("¿Desea continuar registrando los datos");
@@ -443,18 +438,19 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         try{
-                            sqLiteHelper.insertData(
-                                    "josue",
-                                    "josue",
-                                    "josue",
-                                    "josue",
-                                    "josue",
-                                    "josue",
-                                    "josue",
-                                    "josue",
-                                    "josue",
-                                    "josue",
-                                    "josue",
+
+                            RegisterClienteActivity.sqLiteHelper.insertData(
+                                    cultivo,
+                                    primerNombre,
+                                    segundoNombre,
+                                    apellidoPaterno,
+                                    apellidoPaterno,
+                                    estadoCivil,
+                                    dni,
+                                    referenciaPredio,
+                                    regionSeleccionado,
+                                    geoJson,
+                                    area,
                                     "1.0",
                                     imageViewToByte(imagePhoto),
                                     "josue",

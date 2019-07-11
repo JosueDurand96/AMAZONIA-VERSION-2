@@ -5,15 +5,19 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import amazoniaresilientes.durand.josue.amazoniaresiliente.FoodList;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio.PhotoActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio.RegisterClienteActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.SharedPrefManager;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.MainActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.Ntch_Amazonia;
 
@@ -38,7 +42,7 @@ public class Sincronizar extends AppCompatActivity {
         Cursor cursor = RegisterClienteActivity.sqLiteHelper.getData("SELECT * FROM AMAZONIA");
         list.clear();
         while (cursor.moveToNext()) {
-            int id = cursor.getInt(0);
+            String id = cursor.getString(0);
             String cultivo = cursor.getString(1);
             String primer_nombre = cursor.getString(2);
             String segundo_nombre = cursor.getString(3);
@@ -63,7 +67,7 @@ public class Sincronizar extends AppCompatActivity {
             byte[] imagen4 = cursor.getBlob(22);
             String lat4 = cursor.getString(23);
             String lng4 = cursor.getString(24);
-            list.add(new Ntch_Amazonia(cultivo, primer_nombre, segundo_nombre,apellido_paterno,apellido_materno,estado_civil,dni,referencia_predio,departamento_cliente,poligono,area,precision,imagen1,lat1,lng1,imagen2,lat2,lng2,imagen3,lat3,lng3,imagen4,lat4,lng4));
+            list.add(new Ntch_Amazonia(id,cultivo, primer_nombre, segundo_nombre,apellido_paterno,apellido_materno,estado_civil,dni,referencia_predio,departamento_cliente,poligono,area,precision,imagen1,lat1,lng1,imagen2,lat2,lng2,imagen3,lat3,lng3,imagen4,lat4,lng4));
         }
         adapter.notifyDataSetChanged();
 
@@ -80,7 +84,7 @@ public class Sincronizar extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int item) {
                         if (item == 0) {
                             // update
-                            Cursor c = PhotoActivity.sqLiteHelper.getData("SELECT id FROM FOOD");
+                            Cursor c = RegisterClienteActivity.sqLiteHelper.getData("SELECT id FROM AMAZONIA");
                             ArrayList<Integer> arrID = new ArrayList<Integer>();
                             while (c.moveToNext()){
                                 arrID.add(c.getInt(0));
@@ -90,12 +94,12 @@ public class Sincronizar extends AppCompatActivity {
 
                         } else {
                             // delete
-                            Cursor c = PhotoActivity.sqLiteHelper.getData("SELECT id FROM FOOD");
+                            Cursor c = RegisterClienteActivity.sqLiteHelper.getData("SELECT id FROM AMAZONIA");
                             ArrayList<Integer> arrID = new ArrayList<Integer>();
                             while (c.moveToNext()){
                                 arrID.add(c.getInt(0));
                             }
-                            //  showDialogDelete(arrID.get(position));
+                              showDialogDelete(arrID.get(position));
                         }
                     }
                 });
@@ -104,7 +108,33 @@ public class Sincronizar extends AppCompatActivity {
             }
         });
     }
+    private void showDialogDelete(final int idFood){
+        final AlertDialog.Builder dialogDelete = new AlertDialog.Builder(Sincronizar.this);
 
+        dialogDelete.setTitle("Warning!!");
+        dialogDelete.setMessage("Are you sure you want to this delete?");
+        dialogDelete.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                try {
+                    RegisterClienteActivity.sqLiteHelper.deleteData(idFood);
+                    Toast.makeText(getApplicationContext(), "Delete successfully!!!",Toast.LENGTH_SHORT).show();
+                } catch (Exception e){
+                    Log.e("error", e.getMessage());
+                }
+             Intent i = new Intent(getApplicationContext(),Sincronizar.class);
+                startActivity(i);
+            }
+        });
+
+        dialogDelete.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        dialogDelete.show();
+    }
     @Override
     public void onBackPressed()
     {

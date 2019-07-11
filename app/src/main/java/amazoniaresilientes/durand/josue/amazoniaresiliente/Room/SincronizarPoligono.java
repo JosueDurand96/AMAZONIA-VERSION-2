@@ -36,7 +36,7 @@ public class SincronizarPoligono extends AppCompatActivity {
         Cursor cursor = RegisterClienteActivity.sqLiteHelper.getData("SELECT * FROM AMAZONIA");
         list.clear();
         while (cursor.moveToNext()) {
-            int id = cursor.getInt(0);
+            String id = cursor.getString(0);
             String cultivo = cursor.getString(1);
             String primer_nombre = cursor.getString(2);
             String segundo_nombre = cursor.getString(3);
@@ -61,7 +61,7 @@ public class SincronizarPoligono extends AppCompatActivity {
             byte[] imagen4 = cursor.getBlob(22);
             String lat4 = cursor.getString(23);
             String lng4 = cursor.getString(24);
-            list.add(new Ntch_Amazonia(cultivo, primer_nombre, segundo_nombre,apellido_paterno,apellido_materno,estado_civil,dni,referencia_predio,departamento_cliente,poligono,area,precision,imagen1,lat1,lng1,imagen2,lat2,lng2,imagen3,lat3,lng3,imagen4,lat4,lng4));
+            list.add(new Ntch_Amazonia(id, cultivo, primer_nombre, segundo_nombre,apellido_paterno,apellido_materno,estado_civil,dni,referencia_predio,departamento_cliente,poligono,area,precision,imagen1,lat1,lng1,imagen2,lat2,lng2,imagen3,lat3,lng3,imagen4,lat4,lng4));
         }
         adapter.notifyDataSetChanged();
 

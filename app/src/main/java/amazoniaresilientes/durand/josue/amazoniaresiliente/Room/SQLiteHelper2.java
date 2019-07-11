@@ -18,7 +18,7 @@ public class SQLiteHelper2 extends SQLiteOpenHelper {
 
     public void insertData(String cultivo, String primer_nombre, String segundo_nombre, String apellido_paterno, String apellido_materno, String estado_civil, String dni, String referencia_predio, String departamento_cliente, String poligono, String area, String precision, byte[] imagen1, String lat1, String lng1, byte[] imagen2, String lat2, String lng2, byte[] imagen3, String lat3, String lng3, byte[] imagen4, String lat4, String lng4){
         SQLiteDatabase database = getWritableDatabase();
-        String sql = "INSERT INTO AMAZONIA VALUES ( NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO AMAZONIA VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         SQLiteStatement statement = database.compileStatement(sql);
         statement.clearBindings();
@@ -50,7 +50,17 @@ public class SQLiteHelper2 extends SQLiteOpenHelper {
         statement.executeInsert();
     }
 
+    public  void deleteData(int id) {
+        SQLiteDatabase database = getWritableDatabase();
 
+        String sql = "DELETE FROM AMAZONIA WHERE id = ?";
+        SQLiteStatement statement = database.compileStatement(sql);
+        statement.clearBindings();
+        statement.bindDouble(1, (double)id);
+
+        statement.execute();
+        database.close();
+    }
     public Cursor getData(String sql){
         SQLiteDatabase database = getReadableDatabase();
         return database.rawQuery(sql, null);

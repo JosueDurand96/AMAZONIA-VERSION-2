@@ -68,13 +68,14 @@ public class AdapterSincronizar extends BaseAdapter {
         }
 
         Ntch_Amazonia food = foodsList.get(position);
+        final String id = food.getId();
 
         holder.txtName.setText(food.getPrimer_nombre()+" "+food.getApellido_paterno());
         holder.txtPrice.setText(food.getSegundo_nombre());
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 Toast.makeText(context, "Esperando...", Toast.LENGTH_SHORT).show();
+                 Toast.makeText(context, "Esperando..."+id+" ok", Toast.LENGTH_SHORT).show();
              //   Intent in = new Intent(context, LoginActivity.class);
               //  context.startActivity(in);
 

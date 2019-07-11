@@ -2,7 +2,7 @@ package amazoniaresilientes.durand.josue.amazoniaresiliente.Room;
 
 public class Ntch_Amazonia {
     //TODO: PANTALLA 1
-    private int id;
+    private String id;
     private  String cultivo;
     private String primer_nombre;
     private String segundo_nombre;
@@ -31,7 +31,7 @@ public class Ntch_Amazonia {
     private String lat4;
     private String lng4;
 
-    public Ntch_Amazonia(String cultivo, String primer_nombre, String segundo_nombre, String apellido_paterno, String apellido_materno, String estado_civil, String dni, String referencia_predio, String departamento_cliente, String poligono, String area, String precision, byte[] imagen1, String lat1, String lng1, byte[] imagen2, String lat2, String lng2, byte[] imagen3, String lat3, String lng3, byte[] imagen4, String lat4, String lng4) {
+    public Ntch_Amazonia(String id, String cultivo, String primer_nombre, String segundo_nombre, String apellido_paterno, String apellido_materno, String estado_civil, String dni, String referencia_predio, String departamento_cliente, String poligono, String area, String precision, byte[] imagen1, String lat1, String lng1, byte[] imagen2, String lat2, String lng2, byte[] imagen3, String lat3, String lng3, byte[] imagen4, String lat4, String lng4) {
         this.id = id;
         this.cultivo = cultivo;
         this.primer_nombre = primer_nombre;
@@ -59,11 +59,11 @@ public class Ntch_Amazonia {
         this.lng4 = lng4;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
