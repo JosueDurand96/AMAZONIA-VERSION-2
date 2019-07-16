@@ -42,10 +42,10 @@ import android.widget.TextView;
 public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener, LocationListener {
     String geoJson;
-    public static final int REQUEST_CODE = 101;
-    public static final int REQUEST_CODE2 = 102;
-    public static final int REQUEST_CODE3= 103;
-    public static final int REQUEST_CODE4 = 104;
+    public static final int REQUEST_CODE = 1000;
+    public static final int REQUEST_CODE2 = 1001;
+    public static final int REQUEST_CODE3= 1002;
+    public static final int REQUEST_CODE4 = 1003;
     public static final String ALLOW_KEY = "ALLOWED";
     public static final String CAMERA_PREF = "camera_pref";
     ImageView imagePhoto, imagePhoto2, imagePhoto3, imagePhoto4;
@@ -396,7 +396,7 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
 
         Bitmap bitmap = ((BitmapDrawable)image.getDrawable()).getBitmap();
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 50, stream);
         byte[] byteArray = stream.toByteArray();
         return byteArray;
     }
