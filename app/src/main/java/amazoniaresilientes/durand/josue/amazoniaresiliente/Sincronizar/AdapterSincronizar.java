@@ -66,6 +66,15 @@ public class AdapterSincronizar extends BaseAdapter {
 
     private String KEY_IMAGE = "image";
     private String KEY_NAME = "name";
+    private String KEY_NAME2 = "name2";
+    private String KEY_NAME3 = "name3";
+    private String KEY_NAME4 = "name4";
+    private String KEY_NAME5 = "name5";
+    private String KEY_NAME6 = "name6";
+    private String KEY_NAME7 = "name7";
+    private String KEY_NAME8 = "name8";
+    private String KEY_ID_CLIENTE = "nthc_cliente_idnthc_cliente";
+    private String KEY_ID_USUARIO = "nthc_cliente_nthc_usuario_idnthc_usuario";
 
     private String KEY_POLIGONO = "poligono";
     private String KEY_AREA = "area";
@@ -81,8 +90,7 @@ public class AdapterSincronizar extends BaseAdapter {
     private String KEY_IMAGEN4 ="imagen4";
     private String KEY_LAT4 = "lat4";
     private  String KEY_LNG4 ="lng4";
-    private String KEY_ID_CLIENTE = "nthc_cliente_idnthc_cliente";
-    private String KEY_ID_USUARIO = "nthc_cliente_nthc_usuario_idnthc_usuario";
+
     private static String URL_UPLOAD = "https://www.amazoniaresiliente.com/cliente/Sincronizar.php";
 
     public AdapterSincronizar(Context context, int layout, ArrayList<Ntch_Amazonia> foodsList) {
@@ -218,7 +226,17 @@ public class AdapterSincronizar extends BaseAdapter {
                             String imagen3 = getStringImagen(bitmap3);
                             String imagen4 = getStringImagen(bitmap4);
                             HashMap<String,String> data = new HashMap<>();
-                            data.put(UPLOAD_KEY, imagen);
+                            data.put(KEY_IMAGE, imagen4);
+                            data.put(KEY_IMAGEN2,  imagen4);
+                            data.put(KEY_NAME2, "1");
+                            data.put(KEY_NAME3, "1");
+                            data.put(KEY_NAME4, "1");
+                            data.put(KEY_NAME5, "1");
+                            data.put(KEY_NAME6, "1");
+                            data.put(KEY_NAME7, "1");
+                            data.put(KEY_NAME8, "1");
+                            data.put(KEY_ID_CLIENTE,"1");
+                            data.put(KEY_ID_USUARIO,"1");
                             String result = rh.sendPostRequest(UPLOAD_URL,data);
                             return result;
                         }
