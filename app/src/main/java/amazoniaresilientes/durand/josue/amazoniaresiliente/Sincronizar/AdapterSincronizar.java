@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -48,7 +50,7 @@ public class AdapterSincronizar extends BaseAdapter {
     private Context context;
     private  int layout;
     private ArrayList<Ntch_Amazonia> foodsList;
-    private Bitmap bitmap;
+
 
     private String KEY_ESTADO2 = "poligono";
     private String KEY_NOMBRE_SUB = "area";
@@ -111,66 +113,114 @@ public class AdapterSincronizar extends BaseAdapter {
         else {
             holder = (AdapterSincronizar.ViewHolder) row.getTag();
         }
+
+
+
+
+
         if(SharedPrefManager.getInstance(context).isLoggedIn()){
 
             nthc_Admin user = SharedPrefManager.getInstance(context).getUser();
 
             final String id_Usuario = String.valueOf(user.getId());
+
+
+
+
 //            id2.setText(String.valueOf(user.getId()));
 //            userEmail.setText(user.getCorreo());
 //            gender.setText(user.getApellido_paterno());
 //            userName.setText(user.getPrimer_nombre());
 
         //    btnLogout.setOnClickListener(this);
+
+            Ntch_Amazonia amazonia = foodsList.get(position);
+            //Datos a sincronizar
+            final String id = amazonia.getId();
+            final String cultivo = amazonia.getCultivo();
+            final String primer_nombre = amazonia.getPrimer_nombre();
+            final String segundo_nombre = amazonia.getSegundo_nombre();
+            final String apellido_paterno =amazonia.getApellido_paterno();
+            final String apellido_materno = amazonia.getApellido_materno();
+            final String estado_civil = amazonia.getEstado_civil();
+            final String dni = amazonia.getDni();
+            final String referencia_predio = amazonia.getReferencia_predio();
+            final String departamento_cliente = amazonia.getDepartamento_cliente();
+            final String poligono = amazonia.getPoligono();
+            final String area = amazonia.getArea();
+            final byte[] imagen1 = amazonia.getImagen1();
+
+            final Bitmap bitmap1 = BitmapFactory.decodeByteArray(imagen1, 0, imagen1.length);
+
+            //   holder.imageView.setImageBitmap(bitmap);
+//        byte[] foodImage = food.getImagen1();
+//        Bitmap bitmap = BitmapFactory.decodeByteArray(foodImage, 0, foodImage.length);
+            final String lat1 =amazonia.getLat1();
+            final String lng1;
+            byte[] imagen2 = amazonia.getImagen2();
+            final  String lat2;
+            final  String lng2;
+            byte[] imagen3 = amazonia.getImagen3();
+            final String lat3;
+            final String lng3;
+            byte[] imagen4 = amazonia.getImagen4();
+            final String lat4;
+            final String lng4;
+            holder.txtName.setText(amazonia.getPrimer_nombre()+" "+amazonia.getApellido_paterno());
+            holder.txtPrice.setText(amazonia.getDni());
+
             holder.imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(context, ""+id_Usuario, Toast.LENGTH_SHORT).show();
-              //      UploadPicture("josue","durand","js",getStringImagen(bitmap1));
+                    class UploadImage extends AsyncTask<Bitmap,Void,String> {
 
-                    //   Intent in = new Intent(context, LoginActivity.class);
-                    //  context.startActivity(in);
+                        ProgressDialog loading;
+                        RequestHandler rh = new RequestHandler();
+
+                        @Override
+                        protected void onPreExecute() {
+                            super.onPreExecute();
+                            loading = ProgressDialog.show(context, "Uploading Image", "Please wait...",true,true);
+                        }
+
+                        @Override
+                        protected void onPostExecute(String s) {
+                            super.onPostExecute(s);
+                            loading.dismiss();
+                            Toast.makeText(context,s,Toast.LENGTH_LONG).show();
+                        }
+
+                        @Override
+                        protected String doInBackground(Bitmap... params) {
+
+
+                            Bitmap bitmap1 = BitmapFactory.decodeByteArray(imagen1, 0, imagen1.length);
+
+                            String uploadImage = getStringImagen(bitmap1);
+                          //  final Bitmap bitmap1 = BitmapFactory.decodeByteArray(imagen1, 0, imagen1.length);
+                            HashMap<String,String> data = new HashMap<>();
+
+                            data.put(UPLOAD_KEY, uploadImage);
+
+                            String result = rh.sendPostRequest(UPLOAD_URL,data);
+
+                            return result;
+                        }
+                    }
+
+                    UploadImage ui = new UploadImage();
+                    ui.execute(bitmap);
 
                 }
             });
         }
 
-        Ntch_Amazonia amazonia = foodsList.get(position);
-        //Datos a sincronizar
-        final String id = amazonia.getId();
-        final String cultivo = amazonia.getCultivo();
-        final String primer_nombre = amazonia.getPrimer_nombre();
-        final String segundo_nombre = amazonia.getSegundo_nombre();
-        final String apellido_paterno =amazonia.getApellido_paterno();
-        final String apellido_materno = amazonia.getApellido_materno();
-        final String estado_civil = amazonia.getEstado_civil();
-        final String dni = amazonia.getDni();
-        final String referencia_predio = amazonia.getReferencia_predio();
-        final String departamento_cliente = amazonia.getDepartamento_cliente();
-        final String poligono = amazonia.getPoligono();
-        final String area = amazonia.getArea();
-        final byte[] imagen1 = amazonia.getImagen1();
-        final Bitmap bitmap1 = BitmapFactory.decodeByteArray(imagen1, 0, imagen1.length);
-
-     //   holder.imageView.setImageBitmap(bitmap);
-//        byte[] foodImage = food.getImagen1();
-//        Bitmap bitmap = BitmapFactory.decodeByteArray(foodImage, 0, foodImage.length);
-        final String lat1;
-        final String lng1;
-        byte[] imagen2 = amazonia.getImagen2();
-        final  String lat2;
-        final  String lng2;
-        byte[] imagen3 = amazonia.getImagen3();
-        final String lat3;
-        final String lng3;
-        byte[] imagen4 = amazonia.getImagen4();
-        final String lat4;
-        final String lng4;
 
 
 
-        holder.txtName.setText(amazonia.getPrimer_nombre()+" "+amazonia.getApellido_paterno());
-        holder.txtPrice.setText(amazonia.getDni());
+
+
 
 
 //        byte[] foodImage = food.getImagen1();
@@ -180,55 +230,18 @@ public class AdapterSincronizar extends BaseAdapter {
         return row;
     }
 
-    private void UploadPicture(final String username,final String email,final String password, final String photo){
-        final ProgressDialog progressDialog = new ProgressDialog(context);
-        progressDialog.setMessage("Uploading...");
-        progressDialog.show();
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_UPLOAD,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        progressDialog.dismiss();
-                        try{
-                            JSONObject jsonObject =new JSONObject(response);
-                            String success = jsonObject.getString("success");
-                            if (success.equals("1")){
-                                Toast.makeText(context, "Success!", Toast.LENGTH_SHORT).show();
-                            }
+    public static final String UPLOAD_URL = "https://www.amazoniaresiliente.com/cliente/upload3.php";
+    public static final String UPLOAD_KEY = "image";
+    public static final String TAG = "MY MESSAGE";
 
-                        }catch (JSONException e){
-                            e.printStackTrace();
-                            progressDialog.dismiss();
-                            Toast.makeText(context, "Try again! "+e.toString(), Toast.LENGTH_SHORT).show();
-                        }
+    private Bitmap bitmap;
 
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(context, "Error! "+error.toString(), Toast.LENGTH_SHORT).show();
-            }
-        })
-        {
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String,String> params = new HashMap<>();
-                params.put("username",username);
-                params.put("email",email);
-                params.put("password",password);
-                params.put("photo",photo);
-                return super.getParams();
-            }
-        };
-
-        RequestQueue requestQueue = Volley.newRequestQueue(context);
-        requestQueue.add(stringRequest);
-    }
-
+    private Uri filePath;
+    private int PICK_IMAGE_REQUEST = 1;
 
     public String getStringImagen(Bitmap bmp){
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        bmp.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+        bmp.compress(Bitmap.CompressFormat.PNG, 50, baos);
         byte[] imageBytes = baos.toByteArray();
         String encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
         return encodedImage;
