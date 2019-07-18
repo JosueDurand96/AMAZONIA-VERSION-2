@@ -1,40 +1,27 @@
 package amazoniaresilientes.durand.josue.amazoniaresiliente.Sincronizar;
 
 
-import android.Manifest;
-import android.app.Activity;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
-import android.se.omapi.Session;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Food;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.FoodList;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio.PhotoActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio.RegisterClienteActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.LoginActivity;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.SharedPrefManager;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.MainActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.Ntch_Amazonia;
 
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.SincronizarPoligono;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 public class Sincronizar extends AppCompatActivity {
     ListView gridView;

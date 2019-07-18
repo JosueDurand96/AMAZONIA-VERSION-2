@@ -18,15 +18,13 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/MapaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/MapaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/PhotoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/PhotoActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/SeleccionActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/SeleccionActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Login/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Login/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Login/Main2Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Login/Main2Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Login/SharedPrefManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Login/SharedPrefManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Login/nthc_Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Room/nthc_Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Sincronizar/AdapterSincronizar.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Sincronizar/AdapterSincronizar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Food.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/FoodList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/FoodListAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/SQLiteHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Sincronizar/Sincronizar.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Sincronizar/Sincronizar.java" afterDir="false" />
     </list>
     <ignored path="FoodSQLiteDemo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -126,7 +124,7 @@
           <entry key="gradle" value="8" />
           <entry key="java" value="128" />
           <entry key="md" value="1" />
-          <entry key="xml" value="49" />
+          <entry key="xml" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -135,7 +133,7 @@
           <entry key="Groovy" value="8" />
           <entry key="JAVA" value="128" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="XML" value="49" />
+          <entry key="XML" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -163,20 +161,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Sincronizar/Sincronizar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="245" column="4" selection-start-line="245" selection-start-column="4" selection-end-line="245" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#11177#11384#0" expanded="true" />
-                <element signature="e#11383#11384#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Login/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -261,11 +245,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Room/SincronizarPoligono.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="80" column="73" selection-start-line="80" selection-start-column="73" selection-end-line="80" selection-end-column="73" />
+            <state relative-caret-position="212">
+              <caret line="106" column="31" lean-forward="true" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register_cliente.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1003">
+              <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -2639,27 +2633,6 @@
             <path>
               <item name="AmazoniaResilientes" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="amazoniaresiliente" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Inicio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AmazoniaResilientes" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="amazoniaresiliente" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AmazoniaResilientes" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="amazoniaresiliente" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Room" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AmazoniaResilientes" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
             </path>
             <path>
@@ -3033,7 +3006,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Gradle Console" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Android Monitor" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4988645" visible="true" weight="0.011925043" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4988645" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5011355" side_tool="true" weight="0.6609881" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="12" />
@@ -3154,14 +3127,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="38" selection-start-column="38" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register_cliente.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -3352,7 +3317,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Sincronizar/Sincronizar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
-          <caret line="245" column="4" selection-start-line="245" selection-start-column="4" selection-end-line="245" selection-end-column="4" />
+          <caret line="232" column="4" selection-start-line="232" selection-start-column="4" selection-end-line="232" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#11177#11384#0" expanded="true" />
@@ -3438,8 +3403,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Room/SincronizarPoligono.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="80" column="73" selection-start-line="80" selection-start-column="73" selection-end-line="80" selection-end-column="73" />
+        <state relative-caret-position="212">
+          <caret line="106" column="31" lean-forward="true" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register_cliente.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1003">
+          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
         </state>
       </provider>
     </entry>
