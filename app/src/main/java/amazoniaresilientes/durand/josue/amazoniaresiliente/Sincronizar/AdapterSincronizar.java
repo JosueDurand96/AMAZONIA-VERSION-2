@@ -196,72 +196,97 @@ public class AdapterSincronizar extends BaseAdapter {
                 @Override
                 public void onClick(View v) {
                     RegisterClienteActivity.sqLiteHelper.deleteData(Integer.parseInt(id_bd_sqlite));
+                    final AlertDialog.Builder dialogDelete = new AlertDialog.Builder(context);
 
-                    class UploadImage extends AsyncTask<Bitmap,Void,String> {
-
-                        ProgressDialog loading;
-                        RequestHandler rh = new RequestHandler();
-
+                    dialogDelete.setTitle("Sincronizar!!");
+                    dialogDelete.setMessage("¿Desea Sincronizar?");
+                    dialogDelete.setPositiveButton("SI", new DialogInterface.OnClickListener() {
                         @Override
-                        protected void onPreExecute() {
-                            super.onPreExecute();
-                            loading = ProgressDialog.show(context, "Sincronizando", "Por favor espere...",true,true);
-                        }
+                        public void onClick(DialogInterface dialog, int which) {
+                            try {
+                                class UploadImage extends AsyncTask<Bitmap,Void,String> {
 
-                        @Override
-                        protected void onCancelled() {
-                            Toast.makeText(context, "NO SE PUDO SINCRONIZAR", Toast.LENGTH_SHORT).show();
-                            super.onCancelled();
-                        }
+                                    ProgressDialog loading;
+                                    RequestHandler rh = new RequestHandler();
 
-                        @Override
-                        protected void onPostExecute(String s) {
-                            super.onPostExecute(s);
-                            loading.dismiss();
-                            Toast.makeText(context,"SINCRONIZACIÓN CORRECTA",Toast.LENGTH_LONG).show();
-                        }
+                                    @Override
+                                    protected void onPreExecute() {
+                                        super.onPreExecute();
+                                        loading = ProgressDialog.show(context, "Sincronizando", "Por favor espere...",true,true);
+                                    }
 
-                        @Override
-                        protected String doInBackground(Bitmap... params) {
-                            final Bitmap bitmap1 = BitmapFactory.decodeByteArray(imagen1, 0, imagen1.length);
-                            final Bitmap bitmap2 = BitmapFactory.decodeByteArray(imagen2, 0, imagen2.length);
-                            final Bitmap bitmap3 = BitmapFactory.decodeByteArray(imagen3, 0, imagen3.length);
-                            final Bitmap bitmap4 = BitmapFactory.decodeByteArray(imagen4, 0, imagen4.length);
-                            String  imagen1 = getStringImagen(bitmap1);
-                            String imagen2 = getStringImagen(bitmap2);
-                            String imagen3 = getStringImagen(bitmap3);
-                            String imagen4 = getStringImagen(bitmap4);
-                            HashMap<String,String> data = new HashMap<>();
-                            data.put(KEY_PRIMER_NOMBRE, primer_nombre);
-                            data.put(KEY_SEGUNDO_NOMBRE, segundo_nombre);
-                            data.put(KEY_APELLIDO_PATERNO,  apellido_paterno);
-                            data.put(KEY_APELLIDO_MATERNO, apellido_materno);
-                            data.put(KEY_ESTADO_CIVIL, estado_civil);
-                            data.put(KEY_DNI, dni);
-                            data.put(KEY_REFERENCIA_PREDIO, referencia_predio);
-                            data.put(KEY_DEPARTAMENTO_CLIENTE, departamento_cliente);
-                            data.put(KEY_CULTIVO, cultivo);
-                            data.put(KEY_ID_USUARIO,id_Usuario);
-                            data.put(KEY_POLIGONO, poligono);
-                            data.put(KEY_AREA, area);
-                            data.put(KEY_IMAGEN1,  imagen1);
-                            data.put(KEY_LAT1, lat1);
-                            data.put(KEY_LNG1, lng1);
-                            data.put(KEY_IMAGEN2,  imagen2);
-                            data.put(KEY_LAT2, lat2);
-                            data.put(KEY_LNG2, lng2);
-                            data.put(KEY_IMAGEN3,imagen3);
-                            data.put(KEY_LAT3, lat3);
-                            data.put(KEY_LNG3, lng3);
-                            data.put(KEY_IMAGEN4,imagen4);
-                            data.put(KEY_LAT4, lat4);
-                            data.put(KEY_LNG4, lng4);
-                            String result = rh.sendPostRequest(UPLOAD_URL,data);
-                            return result;
+                                    @Override
+                                    protected void onCancelled() {
+                                        Toast.makeText(context, "NO SE PUDO SINCRONIZAR", Toast.LENGTH_SHORT).show();
+                                        super.onCancelled();
+                                    }
+
+                                    @Override
+                                    protected void onPostExecute(String s) {
+                                        super.onPostExecute(s);
+                                        loading.dismiss();
+                                        Toast.makeText(context,"SINCRONIZACIÓN CORRECTA",Toast.LENGTH_LONG).show();
+                                    }
+
+                                    @Override
+                                    protected String doInBackground(Bitmap... params) {
+                                        final Bitmap bitmap1 = BitmapFactory.decodeByteArray(imagen1, 0, imagen1.length);
+                                        final Bitmap bitmap2 = BitmapFactory.decodeByteArray(imagen2, 0, imagen2.length);
+                                        final Bitmap bitmap3 = BitmapFactory.decodeByteArray(imagen3, 0, imagen3.length);
+                                        final Bitmap bitmap4 = BitmapFactory.decodeByteArray(imagen4, 0, imagen4.length);
+                                        String  imagen1 = getStringImagen(bitmap1);
+                                        String imagen2 = getStringImagen(bitmap2);
+                                        String imagen3 = getStringImagen(bitmap3);
+                                        String imagen4 = getStringImagen(bitmap4);
+                                        HashMap<String,String> data = new HashMap<>();
+                                        data.put(KEY_PRIMER_NOMBRE, primer_nombre);
+                                        data.put(KEY_SEGUNDO_NOMBRE, segundo_nombre);
+                                        data.put(KEY_APELLIDO_PATERNO,  apellido_paterno);
+                                        data.put(KEY_APELLIDO_MATERNO, apellido_materno);
+                                        data.put(KEY_ESTADO_CIVIL, estado_civil);
+                                        data.put(KEY_DNI, dni);
+                                        data.put(KEY_REFERENCIA_PREDIO, referencia_predio);
+                                        data.put(KEY_DEPARTAMENTO_CLIENTE, departamento_cliente);
+                                        data.put(KEY_CULTIVO, cultivo);
+                                        data.put(KEY_ID_USUARIO,id_Usuario);
+                                        data.put(KEY_POLIGONO, poligono);
+                                        data.put(KEY_AREA, area);
+                                        data.put(KEY_IMAGEN1,  imagen1);
+                                        data.put(KEY_LAT1, lat1);
+                                        data.put(KEY_LNG1, lng1);
+                                        data.put(KEY_IMAGEN2,  imagen2);
+                                        data.put(KEY_LAT2, lat2);
+                                        data.put(KEY_LNG2, lng2);
+                                        data.put(KEY_IMAGEN3,imagen3);
+                                        data.put(KEY_LAT3, lat3);
+                                        data.put(KEY_LNG3, lng3);
+                                        data.put(KEY_IMAGEN4,imagen4);
+                                        data.put(KEY_LAT4, lat4);
+                                        data.put(KEY_LNG4, lng4);
+                                        String result = rh.sendPostRequest(UPLOAD_URL,data);
+                                        return result;
+                                    }
+                                }
+                                UploadImage ui = new UploadImage();
+                                ui.execute(bitmap);
+
+                            } catch (Exception e){
+                                Log.e("error", e.getMessage());
+                            }
+                            Intent i = new Intent(context,Sincronizar.class);
+                            context.startActivity(i);
                         }
-                    }
-                    UploadImage ui = new UploadImage();
-                    ui.execute(bitmap);
+                    });
+
+                    dialogDelete.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    dialogDelete.show();
+
+
                 }
             });
         }

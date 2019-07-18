@@ -8,6 +8,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.os.Handler;
+import android.se.omapi.Session;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -23,6 +25,7 @@ import amazoniaresilientes.durand.josue.amazoniaresiliente.Food;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.FoodList;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio.PhotoActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio.RegisterClienteActivity;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.LoginActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.SharedPrefManager;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.MainActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
@@ -84,10 +87,10 @@ public class Sincronizar extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
 
                 //CharSequence[] items = {"Update", "Delete"};
-                CharSequence[] items = {"Delete"};
+                CharSequence[] items = {"Eliminar"};
                 AlertDialog.Builder dialog = new AlertDialog.Builder(Sincronizar.this);
 
-                dialog.setTitle("Choose an action");
+                dialog.setTitle("Eliminar Registro");
                 dialog.setItems(items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int item) {
@@ -199,8 +202,8 @@ public class Sincronizar extends AppCompatActivity {
         final AlertDialog.Builder dialogDelete = new AlertDialog.Builder(Sincronizar.this);
 
         dialogDelete.setTitle("Espere!!");
-        dialogDelete.setMessage("¿Esta seguro eliminarlo?");
-        dialogDelete.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        dialogDelete.setMessage("¿Esta seguro de eliminarlo?");
+        dialogDelete.setPositiveButton("SI", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 try {
@@ -214,7 +217,7 @@ public class Sincronizar extends AppCompatActivity {
             }
         });
 
-        dialogDelete.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+        dialogDelete.setNegativeButton("NO", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
@@ -222,16 +225,53 @@ public class Sincronizar extends AppCompatActivity {
         });
         dialogDelete.show();
     }
+    private boolean doubleBackToExitPressedOnce;
+    private Handler mHandler = new Handler();
+
+    private final Runnable mRunnable = new Runnable() {
+        @Override
+        public void run() {
+            doubleBackToExitPressedOnce = false;
+        }
+    };
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        if (mHandler != null) { mHandler.removeCallbacks(mRunnable); }
+    }
     @Override
     public void onBackPressed()
     {
 
-        // code here to show dialog
-        Intent intent = new Intent(Sincronizar.this, RegisterClienteActivity.class);
-      //  SharedPrefManager.getInstance(getApplicationContext()).logout();
-        startActivity(intent);
+        if (doubleBackToExitPressedOnce) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("¿Desea volver al Inicio?");
+            builder.setTitle("Alerta!");
+            builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    startActivity(new Intent(Sincronizar.this, LoginActivity.class));
+                }
+            });
+            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
 
-        finish();
-        super.onBackPressed();  // optional depending on your needs
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Por favor presione dos veces para salir", Toast.LENGTH_SHORT).show();
+
+        mHandler.postDelayed(mRunnable, 2000);
     }
+
+
 }

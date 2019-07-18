@@ -35,7 +35,7 @@ public class SeleccionActivity extends AppCompatActivity {
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
 
     //    Toast.makeText(this, "Holaa "+regionSeleccionado, Toast.LENGTH_SHORT).show();
-        Toast.makeText(this, "Holaa "+apellidoPaterno, Toast.LENGTH_SHORT).show();
+
         final Button loginButton = findViewById(R.id.login);
         final Spinner spinner = (Spinner) findViewById(R.id.spinner);
         loginButton.setEnabled(true);

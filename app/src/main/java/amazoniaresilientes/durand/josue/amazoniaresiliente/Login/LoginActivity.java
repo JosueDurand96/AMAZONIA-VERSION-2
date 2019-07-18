@@ -1,6 +1,7 @@
 package amazoniaresilientes.durand.josue.amazoniaresiliente.Login;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -21,8 +22,10 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio.RegisterClienteActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Sincronizar.Sincronizar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -135,5 +138,12 @@ public class LoginActivity extends AppCompatActivity {
         };
 
         VolleySingleton.getInstance(this).addToRequestQueue(stringRequest);
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(LoginActivity.this, RegisterClienteActivity.class));
+
     }
 }
