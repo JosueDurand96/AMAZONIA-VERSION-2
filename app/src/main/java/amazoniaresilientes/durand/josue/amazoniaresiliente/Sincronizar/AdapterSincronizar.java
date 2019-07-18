@@ -175,7 +175,7 @@ public class AdapterSincronizar extends BaseAdapter {
                     RegisterClienteActivity.sqLiteHelper.deleteData(Integer.parseInt(id_bd_sqlite));
                     final AlertDialog.Builder dialogDelete = new AlertDialog.Builder(context);
 
-                    dialogDelete.setTitle("Sincronizar!!");
+                    dialogDelete.setTitle("Amazonía Resiliente!!");
                     dialogDelete.setMessage("¿Desea Sincronizar?");
                     dialogDelete.setPositiveButton("SI", new DialogInterface.OnClickListener() {
                         @Override

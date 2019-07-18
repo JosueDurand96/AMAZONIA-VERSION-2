@@ -235,7 +235,7 @@ public class Sincronizar extends AppCompatActivity {
         if (doubleBackToExitPressedOnce) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("¿Desea volver al Inicio?");
-            builder.setTitle("Alerta!");
+            builder.setTitle("Amazonía Resiliente!");
             builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {

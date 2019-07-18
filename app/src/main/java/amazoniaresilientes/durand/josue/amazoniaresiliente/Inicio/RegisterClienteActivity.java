@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import android.os.Handler;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -11,9 +12,25 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.LoginActivity;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.SharedPrefManager;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.URLs;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.VolleySingleton;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.SQLiteHelper2;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.SincronizarPoligono;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.nthc_Admin;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Sincronizar.Sincronizar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -46,71 +63,20 @@ public class RegisterClienteActivity extends AppCompatActivity {
         sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS AMAZONIA(Id INTEGER PRIMARY KEY AUTOINCREMENT, cultivo VARCHAR, primer_nombre VARCHAR, segundo_nombre VARCHAR, apellido_paterno VARCHAR, apellido_materno VARCHAR, estado_civil VARCHAR, dni VARCHAR, referencia_predio VARCHAR, departamento_cliente VARCHAR, poligono VARCHAR, area VARCHAR, precision VARCHAR, imagen1 BLOB, lat1 VARCHAR, lng1 VARCHAR, imagen2 BLOB, lat2 VARCHAR, lng2 VARCHAR, imagen3 BLOB, lat3 VARCHAR, lng3 VARCHAR, imagen4 BLOB, lat4 VARCHAR, lng4 VARCHAR)");
 
 
-         final  String primerNombre = etPrimerNombre.getText().toString().trim();
-         String segundoNombre = etSegundoNombre.getText().toString();
-         String apellidoPaterno = etApellidoPaterno.getText().toString();
-         String apellidoMaterno = etapellidomaterno.getText().toString();
-         String estadoCivil = etEstadoCivil.getText().toString();
-         String dni = etDni.getText().toString();
-         String predioCliente = etPredioCliente.getText().toString();
-
-
-
-
-
-
+        final   String primerNombre = etPrimerNombre.getText().toString().trim();
+        final   String segundoNombre = etSegundoNombre.getText().toString();
+        final   String apellidoPaterno = etApellidoPaterno.getText().toString();
+        final   String apellidoMaterno = etapellidomaterno.getText().toString();
+        final   String estadoCivil = etEstadoCivil.getText().toString();
+        final   String dni = etDni.getText().toString();
+        final   String predioCliente = etPredioCliente.getText().toString();
 
         //ENVIO DE PARAMETROS DEPENDIENDO DE LA REGION PARA LOS MAPAS
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println(spinner.getSelectedItemPosition());
-                if (spinner.getSelectedItemPosition() == 0) {
+                userLogin();
 
-                } else {
-                    if (spinner.getSelectedItemPosition() == 1) {
-                        Intent intent = new Intent(RegisterClienteActivity.this, SeleccionActivity.class);
-
-                        intent.putExtra("cultivo","CACAO");
-                        intent.putExtra("primerNombre",etPrimerNombre.getText().toString().trim());
-                        intent.putExtra("segundoNombre",etSegundoNombre.getText().toString().trim());
-                        intent.putExtra("apellidoPaterno",etApellidoPaterno.getText().toString().trim());
-                        intent.putExtra("apellidoMaterno",etapellidomaterno.getText().toString().trim());
-                        intent.putExtra("estadoCivil",etEstadoCivil.getText().toString().trim());
-                        intent.putExtra("dni",etDni.getText().toString().trim());
-                        intent.putExtra("referenciaPredio",etPredioCliente.getText().toString().trim());
-                        startActivity(intent);
-                    }
-                    if (spinner.getSelectedItemPosition() == 2) {
-                        Intent intent = new Intent(RegisterClienteActivity.this, SeleccionActivity.class);
-                        intent.putExtra("cultivo","CAFE");
-                        intent.putExtra("primerNombre",etPrimerNombre.getText().toString().trim());
-                        intent.putExtra("segundoNombre",etSegundoNombre.getText().toString().trim());
-                        intent.putExtra("apellidoPaterno",etApellidoPaterno.getText().toString().trim());
-                        intent.putExtra("apellidoMaterno",etapellidomaterno.getText().toString().trim());
-                        intent.putExtra("estadoCivil",etEstadoCivil.getText().toString().trim());
-                        intent.putExtra("dni",etDni.getText().toString().trim());
-                        intent.putExtra("referenciaPredio",etPredioCliente.getText().toString().trim());
-
-                        startActivity(intent);
-                    }
-                    if (spinner.getSelectedItemPosition() == 3) {
-                        Intent intent = new Intent(RegisterClienteActivity.this, SeleccionActivity.class);
-                        intent.putExtra("cultivo","ACHOTE");
-                        intent.putExtra("primerNombre",etPrimerNombre.getText().toString().trim());
-                        intent.putExtra("segundoNombre",etSegundoNombre.getText().toString().trim());
-                        intent.putExtra("apellidoPaterno",etApellidoPaterno.getText().toString().trim());
-                        intent.putExtra("apellidoMaterno",etapellidomaterno.getText().toString().trim());
-                        intent.putExtra("estadoCivil",etEstadoCivil.getText().toString().trim());
-                        intent.putExtra("dni",etDni.getText().toString().trim());
-                        intent.putExtra("referenciaPredio",etPredioCliente.getText().toString().trim());
-
-                        startActivity(intent);
-                    }
-
-
-
-                }
 
             }
         });
@@ -121,7 +87,7 @@ public class RegisterClienteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(RegisterClienteActivity.this);
-                builder.setTitle("App");
+                builder.setTitle("Amazonía Resiliente");
                 builder.setMessage("¿Desea sincronizar");
                 builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
                     @Override
@@ -145,6 +111,105 @@ public class RegisterClienteActivity extends AppCompatActivity {
             }
         });
     }
+
+
+    private void userLogin() {
+        //first getting the values
+        final   String primerNombre = etPrimerNombre.getText().toString().trim();
+        final   String segundoNombre = etSegundoNombre.getText().toString();
+        final   String apellidoPaterno = etApellidoPaterno.getText().toString();
+        final   String apellidoMaterno = etapellidomaterno.getText().toString();
+        final   String estadoCivil = etEstadoCivil.getText().toString();
+        final   String dni = etDni.getText().toString();
+        final   String predioCliente = etPredioCliente.getText().toString();
+        final Spinner spinner = (Spinner) findViewById(R.id.spinner2);
+        //validating inputs
+        if (TextUtils.isEmpty(primerNombre)) {
+            etPrimerNombre.setError("No puede estar en blanco");
+            etPrimerNombre.requestFocus();
+            return;
+        }
+        if (TextUtils.isEmpty(segundoNombre)) {
+            etSegundoNombre.setError("No puede estar en blanco");
+            etSegundoNombre.requestFocus();
+            return;
+        }
+        if (TextUtils.isEmpty(apellidoPaterno)) {
+            etApellidoPaterno.setError("No puede estar en blanco");
+            etApellidoPaterno.requestFocus();
+            return;
+        }
+        if (TextUtils.isEmpty(apellidoMaterno)) {
+            etapellidomaterno.setError("No puede estar en blanco");
+            etapellidomaterno.requestFocus();
+            return;
+        }
+        if (TextUtils.isEmpty(estadoCivil)) {
+            etEstadoCivil.setError("No puede estar en blanco");
+            etEstadoCivil.requestFocus();
+            return;
+        }
+        if (TextUtils.isEmpty(dni)) {
+            etDni.setError("No puede estar en blanco");
+            etDni.requestFocus();
+            return;
+        }
+        if (TextUtils.isEmpty(predioCliente)) {
+            etPredioCliente.setError("No puede estar en blanco");
+            etPredioCliente.requestFocus();
+            return;
+        }
+        //if everything is fine
+        System.out.println(spinner.getSelectedItemPosition());
+        if (spinner.getSelectedItemPosition() == 0) {
+
+        } else {
+            if (spinner.getSelectedItemPosition() == 1) {
+                Intent intent = new Intent(RegisterClienteActivity.this, SeleccionActivity.class);
+
+                intent.putExtra("cultivo","CACAO");
+                intent.putExtra("primerNombre",etPrimerNombre.getText().toString().trim());
+                intent.putExtra("segundoNombre",etSegundoNombre.getText().toString().trim());
+                intent.putExtra("apellidoPaterno",etApellidoPaterno.getText().toString().trim());
+                intent.putExtra("apellidoMaterno",etapellidomaterno.getText().toString().trim());
+                intent.putExtra("estadoCivil",etEstadoCivil.getText().toString().trim());
+                intent.putExtra("dni",etDni.getText().toString().trim());
+                intent.putExtra("referenciaPredio",etPredioCliente.getText().toString().trim());
+                startActivity(intent);
+            }
+            if (spinner.getSelectedItemPosition() == 2) {
+                Intent intent = new Intent(RegisterClienteActivity.this, SeleccionActivity.class);
+                intent.putExtra("cultivo","CAFE");
+                intent.putExtra("primerNombre",etPrimerNombre.getText().toString().trim());
+                intent.putExtra("segundoNombre",etSegundoNombre.getText().toString().trim());
+                intent.putExtra("apellidoPaterno",etApellidoPaterno.getText().toString().trim());
+                intent.putExtra("apellidoMaterno",etapellidomaterno.getText().toString().trim());
+                intent.putExtra("estadoCivil",etEstadoCivil.getText().toString().trim());
+                intent.putExtra("dni",etDni.getText().toString().trim());
+                intent.putExtra("referenciaPredio",etPredioCliente.getText().toString().trim());
+
+                startActivity(intent);
+            }
+            if (spinner.getSelectedItemPosition() == 3) {
+                Intent intent = new Intent(RegisterClienteActivity.this, SeleccionActivity.class);
+                intent.putExtra("cultivo","ACHOTE");
+                intent.putExtra("primerNombre",etPrimerNombre.getText().toString().trim());
+                intent.putExtra("segundoNombre",etSegundoNombre.getText().toString().trim());
+                intent.putExtra("apellidoPaterno",etApellidoPaterno.getText().toString().trim());
+                intent.putExtra("apellidoMaterno",etapellidomaterno.getText().toString().trim());
+                intent.putExtra("estadoCivil",etEstadoCivil.getText().toString().trim());
+                intent.putExtra("dni",etDni.getText().toString().trim());
+                intent.putExtra("referenciaPredio",etPredioCliente.getText().toString().trim());
+
+                startActivity(intent);
+            }
+
+
+
+        }
+    }
+
+
     private boolean doubleBackToExitPressedOnce;
     private Handler mHandler = new Handler();
 
@@ -168,7 +233,7 @@ public class RegisterClienteActivity extends AppCompatActivity {
         if (doubleBackToExitPressedOnce) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("¿Desea salir de la App?");
-            builder.setTitle("Alerta!");
+            builder.setTitle("Amazonía Resiliente!");
             builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
