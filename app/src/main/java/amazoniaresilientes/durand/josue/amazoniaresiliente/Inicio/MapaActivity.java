@@ -1,5 +1,6 @@
 package amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio;
 
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.LoginActivity;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -120,7 +121,7 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         //    setSupportActionBar(toolbar);
         currentDrawingType = DrawingOption.DrawingType.POLYGON;
 
-        Toast.makeText(this, "dni:  " +referenciaPredio, Toast.LENGTH_SHORT).show();
+
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -1038,5 +1039,13 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
             Toast.makeText(MapaActivity.this, "Error occurred.", Toast.LENGTH_SHORT).show();
             Log.d(TAG, "Error occurred", throwable);
         }
+    }
+
+
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(MapaActivity.this, SeleccionActivity.class));
+
     }
 }

@@ -1,7 +1,6 @@
 package amazoniaresilientes.durand.josue.amazoniaresiliente.Login;
 
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -24,8 +23,8 @@ import java.util.Map;
 
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio.RegisterClienteActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.nthc_Admin;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Sincronizar.Sincronizar;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {

@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.nthc_Admin;
+
 public class SharedPrefManager {
 
     private static final String SHARED_PREF_NAME = "volleyregisterlogin";

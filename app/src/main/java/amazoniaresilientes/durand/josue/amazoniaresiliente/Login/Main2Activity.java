@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.nthc_Admin;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Main2Activity extends AppCompatActivity implements View.OnClickListener {

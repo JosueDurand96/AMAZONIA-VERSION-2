@@ -19,6 +19,7 @@ import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.SQLiteHelper2;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.SincronizarPoligono;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -481,8 +482,8 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
 
                             );
                             Toast.makeText(getApplicationContext(), "AGREGADO!", Toast.LENGTH_SHORT).show();
-//                            Intent intent = new Intent(PhotoActivity.this, SincronizarPoligono.class);
-//                            startActivity(intent);
+                            Intent intent = new Intent(PhotoActivity.this, SincronizarPoligono.class);
+                            startActivity(intent);
 
                            // imageView.setImageResource(R.mipmap.ic_launcher);
                         }
@@ -507,15 +508,10 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
 
     }
 
-    /*@Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode) {
-            case 1: {
-                openCamera();
-                break;
-            }
-            // other 'case' lines to check for other permissions this app might request.
-            // You can add here other case statements according to your requirement.
-        }
-    }*/
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(PhotoActivity.this, MapaActivity.class));
+
+    }
 }

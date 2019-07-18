@@ -1,4 +1,4 @@
-package amazoniaresilientes.durand.josue.amazoniaresiliente.Login;
+package amazoniaresilientes.durand.josue.amazoniaresiliente.Room;
 
 public class nthc_Admin {
     private int idnthc_usuario;

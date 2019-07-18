@@ -6,8 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.util.Base64;
 import android.util.Log;
@@ -19,36 +17,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.ByteArrayOutputStream;
-import java.io.DataOutputStream;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Map;
 
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio.PhotoActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio.RegisterClienteActivity;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.LoginActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.SharedPrefManager;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.nthc_Admin;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.nthc_Admin;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.Ntch_Amazonia;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.SincronizarListAdapter;
 import androidx.appcompat.app.AlertDialog;
 
 public class AdapterSincronizar extends BaseAdapter {

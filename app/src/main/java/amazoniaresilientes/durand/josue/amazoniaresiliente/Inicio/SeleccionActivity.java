@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.LoginActivity;
 import androidx.appcompat.app.AppCompatActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -278,5 +279,14 @@ public class SeleccionActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+
+
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(SeleccionActivity.this, RegisterClienteActivity.class));
+
     }
 }
