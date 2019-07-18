@@ -31,6 +31,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Hashtable;
@@ -194,6 +199,18 @@ public class AdapterSincronizar extends BaseAdapter {
             holder.imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    final Bitmap bitmap1 = BitmapFactory.decodeByteArray(imagen1, 0, imagen1.length);
+                           final Bitmap bitmap2 = BitmapFactory.decodeByteArray(imagen2, 0, imagen2.length);
+                            final Bitmap bitmap3 = BitmapFactory.decodeByteArray(imagen3, 0, imagen3.length);
+                            final Bitmap bitmap4 = BitmapFactory.decodeByteArray(imagen4, 0, imagen4.length);
+
+//                Intent visorImagen = new Intent(mContext,CarritoCompra.class);
+//                visorImagen.putExtra("idproducto",txtidproducto.getText().toString());
+
+//                mContext.startActivity(visorImagen);
+
+
+
                  //   Toast.makeText(context, ""+id_Usuario, Toast.LENGTH_SHORT).show();
                     class UploadImage extends AsyncTask<Bitmap,Void,String> {
 
@@ -221,20 +238,25 @@ public class AdapterSincronizar extends BaseAdapter {
                             final Bitmap bitmap2 = BitmapFactory.decodeByteArray(imagen2, 0, imagen2.length);
                             final Bitmap bitmap3 = BitmapFactory.decodeByteArray(imagen3, 0, imagen3.length);
                             final Bitmap bitmap4 = BitmapFactory.decodeByteArray(imagen4, 0, imagen4.length);
-                            String imagen = getStringImagen(bitmap1);
+                            String   imagen1 = getStringImagen(bitmap1);
                             String imagen2 = getStringImagen(bitmap2);
                             String imagen3 = getStringImagen(bitmap3);
                             String imagen4 = getStringImagen(bitmap4);
                             HashMap<String,String> data = new HashMap<>();
-                            data.put(KEY_IMAGE, imagen4);
-                            data.put(KEY_IMAGEN2,  imagen4);
-                            data.put(KEY_NAME2, "1");
-                            data.put(KEY_NAME3, "1");
-                            data.put(KEY_NAME4, "1");
-                            data.put(KEY_NAME5, "1");
-                            data.put(KEY_NAME6, "1");
-                            data.put(KEY_NAME7, "1");
-                            data.put(KEY_NAME8, "1");
+                            data.put(KEY_POLIGONO, poligono);
+                            data.put(KEY_AREA, area);
+                            data.put(KEY_IMAGEN1,  imagen1);
+                            data.put(KEY_LAT1, lat1);
+                            data.put(KEY_LNG1, lng1);
+                            data.put(KEY_IMAGEN2,  imagen2);
+                            data.put(KEY_LAT2, lat2);
+                            data.put(KEY_LNG2, lng2);
+                            data.put(KEY_IMAGEN3,imagen3);
+                            data.put(KEY_LAT3, lat3);
+                            data.put(KEY_LNG3, lng3);
+                            data.put(KEY_IMAGEN4,imagen4);
+                            data.put(KEY_LAT4, lat4);
+                            data.put(KEY_LNG4, lng4);
                             data.put(KEY_ID_CLIENTE,"1");
                             data.put(KEY_ID_USUARIO,"1");
                             String result = rh.sendPostRequest(UPLOAD_URL,data);
@@ -277,6 +299,7 @@ public class AdapterSincronizar extends BaseAdapter {
         String encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
         return encodedImage;
     }
+
 
     //CONVERTIDOR
     public static byte[] imageViewToByte(ImageView image) {

@@ -50,7 +50,7 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
     public static final String CAMERA_PREF = "camera_pref";
     ImageView imagePhoto, imagePhoto2, imagePhoto3, imagePhoto4;
     private Location location;
-    String latitude, longitude,latitude2, longitude2,latitude3, longitude3,latitude4, longitude4;
+    double latitude, longitude,latitude2, longitude2,latitude3, longitude3,latitude4, longitude4;
 
     private GoogleApiClient googleApiClient;
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
@@ -272,14 +272,15 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
         location = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
 
         if (location != null) {
-            latitude = String.valueOf(location.getLatitude());
-            longitude = String.valueOf(location.getLongitude());
-            latitude2 = String.valueOf(location.getLatitude());
-            longitude2 = String.valueOf(location.getLongitude());
-            latitude3 = String.valueOf(location.getLatitude());
-            longitude3 = String.valueOf(location.getLongitude());
-            latitude4 = String.valueOf(location.getLatitude());
-            longitude4 = String.valueOf(location.getLongitude());
+            latitude = location.getLatitude();
+            latitude = location.getLatitude();
+            longitude =location.getLongitude();
+            latitude2 = location.getLatitude();
+            longitude2 = location.getLongitude();
+            latitude3 = location.getLatitude();
+            longitude3 = location.getLongitude();
+            latitude4 = location.getLatitude();
+            longitude4 = location.getLongitude();
 
         }
 
@@ -313,14 +314,15 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
     @Override
     public void onLocationChanged(Location location) {
         if (location != null) {
-            latitude = String.valueOf(location.getLatitude());
-            longitude = String.valueOf(location.getLongitude());
-            latitude2 = String.valueOf(location.getLatitude());
-            longitude2 = String.valueOf(location.getLongitude());
-            latitude3 = String.valueOf(location.getLatitude());
-            longitude3 = String.valueOf(location.getLongitude());
-            latitude4 = String.valueOf(location.getLatitude());
-            longitude4 = String.valueOf(location.getLongitude());
+            latitude = location.getLatitude();
+            latitude = location.getLatitude();
+            longitude =location.getLongitude();
+            latitude2 = location.getLatitude();
+            longitude2 = location.getLongitude();
+            latitude3 = location.getLatitude();
+            longitude3 = location.getLongitude();
+            latitude4 = location.getLatitude();
+            longitude4 = location.getLongitude();
         }
     }
 
@@ -440,7 +442,17 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         try{
+                            String lat1 = String.valueOf(latitude);
+                            String lng1 = String.valueOf(longitude);
 
+                            String lat2 = String.valueOf(latitude2);
+                            String lng2 = String.valueOf(longitude2);
+
+                            String lat3 = String.valueOf(latitude3);
+                            String lng3 = String.valueOf(longitude3);
+
+                            String lat4 = String.valueOf(latitude4);
+                            String lng4 = String.valueOf(longitude4);
                             RegisterClienteActivity.sqLiteHelper.insertData(
                                     cultivo,
                                     primerNombre,
@@ -455,17 +467,17 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
                                     area,
                                     "1.0",
                                     imageViewToByte(imagePhoto),
-                                    latitude,
-                                    longitude,
+                                    lat1,
+                                    lng1,
                                     imageViewToByte(imagePhoto2),
-                                    latitude2,
-                                    longitude,
+                                    lat2,
+                                    lng2,
                                     imageViewToByte(imagePhoto3),
-                                    latitude3,
-                                    longitude3,
+                                    lat3,
+                                    lng3,
                                     imageViewToByte(imagePhoto4),
-                                    latitude4,
-                                    longitude4
+                                    lat4,
+                                    lng4
 
                             );
                             Toast.makeText(getApplicationContext(), "AGREGADO!", Toast.LENGTH_SHORT).show();
