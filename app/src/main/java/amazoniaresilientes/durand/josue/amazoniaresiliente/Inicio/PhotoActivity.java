@@ -438,7 +438,7 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(PhotoActivity.this);
                 builder.setTitle("App");
-                builder.setMessage("¿Desea continuar registrando los datos");
+                builder.setMessage("¿Desea guardar los datos");
                 builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
