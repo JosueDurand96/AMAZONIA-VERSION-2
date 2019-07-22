@@ -1,11 +1,14 @@
 package amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import android.os.Handler;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,9 +42,34 @@ import androidx.appcompat.widget.AppCompatImageView;
 
 public class RegisterClienteActivity extends AppCompatActivity {
 
-    EditText etPrimerNombre,etSegundoNombre,etApellidoPaterno,etapellidomaterno,etEstadoCivil,etDni,etPredioCliente;
+    EditText etPrimerNombre,etSegundoNombre,etApellidoPaterno,etapellidomaterno,etDni,etPredioCliente;
     public static SQLiteHelper2 sqLiteHelper;
-
+    EditText  powerfactorEditText ,etAsociacionProductiva ,etEdadCultivo,etEdadCliente;
+    Spinner s1;
+    Spinner spEstadoCivil;
+    String procedencia,txtprocedencia;
+    String[] Items = {
+            "Seleccionar Procedencia:",
+            "Nativo",
+            "Mestizo",
+            "Otro",
+    };
+    String[] Items2 = {
+            "Estado Civil :",
+            "Casado",
+            "Soltero",
+            "Conviviente",
+            "Divorciado",
+            "Viudo",
+            "Otro",
+    };
+    String[] ItemsCultivo = {
+            "Seleccionar Cultivo :",
+            "Café",
+            "Cacao",
+            "Achote",
+    };
+    String estadoCivil,cultivo = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,40 +78,136 @@ public class RegisterClienteActivity extends AppCompatActivity {
          etSegundoNombre=(EditText)findViewById(R.id.etSegundoNombre);
          etApellidoPaterno=(EditText)findViewById(R.id.etApellidoPaterno);
          etapellidomaterno=(EditText)findViewById(R.id.etapellidomaterno);
-         etEstadoCivil=(EditText)findViewById(R.id.etEstadoCivil);
+        spEstadoCivil=(Spinner) findViewById(R.id.etEstadoCivil);
          etDni=(EditText)findViewById(R.id.etDni);
          etPredioCliente=(EditText)findViewById(R.id.etPredioCliente);
+        etAsociacionProductiva=(EditText)findViewById(R.id.etAsociacionProductiva);
+        etEdadCliente=(EditText)findViewById(R.id.etEdadCliente);
+        etEdadCultivo=(EditText)findViewById(R.id.etEdadCultivo);
+        etAsociacionProductiva=(EditText)findViewById(R.id.etAsociacionProductiva);
         final Button loginButton = findViewById(R.id.btnCliente);
-        final Spinner spinner = (Spinner) findViewById(R.id.spinner2);
+        final Spinner spinnerCultivo = (Spinner) findViewById(R.id.spinner2);
         loginButton.setEnabled(true);
-        String[] letra = {"Seleccionar Cultivo", "CACAO","CAFÉ","ACHOTE"};
-        spinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, letra));
-        sqLiteHelper = new SQLiteHelper2(this, "AmazoniaDB.sqlite", null, 1);
 
+
+
+
+
+        ArrayAdapter<String> adapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, ItemsCultivo);
+        spinnerCultivo.setAdapter(adapter3);
+        spinnerCultivo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                cultivo = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        s1 = (Spinner) findViewById(R.id.spinnerAmp);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Items);
+
+
+        s1.setAdapter(adapter);
+        powerfactorEditText = (EditText)findViewById(R.id.powerfactorEditText);
+        s1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 0 :
+                        int indzex = s1.getSelectedItemPosition();
+                        powerfactorEditText.setFocusable(true);
+                        powerfactorEditText.setEnabled(false);
+                        powerfactorEditText.setCursorVisible(false);
+                        powerfactorEditText.setKeyListener(null);
+                        powerfactorEditText.setBackgroundColor(Color.TRANSPARENT);
+                        break;
+                    case 1:
+                        int index = s1.getSelectedItemPosition();
+                        powerfactorEditText.setEnabled(true);
+                        powerfactorEditText.setInputType(InputType.TYPE_CLASS_TEXT);
+                        powerfactorEditText.setFocusable(true);
+                        powerfactorEditText.setCursorVisible(true);
+                        break;
+                    case 2:
+                        int index1 = s1.getSelectedItemPosition();
+                        powerfactorEditText.setEnabled(true);
+                        powerfactorEditText.setInputType(InputType.TYPE_CLASS_TEXT);
+                        powerfactorEditText.setFocusable(true);
+                        powerfactorEditText.setCursorVisible(true);
+                        break;
+                    case 3:
+                        int indsex1 = s1.getSelectedItemPosition();
+                        powerfactorEditText.setEnabled(true);
+                        powerfactorEditText.setInputType(InputType.TYPE_CLASS_TEXT);
+                        powerfactorEditText.setFocusable(true);
+                        powerfactorEditText.setCursorVisible(true);
+                        break;
+                }
+                procedencia = parent.getItemAtPosition(position).toString();
+
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+        sqLiteHelper = new SQLiteHelper2(this, "AmazoniaDB.sqlite", null, 1);
         sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS AMAZONIA(Id INTEGER PRIMARY KEY AUTOINCREMENT, cultivo VARCHAR, primer_nombre VARCHAR, segundo_nombre VARCHAR, apellido_paterno VARCHAR, apellido_materno VARCHAR, estado_civil VARCHAR, dni VARCHAR, referencia_predio VARCHAR, departamento_cliente VARCHAR, poligono VARCHAR, area VARCHAR, precision VARCHAR, imagen1 BLOB, lat1 VARCHAR, lng1 VARCHAR, imagen2 BLOB, lat2 VARCHAR, lng2 VARCHAR, imagen3 BLOB, lat3 VARCHAR, lng3 VARCHAR, imagen4 BLOB, lat4 VARCHAR, lng4 VARCHAR)");
 
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Items2);
+        spEstadoCivil.setAdapter(adapter2);
+        spEstadoCivil.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-        final   String primerNombre = etPrimerNombre.getText().toString().trim();
-        final   String segundoNombre = etSegundoNombre.getText().toString();
-        final   String apellidoPaterno = etApellidoPaterno.getText().toString();
-        final   String apellidoMaterno = etapellidomaterno.getText().toString();
-        final   String estadoCivil = etEstadoCivil.getText().toString();
-        final   String dni = etDni.getText().toString();
-        final   String predioCliente = etPredioCliente.getText().toString();
+                estadoCivil = parent.getItemAtPosition(position).toString();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
 
         //ENVIO DE PARAMETROS DEPENDIENDO DE LA REGION PARA LOS MAPAS
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userLogin();
 
-
+                Intent intent = new Intent(getApplicationContext(),SeleccionActivity.class);
+                intent.putExtra("cultivo",cultivo);
+                intent.putExtra("edadCultivo",etEdadCultivo.getText().toString().trim());
+                intent.putExtra("primerNombre",etPrimerNombre.getText().toString().trim());
+                intent.putExtra("segundoNombre",etSegundoNombre.getText().toString().trim());
+                intent.putExtra("apellidoPaterno",etApellidoPaterno.getText().toString().trim());
+                intent.putExtra("apellidoMaterno",etapellidomaterno.getText().toString().trim());
+                intent.putExtra("edadCliente",etEdadCliente.getText().toString().trim());
+                intent.putExtra("estadoCivil",estadoCivil);
+                intent.putExtra("dni",etDni.getText().toString().trim());
+                intent.putExtra("referenciaPredio",etPredioCliente.getText().toString().trim());
+                intent.putExtra("procedenciaCombo",procedencia);
+                intent.putExtra("txtprocedencia",powerfactorEditText.getText().toString().trim());
+                intent.putExtra("asociacionProductiva",etAsociacionProductiva.getText().toString().trim());
+                startActivity(intent);
             }
         });
 
-        /**/
-        AppCompatImageView savePolygon = findViewById(R.id.listarPoligono);
-        savePolygon.setOnClickListener(new View.OnClickListener() {
+        //TODO: NUBE MANDA AL LISTAR LOS POLIGONOS
+        AppCompatImageView savePolygon = findViewById(R.id.listarPoligono);savePolygon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(RegisterClienteActivity.this);
@@ -111,124 +235,22 @@ public class RegisterClienteActivity extends AppCompatActivity {
             }
         });
     }
-
-
-    private void userLogin() {
-        //first getting the values
-        final   String primerNombre = etPrimerNombre.getText().toString().trim();
-        final   String segundoNombre = etSegundoNombre.getText().toString();
-        final   String apellidoPaterno = etApellidoPaterno.getText().toString();
-        final   String apellidoMaterno = etapellidomaterno.getText().toString();
-        final   String estadoCivil = etEstadoCivil.getText().toString();
-        final   String dni = etDni.getText().toString();
-        final   String predioCliente = etPredioCliente.getText().toString();
-        final Spinner spinner = (Spinner) findViewById(R.id.spinner2);
-        //validating inputs
-        if (TextUtils.isEmpty(primerNombre)) {
-            etPrimerNombre.setError("No puede estar en blanco");
-            etPrimerNombre.requestFocus();
-            return;
-        }
-        if (TextUtils.isEmpty(segundoNombre)) {
-            etSegundoNombre.setError("No puede estar en blanco");
-            etSegundoNombre.requestFocus();
-            return;
-        }
-        if (TextUtils.isEmpty(apellidoPaterno)) {
-            etApellidoPaterno.setError("No puede estar en blanco");
-            etApellidoPaterno.requestFocus();
-            return;
-        }
-        if (TextUtils.isEmpty(apellidoMaterno)) {
-            etapellidomaterno.setError("No puede estar en blanco");
-            etapellidomaterno.requestFocus();
-            return;
-        }
-        if (TextUtils.isEmpty(estadoCivil)) {
-            etEstadoCivil.setError("No puede estar en blanco");
-            etEstadoCivil.requestFocus();
-            return;
-        }
-        if (TextUtils.isEmpty(dni)) {
-            etDni.setError("No puede estar en blanco");
-            etDni.requestFocus();
-            return;
-        }
-        if (TextUtils.isEmpty(predioCliente)) {
-            etPredioCliente.setError("No puede estar en blanco");
-            etPredioCliente.requestFocus();
-            return;
-        }
-        //if everything is fine
-        System.out.println(spinner.getSelectedItemPosition());
-        if (spinner.getSelectedItemPosition() == 0) {
-
-        } else {
-            if (spinner.getSelectedItemPosition() == 1) {
-                Intent intent = new Intent(RegisterClienteActivity.this, SeleccionActivity.class);
-
-                intent.putExtra("cultivo","CACAO");
-                intent.putExtra("primerNombre",etPrimerNombre.getText().toString().trim());
-                intent.putExtra("segundoNombre",etSegundoNombre.getText().toString().trim());
-                intent.putExtra("apellidoPaterno",etApellidoPaterno.getText().toString().trim());
-                intent.putExtra("apellidoMaterno",etapellidomaterno.getText().toString().trim());
-                intent.putExtra("estadoCivil",etEstadoCivil.getText().toString().trim());
-                intent.putExtra("dni",etDni.getText().toString().trim());
-                intent.putExtra("referenciaPredio",etPredioCliente.getText().toString().trim());
-                startActivity(intent);
-            }
-            if (spinner.getSelectedItemPosition() == 2) {
-                Intent intent = new Intent(RegisterClienteActivity.this, SeleccionActivity.class);
-                intent.putExtra("cultivo","CAFE");
-                intent.putExtra("primerNombre",etPrimerNombre.getText().toString().trim());
-                intent.putExtra("segundoNombre",etSegundoNombre.getText().toString().trim());
-                intent.putExtra("apellidoPaterno",etApellidoPaterno.getText().toString().trim());
-                intent.putExtra("apellidoMaterno",etapellidomaterno.getText().toString().trim());
-                intent.putExtra("estadoCivil",etEstadoCivil.getText().toString().trim());
-                intent.putExtra("dni",etDni.getText().toString().trim());
-                intent.putExtra("referenciaPredio",etPredioCliente.getText().toString().trim());
-
-                startActivity(intent);
-            }
-            if (spinner.getSelectedItemPosition() == 3) {
-                Intent intent = new Intent(RegisterClienteActivity.this, SeleccionActivity.class);
-                intent.putExtra("cultivo","ACHOTE");
-                intent.putExtra("primerNombre",etPrimerNombre.getText().toString().trim());
-                intent.putExtra("segundoNombre",etSegundoNombre.getText().toString().trim());
-                intent.putExtra("apellidoPaterno",etApellidoPaterno.getText().toString().trim());
-                intent.putExtra("apellidoMaterno",etapellidomaterno.getText().toString().trim());
-                intent.putExtra("estadoCivil",etEstadoCivil.getText().toString().trim());
-                intent.putExtra("dni",etDni.getText().toString().trim());
-                intent.putExtra("referenciaPredio",etPredioCliente.getText().toString().trim());
-
-                startActivity(intent);
-            }
-
-
-
-        }
-    }
-
-
+    //Salir del App
     private boolean doubleBackToExitPressedOnce;
     private Handler mHandler = new Handler();
-
     private final Runnable mRunnable = new Runnable() {
         @Override
         public void run() {
             doubleBackToExitPressedOnce = false;
         }
     };
-
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
+    protected void onDestroy() { super.onDestroy();
 
         if (mHandler != null) { mHandler.removeCallbacks(mRunnable); }
     }
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
 
         if (doubleBackToExitPressedOnce) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -260,7 +282,4 @@ public class RegisterClienteActivity extends AppCompatActivity {
 
         mHandler.postDelayed(mRunnable, 2000);
     }
-
-
-
 }

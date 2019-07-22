@@ -282,9 +282,7 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
             longitude3 = location.getLongitude();
             latitude4 = location.getLatitude();
             longitude4 = location.getLongitude();
-
         }
-
         startLocationUpdates();
     }
 

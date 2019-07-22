@@ -21,7 +21,9 @@ public class SeleccionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         cultivo = getIntent().getStringExtra("cultivo");
+        String edadCultivo = getIntent().getStringExtra("edadCultivo");
         primerNombre = getIntent().getStringExtra("primerNombre");
         segundoNombre = getIntent().getStringExtra("segundoNombre");
         apellidoPaterno = getIntent().getStringExtra("apellidoPaterno");
@@ -29,13 +31,15 @@ public class SeleccionActivity extends AppCompatActivity {
         estadoCivil = getIntent().getStringExtra("estadoCivil");
         dni = getIntent().getStringExtra("dni");
         referenciaPredio = getIntent().getStringExtra("referenciaPredio");
-
+        String   procedenciaCombo = getIntent().getStringExtra("procedenciaCombo");
+        String   txtprocedencia = getIntent().getStringExtra("txtprocedencia");
+        String   asociacionProductiva = getIntent().getStringExtra("asociacionProductiva");
 
 
         setContentView(R.layout.activity_seleccion);
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
 
-    //    Toast.makeText(this, "Holaa "+regionSeleccionado, Toast.LENGTH_SHORT).show();
+
 
         final Button loginButton = findViewById(R.id.login);
         final Spinner spinner = (Spinner) findViewById(R.id.spinner);

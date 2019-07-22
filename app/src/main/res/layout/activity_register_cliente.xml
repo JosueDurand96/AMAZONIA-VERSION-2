@@ -76,10 +76,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="59dp" />
-
                 <Spinner
                     android:id="@+id/spinner2"
                     style="@style/Widget.AppCompat.Spinner"
@@ -88,8 +84,6 @@
                     android:layout_margin="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/spinner_bg"
                     android:dropDownWidth="300dp"
                     android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
                     android:paddingRight="8dp"
@@ -102,49 +96,104 @@
 
 
                 <EditText
-                    android:id="@+id/etPrimerNombre"
-                    android:layout_width="match_parent"
+                    android:id="@+id/etEdadCultivo"
+                    android:layout_width="388dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:inputType="number"
+                    android:layout_marginRight="8dp"
+                    android:ems="10"
+                    android:hint="Edad Cultivo"
+                     />
+
+                <EditText
+                    android:id="@+id/etPrimerNombre"
+                    android:layout_width="388dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
                     android:ems="10"
                     android:hint="Primer Nombre"
                     android:inputType="textPersonName" />
 
                 <EditText
                     android:id="@+id/etSegundoNombre"
-                    android:layout_width="match_parent"
+                    android:layout_width="388dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
                     android:ems="10"
                     android:hint="Segundo Nombre"
                     android:inputType="textPersonName" />
 
                 <EditText
                     android:id="@+id/etApellidoPaterno"
-                    android:layout_width="match_parent"
+                    android:layout_width="388dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
                     android:ems="10"
                     android:hint="Apellido Paterno"
                     android:inputType="textPersonName" />
 
                 <EditText
                     android:id="@+id/etapellidomaterno"
-                    android:layout_width="match_parent"
+                    android:layout_width="388dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
                     android:ems="10"
                     android:hint="Apellido Materno"
                     android:inputType="textPersonName" />
 
                 <EditText
-                    android:id="@+id/etEstadoCivil"
-                    android:layout_width="match_parent"
+                    android:id="@+id/etEdadCliente"
+                    android:layout_width="388dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
                     android:ems="10"
-                    android:hint="Estado Civil"
+                    android:hint="Edad Cliente"
                     android:inputType="textPersonName" />
+
+                <Spinner
+                    android:id="@+id/etEstadoCivil"
+                    android:layout_width="388dp"
+                    android:layout_height="46dp"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:ems="10" />
 
                 <EditText
                     android:id="@+id/etDni"
-                    android:layout_width="match_parent"
+                    android:layout_width="388dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
                     android:ems="10"
                     android:hint="Dni"
                     android:inputType="number"
@@ -152,27 +201,67 @@
 
                 <EditText
                     android:id="@+id/etPredioCliente"
-                    android:layout_width="match_parent"
+                    android:layout_width="388dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
                     android:ems="10"
                     android:hint="Referencia de Predio"
                     android:inputType="textPersonName" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <Spinner
+                    android:id="@+id/spinnerAmp"
+                    android:layout_width="387dp"
+                    android:layout_height="44dp"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:ems="10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="208dp" />
 
-                    <Space
-                        android:layout_width="431dp"
-                        android:layout_height="44dp"
-                        android:layout_weight="1" />
-                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="384dp"
+                    android:layout_height="103dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:ems="10"
+                    >
+                    <EditText
+                        android:id="@+id/powerfactorEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Procedencia"
+                        android:inputType="textPersonName" />
+                </androidx.cardview.widget.CardView>
+
+                <EditText
+                    android:id="@+id/etAsociacionProductiva"
+                    android:layout_width="388dp"
+                    android:layout_height="46dp"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:hint="Asociación Productiva"
+                    android:inputType="textPersonName" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
                     android:orientation="vertical">
 
                     <Button
