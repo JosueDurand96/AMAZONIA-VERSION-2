@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
-    tools:context=".amazoniaresilientes.durand.josue.amazoniaresiliente.Inicio.MapaActivity">
+    tools:context=".Inicio.MapaActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -22,8 +22,8 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/savePolygon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_gravity="right"
                 android:src="@drawable/baseline_save_24"
                 android:textAllCaps="false"
@@ -33,39 +33,38 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar3"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="?attr/actionBarSize"
             app:title="">
 
-            <androidx.appcompat.widget.AppCompatImageView
+            <ToggleButton
                 android:id="@+id/btnWalk"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_marginRight="40dp"
-                android:src="@drawable/baseline_directions_walk_24"
-                android:textAllCaps="false"
-                android:tint="@color/white" />
+                android:layout_width=   "45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:textOff=""
+                android:textOn="" />
 
-            <androidx.appcompat.widget.AppCompatImageView
+            <ToggleButton
                 android:id="@+id/drawPolygon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_marginRight="40dp"
-                android:src="@drawable/baseline_gesture_24"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="400dp"
                 android:textAllCaps="false"
+                android:textOff=""
+                android:textOn=""
                 android:tint="@color/white" />
 
             <!--<androidx.appcompat.widget.AppCompatImageView-->
-                <!--android:id="@+id/deletePoligono"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="start"-->
-                <!--android:layout_marginRight="40dp"-->
-                <!--android:src="@drawable/baseline_delete_24"-->
-                <!--android:textAllCaps="false"-->
-                <!--android:tint="@color/white" />-->
+            <!--android:id="@+id/deletePoligono"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="start"-->
+            <!--android:layout_marginRight="40dp"-->
+            <!--android:src="@drawable/baseline_delete_24"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:tint="@color/white" />-->
 
         </androidx.appcompat.widget.Toolbar>
         <androidx.appcompat.widget.Toolbar

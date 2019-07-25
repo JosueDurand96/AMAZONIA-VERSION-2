@@ -20,10 +20,16 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
+
 import com.cocoahero.android.geojson.Feature;
 import com.cocoahero.android.geojson.FeatureCollection;
 import com.cocoahero.android.geojson.GeoJSON;
@@ -763,27 +769,35 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         });
 
 
-        AppCompatImageView walk = findViewById(R.id.btnWalk);
-        walk.setOnClickListener(new View.OnClickListener() {
+        //TODO: PERSONA   ic_directions_walk_red_24dp
+        final ToggleButton walk = findViewById(R.id.btnWalk);
+        walk.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                try {
-                    locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-                    currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-                    if (currentLocation != null) {
-                        //TODO:PROBANDO PRECISIÓN
-                        lengthTextView.setText("Precision: " + currentLocation.getSpeedAccuracyMetersPerSecond());
-                        float precision = currentLocation.getSpeedAccuracyMetersPerSecond();
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    walk.setBackground(getDrawable(R.drawable.ic_directions_walk_red_24dp));
+                    try {
+                        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+                        currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                        if (currentLocation != null) {
+                            //TODO:PROBANDO PRECISIÓN
+                            lengthTextView.setText("Precision: " + currentLocation.getSpeedAccuracyMetersPerSecond());
+                            float precision = currentLocation.getSpeedAccuracyMetersPerSecond();
+                        }
+                        btnMarker.setVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
+                    } catch (SecurityException e) {
+                        e.printStackTrace();
                     }
-                    btnMarker.setVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
-                } catch (SecurityException e) {
-                    e.printStackTrace();
+
+                }else {
+                    walk.setBackground(getDrawable(R.drawable.baseline_directions_walk_24));
                 }
             }
         });
 
+
         /**/
-        AppCompatImageView savePolygon = findViewById(R.id.savePolygon);
+        final AppCompatImageView savePolygon = findViewById(R.id.savePolygon);
         savePolygon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -851,52 +865,78 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
                 }
             }
         });
-        AppCompatImageView drawPolygon = findViewById(R.id.drawPolygon);
-        drawPolygon.setOnClickListener(new View.OnClickListener() {
+        //TODO: DIBUJAR DRAW
+        final ToggleButton drawPolygon222 = findViewById(R.id.drawPolygon);
+        drawPolygon222.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-                    @Override
-                    public void onMapClick(LatLng latLng) {
-                        try {
-                            Marker marker = mMap.addMarker(new MarkerOptions().position(latLng).draggable(true));
-                            marker.setZIndex(102);
-                            marker.setTag(latLng);
-                            markerList.add(marker);
-                            points.add(latLng);
-                            areaTextView.setText(getString(R.string.area_label) + String.format(Locale.getDefault(), "%.2f", (CalUtils.getArea(points)) / 10000) + " ha");
-                            PolygonOptions polygonOptions = new PolygonOptions();
-                            polygonOptions.fillColor(Color.argb(100, 85, 85, 85));
-                            polygonOptions.strokeColor(Color.argb(50, 85, 85, 85));
-                            polygonOptions.strokeWidth(3);
-                            polygonOptions.zIndex(101);
-                            polygonOptions.addAll(points);
-                            polygon = mMap.addPolygon(polygonOptions);
-                            PositionList positionList = new PositionList();
-                            for (LatLng lng : points) {
-                                Position position = new Position(lng.latitude, lng.longitude);
-                                positionList.addPosition(position);
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    drawPolygon222.setBackground(getDrawable(R.drawable.baseline_gesture_rojo));
+                    mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+                        @Override
+                        public void onMapClick(LatLng latLng) {
+                            try {
+                                Marker marker = mMap.addMarker(new MarkerOptions().position(latLng).draggable(true));
+                                marker.setZIndex(102);
+                                marker.setTag(latLng);
+                                markerList.add(marker);
+                                points.add(latLng);
+                                areaTextView.setText(getString(R.string.area_label) + String.format(Locale.getDefault(), "%.2f", (CalUtils.getArea(points)) / 10000) + " ha");
+                                PolygonOptions polygonOptions = new PolygonOptions();
+                                polygonOptions.fillColor(Color.argb(100, 85, 85, 85));
+                                polygonOptions.strokeColor(Color.argb(50, 85, 85, 85));
+                                polygonOptions.strokeWidth(3);
+                                polygonOptions.zIndex(101);
+                                polygonOptions.addAll(points);
+                                polygon = mMap.addPolygon(polygonOptions);
+                                PositionList positionList = new PositionList();
+                                for (LatLng lng : points) {
+                                    Position position = new Position(lng.latitude, lng.longitude);
+                                    positionList.addPosition(position);
+                                }
+                                positionList.addPosition(new Position(points.get(0).latitude, points.get(0).longitude));
+                                Ring ring = new Ring();
+                                ring.setPositions(positionList);
+                                Polygon polygon = new Polygon(ring);
+                                Feature feature = new Feature(polygon);
+                                Log.i("feature", "" + feature.getProperties());
+                                JSONObject jsonObject = feature.toJSON();
+                                Log.i("GeoJson: ", "" + jsonObject);
+                                FeatureCollection featureCollection = new FeatureCollection();
+                                featureCollection.addFeature(feature);
+                                JSON_OBJECT_COLLECTION = featureCollection.toJSON();
+                                //cargaDatos();
+                                Log.i("GeoJsonCollection: ", "" + JSON_OBJECT_COLLECTION);
+                            } catch (Exception e) {
+                                e.printStackTrace();
                             }
-                            positionList.addPosition(new Position(points.get(0).latitude, points.get(0).longitude));
-                            Ring ring = new Ring();
-                            ring.setPositions(positionList);
-                            Polygon polygon = new Polygon(ring);
-                            Feature feature = new Feature(polygon);
-                            Log.i("feature", "" + feature.getProperties());
-                            JSONObject jsonObject = feature.toJSON();
-                            Log.i("GeoJson: ", "" + jsonObject);
-                            FeatureCollection featureCollection = new FeatureCollection();
-                            featureCollection.addFeature(feature);
-                            JSON_OBJECT_COLLECTION = featureCollection.toJSON();
-                            //cargaDatos();
-                            Log.i("GeoJsonCollection: ", "" + JSON_OBJECT_COLLECTION);
-                        } catch (Exception e) {
-                            e.printStackTrace();
                         }
-                    }
-                });
+                    });
+                }else {
+                    drawPolygon222.setBackground(getDrawable(R.drawable.baseline_gesture_24));
+                }
             }
         });
+
+
+//        drawPolygon.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                switch(event.getAction())
+//                {
+//                    case MotionEvent.ACTION_DOWN :
+//                        drawPolygon.setImageResource(R.drawable.baseline_directions_walk_24);
+//                        Toast.makeText(getApplicationContext(), "action up", Toast.LENGTH_SHORT).show();
+//                        break;
+//                    case MotionEvent.ACTION_UP :
+//                        drawPolygon.setImageResource(R.drawable.baseline_gesture_24);
+//                        Toast.makeText(getApplicationContext(), "action up", Toast.LENGTH_SHORT).show();
+//                        break;
+//                }
+//                return false;
+//
+//            }
+//        });
     }
 
     private void drawPolyline(List<LatLng> latLngList) {
