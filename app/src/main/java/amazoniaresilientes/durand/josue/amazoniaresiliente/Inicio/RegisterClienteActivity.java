@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 import android.os.Handler;
 import android.text.InputType;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,26 +14,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.LoginActivity;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.SharedPrefManager;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.URLs;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.VolleySingleton;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.SQLiteHelper2;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.SincronizarPoligono;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.nthc_Admin;
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Sincronizar.Sincronizar;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.adapter.SQLiteHelper3;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
@@ -43,11 +24,11 @@ import androidx.appcompat.widget.AppCompatImageView;
 public class RegisterClienteActivity extends AppCompatActivity {
 
     EditText etPrimerNombre,etSegundoNombre,etApellidoPaterno,etapellidomaterno,etDni,etPredioCliente;
-    public static SQLiteHelper2 sqLiteHelper;
+    public static SQLiteHelper3     sqLiteHelper2;
     EditText  powerfactorEditText ,etAsociacionProductiva ,etEdadCultivo,etEdadCliente;
     Spinner s1;
-    Spinner spEstadoCivil;
-    String procedencia,txtprocedencia;
+    Spinner spEstadoCivil,specotipo;
+    String procedencia,txtprocedencia,ecotipo;
     String[] Items = {
             "Seleccionar Procedencia:",
             "Nativo",
@@ -69,6 +50,12 @@ public class RegisterClienteActivity extends AppCompatActivity {
             "Cacao",
             "Achote",
     };
+    String[] ItemsEcotipo = {
+            "Seleccionar Ecotipo :",
+            "NATIVO",
+            "CCN51",
+            "OTRO",
+    };
     String estadoCivil,cultivo = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +76,20 @@ public class RegisterClienteActivity extends AppCompatActivity {
         final Spinner spinnerCultivo = (Spinner) findViewById(R.id.spinner2);
         loginButton.setEnabled(true);
 
+        specotipo=(Spinner) findViewById(R.id.specotipo);
+        ArrayAdapter<String> adapter4 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, ItemsEcotipo);
+        specotipo.setAdapter(adapter4);
+        specotipo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                ecotipo = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
 
 
@@ -166,8 +167,8 @@ public class RegisterClienteActivity extends AppCompatActivity {
 
 
 
-        sqLiteHelper = new SQLiteHelper2(this, "AmazoniaDB.sqlite", null, 1);
-        sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS AMAZONIA(Id INTEGER PRIMARY KEY AUTOINCREMENT, cultivo VARCHAR, primer_nombre VARCHAR, segundo_nombre VARCHAR, apellido_paterno VARCHAR, apellido_materno VARCHAR, estado_civil VARCHAR, dni VARCHAR, referencia_predio VARCHAR, departamento_cliente VARCHAR, poligono VARCHAR, area VARCHAR, precision VARCHAR, imagen1 BLOB, lat1 VARCHAR, lng1 VARCHAR, imagen2 BLOB, lat2 VARCHAR, lng2 VARCHAR, imagen3 BLOB, lat3 VARCHAR, lng3 VARCHAR, imagen4 BLOB, lat4 VARCHAR, lng4 VARCHAR)");
+        sqLiteHelper2 = new SQLiteHelper3(this, "AmazoniaDB.sqlite", null, 1);
+        sqLiteHelper2.queryData3("CREATE TABLE IF NOT EXISTS AMAZONIASS(Id INTEGER PRIMARY KEY AUTOINCREMENT, cultivo VARCHAR, primer_nombre VARCHAR, segundo_nombre VARCHAR, apellido_paterno VARCHAR, apellido_materno VARCHAR, estado_civil VARCHAR, dni VARCHAR, referencia_predio VARCHAR, departamento_cliente VARCHAR, poligono VARCHAR, area VARCHAR, precision VARCHAR, imagen1 BLOB, lat1 VARCHAR, lng1 VARCHAR, imagen2 BLOB, lat2 VARCHAR, lng2 VARCHAR, imagen3 BLOB, lat3 VARCHAR, lng3 VARCHAR, imagen4 BLOB, lat4 VARCHAR, lng4 VARCHAR, edad_cultivo VARCHAR, edad_cliente VARCHAR, procedenciaCombo VARCHAR, txtprocedencia VARCHAR, asociacionProductiva VARCHAR, ecotipo VARCHAR)");
 
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Items2);
         spEstadoCivil.setAdapter(adapter2);

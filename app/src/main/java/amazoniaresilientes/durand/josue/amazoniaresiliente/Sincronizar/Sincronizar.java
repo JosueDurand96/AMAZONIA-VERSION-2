@@ -20,6 +20,7 @@ import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.LoginActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.Ntch_Amazonia;
 
+import amazoniaresilientes.durand.josue.amazoniaresiliente.adapter.AdapterSincronizar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -37,7 +38,7 @@ public class Sincronizar extends AppCompatActivity {
         gridView.setAdapter(adapter);
 
         // get all data from sqlite
-        Cursor cursor = RegisterClienteActivity.sqLiteHelper.getData("SELECT * FROM AMAZONIA");
+        Cursor cursor = RegisterClienteActivity.sqLiteHelper2.getData3("SELECT * FROM AMAZONIASS");
         list.clear();
         while (cursor.moveToNext()) {
             String id = cursor.getString(0);
@@ -65,7 +66,14 @@ public class Sincronizar extends AppCompatActivity {
             byte[] imagen4 = cursor.getBlob(22);
             String lat4 = cursor.getString(23);
             String lng4 = cursor.getString(24);
-            list.add(new Ntch_Amazonia(id,cultivo, primer_nombre, segundo_nombre,apellido_paterno,apellido_materno,estado_civil,dni,referencia_predio,departamento_cliente,poligono,area,precision,imagen1,lat1,lng1,imagen2,lat2,lng2,imagen3,lat3,lng3,imagen4,lat4,lng4));
+            String edad_cultivo = cursor.getString(25);
+            String edad_cliente = cursor.getString(26);
+            String procedenciaCombo = cursor.getString(27);
+            String txtprocedencia = cursor.getString(28);
+            String asociacionProductiva = cursor.getString(29);
+            String ecotipo = cursor.getString(30);
+
+            list.add(new Ntch_Amazonia(id, cultivo, primer_nombre, segundo_nombre,apellido_paterno,apellido_materno,estado_civil,dni,referencia_predio,departamento_cliente,poligono,area,precision,imagen1,lat1,lng1,imagen2,lat2,lng2,imagen3,lat3,lng3,imagen4,lat4,lng4,edad_cultivo,edad_cliente,procedenciaCombo,txtprocedencia,asociacionProductiva,ecotipo));
         }
         adapter.notifyDataSetChanged();
 
@@ -82,7 +90,7 @@ public class Sincronizar extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int item) {
                         if (item==0){
-                            Cursor c = RegisterClienteActivity.sqLiteHelper.getData("SELECT id FROM AMAZONIA");
+                            Cursor c = RegisterClienteActivity.sqLiteHelper2.getData3("SELECT id FROM AMAZONIASS");
                             ArrayList<Integer> arrID = new ArrayList<Integer>();
                             while (c.moveToNext()){
                                 arrID.add(c.getInt(0));
@@ -194,7 +202,7 @@ public class Sincronizar extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 try {
-                    RegisterClienteActivity.sqLiteHelper.deleteData(idFood);
+                    RegisterClienteActivity.sqLiteHelper2.deleteData(idFood);
                     Toast.makeText(getApplicationContext(), "Registro Eliminado!!!",Toast.LENGTH_SHORT).show();
                 } catch (Exception e){
                     Log.e("error", e.getMessage());

@@ -11,6 +11,9 @@ public class Ntch_Amazonia {
     private String estado_civil;
     private String dni;
     private String referencia_predio;
+
+
+
     //TODO: PANTALLA 2
     private String departamento_cliente;
     //TODO: PANTALLA 3
@@ -31,7 +34,14 @@ public class Ntch_Amazonia {
     private String lat4;
     private String lng4;
 
-    public Ntch_Amazonia(String id, String cultivo, String primer_nombre, String segundo_nombre, String apellido_paterno, String apellido_materno, String estado_civil, String dni, String referencia_predio, String departamento_cliente, String poligono, String area, String precision, byte[] imagen1, String lat1, String lng1, byte[] imagen2, String lat2, String lng2, byte[] imagen3, String lat3, String lng3, byte[] imagen4, String lat4, String lng4) {
+    private String edad_cultivo;
+    private String edad_cliente;
+    private String procedenciaCombo;
+    private String txtprocedencia;
+    private String asociacionProductiva;
+    private String ecotipo;
+
+    public Ntch_Amazonia(String id, String cultivo, String primer_nombre, String segundo_nombre, String apellido_paterno, String apellido_materno, String estado_civil, String dni, String referencia_predio, String departamento_cliente, String poligono, String area, String precision, byte[] imagen1, String lat1, String lng1, byte[] imagen2, String lat2, String lng2, byte[] imagen3, String lat3, String lng3, byte[] imagen4, String lat4, String lng4, String edad_cultivo, String edad_cliente, String procedenciaCombo, String txtprocedencia, String asociacionProductiva, String ecotipo) {
         this.id = id;
         this.cultivo = cultivo;
         this.primer_nombre = primer_nombre;
@@ -57,6 +67,20 @@ public class Ntch_Amazonia {
         this.imagen4 = imagen4;
         this.lat4 = lat4;
         this.lng4 = lng4;
+        this.edad_cultivo = edad_cultivo;
+        this.edad_cliente = edad_cliente;
+        this.procedenciaCombo = procedenciaCombo;
+        this.txtprocedencia = txtprocedencia;
+        this.asociacionProductiva = asociacionProductiva;
+        this.ecotipo = ecotipo;
+    }
+
+    public String getEcotipo() {
+        return ecotipo;
+    }
+
+    public void setEcotipo(String ecotipo) {
+        this.ecotipo = ecotipo;
     }
 
     public String getId() {
@@ -129,6 +153,46 @@ public class Ntch_Amazonia {
 
     public void setReferencia_predio(String referencia_predio) {
         this.referencia_predio = referencia_predio;
+    }
+
+    public String getEdad_cultivo() {
+        return edad_cultivo;
+    }
+
+    public void setEdad_cultivo(String edad_cultivo) {
+        this.edad_cultivo = edad_cultivo;
+    }
+
+    public String getEdad_cliente() {
+        return edad_cliente;
+    }
+
+    public void setEdad_cliente(String edad_cliente) {
+        this.edad_cliente = edad_cliente;
+    }
+
+    public String getProcedenciaCombo() {
+        return procedenciaCombo;
+    }
+
+    public void setProcedenciaCombo(String procedenciaCombo) {
+        this.procedenciaCombo = procedenciaCombo;
+    }
+
+    public String getTxtprocedencia() {
+        return txtprocedencia;
+    }
+
+    public void setTxtprocedencia(String txtprocedencia) {
+        this.txtprocedencia = txtprocedencia;
+    }
+
+    public String getAsociacionProductiva() {
+        return asociacionProductiva;
+    }
+
+    public void setAsociacionProductiva(String asociacionProductiva) {
+        this.asociacionProductiva = asociacionProductiva;
     }
 
     public String getDepartamento_cliente() {
@@ -258,4 +322,6 @@ public class Ntch_Amazonia {
     public void setLng4(String lng4) {
         this.lng4 = lng4;
     }
+
+
 }

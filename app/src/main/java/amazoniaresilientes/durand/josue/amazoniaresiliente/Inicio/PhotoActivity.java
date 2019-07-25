@@ -18,8 +18,8 @@ import android.widget.Toast;
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
-import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.SQLiteHelper2;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.SincronizarPoligono;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.adapter.SQLiteHelper3;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -66,6 +66,8 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
     String area;
     String cultivo,primerNombre,segundoNombre,apellidoPaterno,apellidoMaterno,estadoCivil,dni,referenciaPredio,regionSeleccionado;
 
+
+    String edadCultivo,procedenciaCombo,txtprocedencia,asociacionProductiva,edadCliente;
     String lat1;
     TextView txtnombres, txtregion,txtcultivo,txtdni;
     Button btnAdd;
@@ -73,7 +75,7 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
 
     final int REQUEST_CODE_GALLERY = 999;
 
-    public static SQLiteHelper2 sqLiteHelper;
+    public static SQLiteHelper3 sqLiteHelper;
 
     public  static RegisterClienteActivity objregister;
     @Override
@@ -82,13 +84,19 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
         area=getIntent().getStringExtra("area");
         regionSeleccionado = getIntent().getStringExtra("region");
         cultivo = getIntent().getStringExtra("cultivo");
+        edadCultivo = getIntent().getStringExtra("edadCultivo");
         primerNombre = getIntent().getStringExtra("primerNombre");
         segundoNombre = getIntent().getStringExtra("segundoNombre");
         apellidoPaterno = getIntent().getStringExtra("apellidoPaterno");
         apellidoMaterno = getIntent().getStringExtra("apellidoMaterno");
+           edadCliente = getIntent().getStringExtra("edadCliente");
+
         estadoCivil = getIntent().getStringExtra("estadoCivil");
         dni = getIntent().getStringExtra("dni");
         referenciaPredio = getIntent().getStringExtra("referenciaPredio");
+        procedenciaCombo = getIntent().getStringExtra("procedenciaCombo");
+        txtprocedencia = getIntent().getStringExtra("txtprocedencia");
+        asociacionProductiva = getIntent().getStringExtra("asociacionProductiva");
         geoJson = getIntent().getStringExtra("GeoJson");
 
         setContentView(R.layout.activity_photo);
@@ -101,11 +109,13 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
         imagePhoto3 = findViewById(R.id.imagePhoto3);
         imagePhoto4 = findViewById(R.id.imagePhoto4);
 
+        Toast.makeText(getApplicationContext(), "sssss"+edadCliente +" ddd"+edadCultivo, Toast.LENGTH_SHORT).show();
 
-        objregister.sqLiteHelper = new SQLiteHelper2(this, "AmazoniaDB.sqlite", null, 1);
-
-        objregister.sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS AMAZONIA(Id INTEGER PRIMARY KEY AUTOINCREMENT, cultivo VARCHAR, primer_nombre VARCHAR, segundo_nombre VARCHAR, apellido_paterno VARCHAR, apellido_materno VARCHAR, estado_civil VARCHAR, dni VARCHAR, referencia_predio VARCHAR, departamento_cliente VARCHAR, poligono VARCHAR, area VARCHAR, precision VARCHAR, imagen1 BLOB, lat1 VARCHAR, lng1 VARCHAR, imagen2 BLOB, lat2 VARCHAR, lng2 VARCHAR, imagen3 BLOB, lat3 VARCHAR, lng3 VARCHAR, imagen4 BLOB, lat4 VARCHAR, lng4 VARCHAR)");
-
+       // sqLiteHelper = new SQLiteHelper2(this, "AmazoniaDB.sqlite", null, 1);
+     //   sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS AMAZONIA(Id INTEGER PRIMARY KEY AUTOINCREMENT, cultivo VARCHAR, primer_nombre VARCHAR, segundo_nombre VARCHAR, apellido_paterno VARCHAR, apellido_materno VARCHAR, estado_civil VARCHAR, dni VARCHAR, referencia_predio VARCHAR, edad_cultivo VARCHAR, edad_cliente VARCHAR, procedenciaCombo VARCHAR, txtprocedencia VARCHAR, asociacionProductiva VARCHAR, departamento_cliente VARCHAR, poligono VARCHAR, area VARCHAR, precision VARCHAR, imagen1 BLOB, lat1 VARCHAR, lng1 VARCHAR, imagen2 BLOB, lat2 VARCHAR, lng2 VARCHAR, imagen3 BLOB, lat3 VARCHAR, lng3 VARCHAR, imagen4 BLOB, lat4 VARCHAR, lng4 VARCHAR)");
+//        sqLiteHelper = new SQLiteHelper3(this, "AmazoniaDB.sqlite", null, 1);
+//        sqLiteHelper.queryData3("CREATE TABLE IF NOT EXISTS AMAZONIA(Id INTEGER PRIMARY KEY AUTOINCREMENT, cultivo VARCHAR, primer_nombre VARCHAR, segundo_nombre VARCHAR, apellido_paterno VARCHAR, apellido_materno VARCHAR, estado_civil VARCHAR, dni VARCHAR, referencia_predio VARCHAR, edad_cultivo VARCHAR, edad_cliente VARCHAR, procedenciaCombo VARCHAR, txtprocedencia VARCHAR, asociacionProductiva VARCHAR, departamento_cliente VARCHAR, poligono VARCHAR, area VARCHAR, precision VARCHAR, imagen1 BLOB, lat1 VARCHAR, lng1 VARCHAR, imagen2 BLOB, lat2 VARCHAR, lng2 VARCHAR, imagen3 BLOB, lat3 VARCHAR, lng3 VARCHAR, imagen4 BLOB, lat4 VARCHAR, lng4 VARCHAR)");
+//
 
         imagePhoto4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -428,7 +438,7 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
         }
     }
 
-    private void setUpButtons() {
+        private void setUpButtons() {
         AppCompatImageView savePolygon = findViewById(R.id.savePolygon);
         savePolygon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -436,7 +446,7 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(PhotoActivity.this);
                 builder.setTitle("App");
-                builder.setMessage("¿Desea guardar los datos");
+                builder.setMessage("¿Desea guardar los datos 2");
                 builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -452,36 +462,41 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
 
                             String lat4 = String.valueOf(latitude4);
                             String lng4 = String.valueOf(longitude4);
-                            RegisterClienteActivity.sqLiteHelper.insertData(
-                                    cultivo,
-                                    primerNombre,
-                                    segundoNombre,
-                                    apellidoPaterno,
-                                    apellidoPaterno,
-                                    estadoCivil,
-                                    dni,
-                                    referenciaPredio,
-                                    regionSeleccionado,
-                                    geoJson,
-                                    area,
+                            RegisterClienteActivity.sqLiteHelper2.insertData3(
+                                    "1.0",
+                                    "josue",
+                                    "1.0",
+                                    "durand xd",
+                                    "1.0",
+                                    "1.0",
+                                    "22222",
+                                    "1.0",
+                                    "1.0",
+                                    "1.0",
+                                    "1.0",
                                     "1.0",
                                     imageViewToByte(imagePhoto),
-                                    lat1,
-                                    lng1,
-                                    imageViewToByte(imagePhoto2),
-                                    lat2,
-                                    lng2,
-                                    imageViewToByte(imagePhoto3),
-                                    lat3,
-                                    lng3,
-                                    imageViewToByte(imagePhoto4),
-                                    lat4,
-                                    lng4
-
+                                    "1.0",
+                                    "1.0",
+                                    imageViewToByte(imagePhoto),
+                                    "1.0",
+                                    "1.0",
+                                    imageViewToByte(imagePhoto),
+                                    "1.0",
+                                    "1.0",
+                                    imageViewToByte(imagePhoto),
+                                    "1.0",
+                                    "1.0",
+                                    "edad cultivo",
+                                    "edad cliente",
+                                    "combo",
+                                    "txtprocedencia",
+                                    "asociacion",
+                                    "ee0"
                             );
                             Toast.makeText(getApplicationContext(), "AGREGADO!", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(PhotoActivity.this, SincronizarPoligono.class);
-                            startActivity(intent);
+//                            Intent intent = new Intent(PhotoActivity.this, SincronizarPoligono.class);
+//                            startActivity(intent);
 
                            // imageView.setImageResource(R.mipmap.ic_launcher);
                         }

@@ -79,7 +79,7 @@
                 <Spinner
                     android:id="@+id/spinner2"
                     style="@style/Widget.AppCompat.Spinner"
-                    android:layout_width="391dp"
+                    android:layout_width="388dp"
                     android:layout_height="?attr/dropdownListPreferredItemHeight"
                     android:layout_margin="8dp"
                     android:layout_marginStart="8dp"
@@ -94,6 +94,24 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+
+                <Spinner
+                    android:id="@+id/specotipo"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="388dp"
+                    android:layout_height="?attr/dropdownListPreferredItemHeight"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:dropDownWidth="300dp"
+                    android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+                    android:paddingRight="8dp"
+                    android:popupBackground="@android:color/white"
+                    android:popupElevation="3dp"
+                    android:stateListAnimator="@drawable/spinner_sla"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
                     android:id="@+id/etEdadCultivo"
@@ -172,7 +190,7 @@
                     android:layout_marginRight="8dp"
                     android:ems="10"
                     android:hint="Edad Cliente"
-                    android:inputType="textPersonName" />
+                    android:inputType="number" />
 
                 <Spinner
                     android:id="@+id/etEstadoCivil"

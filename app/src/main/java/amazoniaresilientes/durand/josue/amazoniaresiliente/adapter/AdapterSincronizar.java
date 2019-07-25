@@ -1,4 +1,4 @@
-package amazoniaresilientes.durand.josue.amazoniaresiliente.Sincronizar;
+package amazoniaresilientes.durand.josue.amazoniaresiliente.adapter;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -26,6 +26,8 @@ import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.SharedPrefManag
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.nthc_Admin;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.Ntch_Amazonia;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Sincronizar.RequestHandler;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Sincronizar.Sincronizar;
 import androidx.appcompat.app.AlertDialog;
 
 public class AdapterSincronizar extends BaseAdapter {
@@ -172,7 +174,7 @@ public class AdapterSincronizar extends BaseAdapter {
             holder.imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    RegisterClienteActivity.sqLiteHelper.deleteData(Integer.parseInt(id_bd_sqlite));
+                    RegisterClienteActivity.sqLiteHelper2.deleteData(Integer.parseInt(id_bd_sqlite));
                     final AlertDialog.Builder dialogDelete = new AlertDialog.Builder(context);
 
                     dialogDelete.setTitle("Amazonía Resiliente!!");
@@ -250,7 +252,7 @@ public class AdapterSincronizar extends BaseAdapter {
                             } catch (Exception e){
                                 Log.e("error", e.getMessage());
                             }
-                            Intent i = new Intent(context,Sincronizar.class);
+                            Intent i = new Intent(context, Sincronizar.class);
                             context.startActivity(i);
                         }
                     });

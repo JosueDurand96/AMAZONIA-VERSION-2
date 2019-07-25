@@ -1,4 +1,4 @@
-package amazoniaresilientes.durand.josue.amazoniaresiliente.Room;
+package amazoniaresilientes.durand.josue.amazoniaresiliente.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 import amazoniaresilientes.durand.josue.amazoniaresiliente.Login.LoginActivity;
 import amazoniaresilientes.durand.josue.amazoniaresiliente.R;
+import amazoniaresilientes.durand.josue.amazoniaresiliente.Room.Ntch_Amazonia;
 
 public class SincronizarListAdapter extends BaseAdapter {
     private Context context;

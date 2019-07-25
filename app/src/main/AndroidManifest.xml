@@ -20,24 +20,27 @@
 
     <application
         android:allowBackup="true"
+        android:screenOrientation="portrait"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Sincronizar.Sincronizar"></activity>
-        <activity android:name=".Login.Main2Activity" />
-        <activity android:name=".Login.LoginActivity" />
-        <activity android:name=".Room.SincronizarPoligono" />
-        <activity android:name=".Inicio.RegisterClienteActivity" />
-        <activity android:name=".Inicio.SeleccionActivity" />
-        <activity android:name=".Inicio.PhotoActivity" />
-        <activity android:name=".Inicio.MapaActivity" />
+        <activity android:name=".Sincronizar.Sincronizar"
+            android:screenOrientation="portrait"
+            ></activity>
+        <activity android:name=".Login.Main2Activity" android:screenOrientation="portrait" />
+        <activity android:name=".Login.LoginActivity" android:screenOrientation="portrait" />
+        <activity android:name=".Room.SincronizarPoligono" android:screenOrientation="portrait" />
+        <activity android:name=".Inicio.RegisterClienteActivity" android:screenOrientation="portrait"  />
+        <activity android:name=".Inicio.SeleccionActivity" android:screenOrientation="portrait" />
+        <activity android:name=".Inicio.PhotoActivity" android:screenOrientation="portrait" />
+        <activity android:name=".Inicio.MapaActivity" android:screenOrientation="portrait"  />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".Inicio.SplashActivity">
+        <activity android:name=".Inicio.SplashActivity" android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

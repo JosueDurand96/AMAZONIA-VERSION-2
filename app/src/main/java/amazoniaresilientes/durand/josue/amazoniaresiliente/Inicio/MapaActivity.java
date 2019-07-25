@@ -99,21 +99,26 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
     String regionSeleccionadoTitulo;
     Toolbar toolbar4;
     String cultivo,primerNombre,segundoNombre,apellidoPaterno,apellidoMaterno,estadoCivil,dni,referenciaPredio;
+
+    String edadCultivo,procedenciaCombo,txtprocedencia,asociacionProductiva,edadCliente;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         regionSeleccionado = getIntent().getStringExtra("region");
         regionSeleccionadoTitulo = getIntent().getStringExtra("regionTitulo");
-
-
         cultivo = getIntent().getStringExtra("cultivo");
+        edadCultivo = getIntent().getStringExtra("edadCultivo");
         primerNombre = getIntent().getStringExtra("primerNombre");
         segundoNombre = getIntent().getStringExtra("segundoNombre");
         apellidoPaterno = getIntent().getStringExtra("apellidoPaterno");
         apellidoMaterno = getIntent().getStringExtra("apellidoMaterno");
+        edadCliente= getIntent().getStringExtra("edadCliente");
         estadoCivil = getIntent().getStringExtra("estadoCivil");
         dni = getIntent().getStringExtra("dni");
         referenciaPredio = getIntent().getStringExtra("referenciaPredio");
+        procedenciaCombo = getIntent().getStringExtra("procedenciaCombo");
+        txtprocedencia = getIntent().getStringExtra("txtprocedencia");
+        asociacionProductiva = getIntent().getStringExtra("asociacionProductiva");
         setContentView(R.layout.activity_mapa);
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
 //        Toolbar toolbar = findViewById(R.id.toolbar);
@@ -791,13 +796,18 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
                         Intent intent = new Intent(MapaActivity.this, PhotoActivity.class);
                         intent.putExtra("region",regionSeleccionado);
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("area", areaTextView.getText().toString());
                         intent.putExtra("GeoJson", JSON_OBJECT_COLLECTION.toString());
                         startActivity(intent);

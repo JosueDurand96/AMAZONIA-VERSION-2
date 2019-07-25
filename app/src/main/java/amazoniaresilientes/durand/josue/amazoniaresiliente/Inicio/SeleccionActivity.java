@@ -23,7 +23,7 @@ public class SeleccionActivity extends AppCompatActivity {
 
 
         cultivo = getIntent().getStringExtra("cultivo");
-        String edadCultivo = getIntent().getStringExtra("edadCultivo");
+        final String edadCultivo = getIntent().getStringExtra("edadCultivo");
         primerNombre = getIntent().getStringExtra("primerNombre");
         segundoNombre = getIntent().getStringExtra("segundoNombre");
         apellidoPaterno = getIntent().getStringExtra("apellidoPaterno");
@@ -31,10 +31,10 @@ public class SeleccionActivity extends AppCompatActivity {
         estadoCivil = getIntent().getStringExtra("estadoCivil");
         dni = getIntent().getStringExtra("dni");
         referenciaPredio = getIntent().getStringExtra("referenciaPredio");
-        String   procedenciaCombo = getIntent().getStringExtra("procedenciaCombo");
-        String   txtprocedencia = getIntent().getStringExtra("txtprocedencia");
-        String   asociacionProductiva = getIntent().getStringExtra("asociacionProductiva");
-
+        final String   procedenciaCombo = getIntent().getStringExtra("procedenciaCombo");
+        final String   txtprocedencia = getIntent().getStringExtra("txtprocedencia");
+        final String   asociacionProductiva = getIntent().getStringExtra("asociacionProductiva");
+        final String   edadCliente = getIntent().getStringExtra("edadCliente");
 
         setContentView(R.layout.activity_seleccion);
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
@@ -60,26 +60,37 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","AMAZONAS");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","AMAZONAS");
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 2) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","AYACUCHO");
+                        intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","AYACUCHO");
                         startActivity(intent);
                     }
@@ -87,13 +98,18 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","CAJAMARCA");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","CAJAMARCA");
                         startActivity(intent);
                     }
@@ -101,13 +117,18 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","CUSCO");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","CUSCO");
                         startActivity(intent);
                     }
@@ -115,13 +136,18 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","HUANCAVELICA");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","HUANCAVELICA");
                         startActivity(intent);
                     }
@@ -129,13 +155,18 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","HUANUCO");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","HUANUCO");
                         startActivity(intent);
                     }
@@ -143,13 +174,18 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","JUNIN");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","JUNIN");
                         startActivity(intent);
                     }
@@ -157,13 +193,18 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","PASCO");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","PASCO");
                         startActivity(intent);
                     }
@@ -171,13 +212,18 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","LORETO_A");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","LORETO A");
                         startActivity(intent);
                     }
@@ -185,13 +231,18 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","LORETO_B");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","LORETO B");
                         startActivity(intent);
                     }
@@ -199,13 +250,18 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","MADRE_DE_DIOS");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","MADRE DE DIOS");
                         startActivity(intent);
                     }
@@ -213,13 +269,18 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","PIURA");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","PIURA");
                         startActivity(intent);
                     }
@@ -227,13 +288,18 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","PIURA_2");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","PIURA 2");
                         startActivity(intent);
                     }
@@ -241,13 +307,18 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","PUNO");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","PUNO");
                         startActivity(intent);
                     }
@@ -255,13 +326,18 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","SAN_MARTIN");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","SAN MARTIN");
                         startActivity(intent);
                     }
@@ -269,13 +345,18 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity    .this, MapaActivity.class);
                         intent.putExtra("region","UCAYALI");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
                         intent.putExtra("apellidoPaterno",apellidoPaterno);
                         intent.putExtra("apellidoMaterno",apellidoMaterno);
+                        intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
                         intent.putExtra("referenciaPredio",referenciaPredio);
+                        intent.putExtra("procedenciaCombo",procedenciaCombo);
+                        intent.putExtra("txtprocedencia",txtprocedencia);
+                        intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","UCAYALI");
                         startActivity(intent);
                     }
