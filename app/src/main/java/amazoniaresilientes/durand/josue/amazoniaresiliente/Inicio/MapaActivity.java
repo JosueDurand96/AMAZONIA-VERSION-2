@@ -99,7 +99,7 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
     String regionSeleccionadoTitulo;
     Toolbar toolbar4;
     String cultivo,primerNombre,segundoNombre,apellidoPaterno,apellidoMaterno,estadoCivil,dni,referenciaPredio;
-
+    String   ecotipo;
     String edadCultivo,procedenciaCombo,txtprocedencia,asociacionProductiva,edadCliente;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +119,7 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         procedenciaCombo = getIntent().getStringExtra("procedenciaCombo");
         txtprocedencia = getIntent().getStringExtra("txtprocedencia");
         asociacionProductiva = getIntent().getStringExtra("asociacionProductiva");
+          ecotipo = getIntent().getStringExtra("ecotipo");
         setContentView(R.layout.activity_mapa);
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
 //        Toolbar toolbar = findViewById(R.id.toolbar);
@@ -804,6 +805,7 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
                         intent.putExtra("edadCliente",edadCliente);
                         intent.putExtra("estadoCivil",estadoCivil);
                         intent.putExtra("dni",dni);
+                        intent.putExtra("ecotipo",ecotipo);
                         intent.putExtra("referenciaPredio",referenciaPredio);
                         intent.putExtra("procedenciaCombo",procedenciaCombo);
                         intent.putExtra("txtprocedencia",txtprocedencia);

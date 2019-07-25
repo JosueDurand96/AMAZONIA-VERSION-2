@@ -203,6 +203,7 @@ public class RegisterClienteActivity extends AppCompatActivity {
                 intent.putExtra("procedenciaCombo",procedencia);
                 intent.putExtra("txtprocedencia",powerfactorEditText.getText().toString().trim());
                 intent.putExtra("asociacionProductiva",etAsociacionProductiva.getText().toString().trim());
+                intent.putExtra("ecotipo",ecotipo);
                 startActivity(intent);
             }
         });

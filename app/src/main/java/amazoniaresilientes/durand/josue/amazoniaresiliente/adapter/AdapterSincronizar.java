@@ -48,15 +48,13 @@ public class AdapterSincronizar extends BaseAdapter {
     private String KEY_DEPARTAMENTO_CLIENTE = "departamento_cliente";
     private String KEY_CULTIVO = "cultivo";
 
-    private String KEY_IMAGE = "image";
-    private String KEY_NAME = "name";
-    private String KEY_NAME2 = "name2";
-    private String KEY_NAME3 = "name3";
-    private String KEY_NAME4 = "name4";
-    private String KEY_NAME5 = "name5";
-    private String KEY_NAME6 = "name6";
-    private String KEY_NAME7 = "name7";
-    private String KEY_NAME8 = "name8";
+    private String KEY_EDAD_CULTIVO = "edad_cultivo";
+    private String KEY_EDAD_CLIENTE = "edad_cliente";
+    private String KEY_PROCEDENCIA_COMBO = "procedenciaCombo";
+    private String KEY_TXTPROCEDENCIA = "txtprocedencia";
+    private String KEY_ASOCIACIONPRODUCTIVA = "asociacionProductiva";
+    private String KEY_ECOTIPO = "ecotipo";
+
     private String KEY_ID_CLIENTE = "nthc_cliente_idnthc_cliente";
     private String KEY_ID_USUARIO = "nthc_usuario_idnthc_usuario";
 
@@ -168,6 +166,14 @@ public class AdapterSincronizar extends BaseAdapter {
             final byte[] imagen4 = amazonia.getImagen4();
             final String lat4= amazonia.getLat4();
             final String lng4 = amazonia.getLng4();
+
+
+            final String edad_cultivo = amazonia.getEdad_cultivo();
+            final String edad_cliente = amazonia.getEdad_cliente();
+            final String procedenciaCombo = amazonia.getProcedenciaCombo();
+            final String txtprocedencia = amazonia.getTxtprocedencia();
+            final String asociacionProductiva = amazonia.getAsociacionProductiva();
+            final String ecotipo = amazonia.getEcotipo();
             holder.txtName.setText(amazonia.getPrimer_nombre()+" "+amazonia.getApellido_paterno());
             holder.txtPrice.setText(amazonia.getDni());
 
@@ -227,6 +233,12 @@ public class AdapterSincronizar extends BaseAdapter {
                                         data.put(KEY_REFERENCIA_PREDIO, referencia_predio);
                                         data.put(KEY_DEPARTAMENTO_CLIENTE, departamento_cliente);
                                         data.put(KEY_CULTIVO, cultivo);
+                                        data.put(KEY_EDAD_CULTIVO, edad_cultivo);
+                                        data.put(KEY_EDAD_CLIENTE, edad_cliente);
+                                        data.put(KEY_PROCEDENCIA_COMBO, procedenciaCombo);
+                                        data.put(KEY_TXTPROCEDENCIA, txtprocedencia);
+                                        data.put(KEY_ASOCIACIONPRODUCTIVA, asociacionProductiva);
+                                        data.put(KEY_ECOTIPO, ecotipo);
                                         data.put(KEY_ID_USUARIO,id_Usuario);
                                         data.put(KEY_POLIGONO, poligono);
                                         data.put(KEY_AREA, area);

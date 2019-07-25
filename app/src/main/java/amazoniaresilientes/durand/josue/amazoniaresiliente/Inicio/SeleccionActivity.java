@@ -35,7 +35,7 @@ public class SeleccionActivity extends AppCompatActivity {
         final String   txtprocedencia = getIntent().getStringExtra("txtprocedencia");
         final String   asociacionProductiva = getIntent().getStringExtra("asociacionProductiva");
         final String   edadCliente = getIntent().getStringExtra("edadCliente");
-
+        final String   ecotipo = getIntent().getStringExtra("ecotipo");
         setContentView(R.layout.activity_seleccion);
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
 
@@ -72,6 +72,7 @@ public class SeleccionActivity extends AppCompatActivity {
                         intent.putExtra("procedenciaCombo",procedenciaCombo);
                         intent.putExtra("txtprocedencia",txtprocedencia);
                         intent.putExtra("asociacionProductiva",asociacionProductiva);
+                        intent.putExtra("ecotipo",ecotipo);
                         intent.putExtra("regionTitulo","AMAZONAS");
                         startActivity(intent);
                     }
@@ -92,11 +93,13 @@ public class SeleccionActivity extends AppCompatActivity {
                         intent.putExtra("txtprocedencia",txtprocedencia);
                         intent.putExtra("asociacionProductiva",asociacionProductiva);
                         intent.putExtra("regionTitulo","AYACUCHO");
+                        intent.putExtra("ecotipo",ecotipo);
                         startActivity(intent);
                     }
                     if (spinner.getSelectedItemPosition() == 3) {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","CAJAMARCA");
+                        intent.putExtra("ecotipo",ecotipo);
                         intent.putExtra("cultivo",cultivo);
                         intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
@@ -117,6 +120,7 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","CUSCO");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("ecotipo",ecotipo);
                         intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
@@ -136,6 +140,7 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","HUANCAVELICA");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("ecotipo",ecotipo);
                         intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
@@ -155,6 +160,7 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","HUANUCO");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("ecotipo",ecotipo);
                         intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
@@ -174,6 +180,7 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","JUNIN");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("ecotipo",ecotipo);
                         intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
@@ -193,6 +200,7 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","PASCO");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("ecotipo",ecotipo);
                         intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
@@ -212,6 +220,7 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","LORETO_A");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("ecotipo",ecotipo);
                         intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
@@ -231,6 +240,7 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","LORETO_B");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("ecotipo",ecotipo);
                         intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
@@ -250,6 +260,7 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","MADRE_DE_DIOS");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("ecotipo",ecotipo);
                         intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
@@ -269,6 +280,7 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","PIURA");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("ecotipo",ecotipo);
                         intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
@@ -288,6 +300,7 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","PIURA_2");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("ecotipo",ecotipo);
                         intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
@@ -307,6 +320,7 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","PUNO");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("ecotipo",ecotipo);
                         intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
@@ -326,6 +340,7 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity.this, MapaActivity.class);
                         intent.putExtra("region","SAN_MARTIN");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("ecotipo",ecotipo);
                         intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);
@@ -345,6 +360,7 @@ public class SeleccionActivity extends AppCompatActivity {
                         Intent intent = new Intent(SeleccionActivity    .this, MapaActivity.class);
                         intent.putExtra("region","UCAYALI");
                         intent.putExtra("cultivo",cultivo);
+                        intent.putExtra("ecotipo",ecotipo);
                         intent.putExtra("edadCultivo",edadCultivo);
                         intent.putExtra("primerNombre",primerNombre);
                         intent.putExtra("segundoNombre",segundoNombre);

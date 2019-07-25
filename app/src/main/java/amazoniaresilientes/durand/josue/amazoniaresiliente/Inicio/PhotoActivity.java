@@ -76,7 +76,7 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
     final int REQUEST_CODE_GALLERY = 999;
 
     public static SQLiteHelper3 sqLiteHelper;
-
+    String   ecotipo;
     public  static RegisterClienteActivity objregister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +90,7 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
         apellidoPaterno = getIntent().getStringExtra("apellidoPaterno");
         apellidoMaterno = getIntent().getStringExtra("apellidoMaterno");
            edadCliente = getIntent().getStringExtra("edadCliente");
-
+        ecotipo = getIntent().getStringExtra("ecotipo");
         estadoCivil = getIntent().getStringExtra("estadoCivil");
         dni = getIntent().getStringExtra("dni");
         referenciaPredio = getIntent().getStringExtra("referenciaPredio");
@@ -463,36 +463,36 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
                             String lat4 = String.valueOf(latitude4);
                             String lng4 = String.valueOf(longitude4);
                             RegisterClienteActivity.sqLiteHelper2.insertData3(
-                                    "1.0",
-                                    "josue",
-                                    "1.0",
-                                    "durand xd",
-                                    "1.0",
-                                    "1.0",
-                                    "22222",
-                                    "1.0",
-                                    "1.0",
-                                    "1.0",
-                                    "1.0",
-                                    "1.0",
-                                    imageViewToByte(imagePhoto),
-                                    "1.0",
+                                    cultivo,
+                                    primerNombre,
+                                    segundoNombre,
+                                    apellidoPaterno,
+                                    apellidoMaterno,
+                                    estadoCivil,
+                                    dni,
+                                    referenciaPredio,
+                                    regionSeleccionado,
+                                    geoJson,
+                                    area,
                                     "1.0",
                                     imageViewToByte(imagePhoto),
-                                    "1.0",
-                                    "1.0",
-                                    imageViewToByte(imagePhoto),
-                                    "1.0",
-                                    "1.0",
-                                    imageViewToByte(imagePhoto),
-                                    "1.0",
-                                    "1.0",
-                                    "edad cultivo",
-                                    "edad cliente",
-                                    "combo",
-                                    "txtprocedencia",
-                                    "asociacion",
-                                    "ee0"
+                                    lat1,
+                                    lng1,
+                                    imageViewToByte(imagePhoto2),
+                                    lat2,
+                                    lng2,
+                                    imageViewToByte(imagePhoto3),
+                                    lat3,
+                                    lng3,
+                                    imageViewToByte(imagePhoto4),
+                                    lat4,
+                                    lng4,
+                                    edadCultivo,
+                                    edadCliente,
+                                    procedenciaCombo,
+                                    txtprocedencia,
+                                    asociacionProductiva,
+                                    ecotipo
                             );
                             Toast.makeText(getApplicationContext(), "AGREGADO!", Toast.LENGTH_SHORT).show();
 //                            Intent intent = new Intent(PhotoActivity.this, SincronizarPoligono.class);
