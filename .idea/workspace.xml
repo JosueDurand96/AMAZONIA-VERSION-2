@@ -12,374 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07365545-64aa-4cef-8f1a-33d73b448772" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/AMAZONIA-VERSION-2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_1_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_collections_28_0_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_28_0_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AmazoniaResilientes.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/areaconservacionprivada.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/areaconservacionregional.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/areanaturalprotegida.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/bosqueproduccionpermanante.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/comunidadescampesinas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/comunidadesnativas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/concesioncastana.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/concesionconservacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/concesionecoturismo.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/concesionmaderable.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/concesionmanejofaunasilvestre.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/concesionreforestacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/humedales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/perdida2012.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/perdida2013.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/perdida2014.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/perdida2015.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/perdida2016.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/reservascomunales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AMAZONAS/reservasterritoriales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/areaconservacionprivada.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/areaconservacionregional.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/areanaturalprotegida.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/bosqueproduccionpermanante.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/comunidadescampesinas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/comunidadesnativas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/concesioncastana.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/concesionconservacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/concesionecoturismo.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/concesionmaderable.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/concesionmanejofaunasilvestre.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/concesionreforestacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/humedales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/perdida2012.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/perdida2013.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/perdida2014.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/perdida2015.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/perdida2016.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/reservascomunales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/AYACUCHO/reservasterritoriales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/areaconservacionprivada.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/areaconservacionregional.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/areanaturalprotegida.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/bosqueproduccionpermanante.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/comunidadescampesinas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/comunidadesnativas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/concesioncastana.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/concesionconservacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/concesionecoturismo.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/concesionmaderable.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/concesionmanejofaunasilvestre.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/concesionreforestacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/humedales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/perdida2012.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/perdida2013.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/perdida2014.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/perdida2015.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/perdida2016.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/reservascomunales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CAJAMARCA/reservasterritoriales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/areaconservacionprivada.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/areaconservacionregional.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/areanaturalprotegida.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/bosqueproduccionpermanante.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/comunidadescampesinas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/comunidadesnativas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/concesioncastana.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/concesionconservacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/concesionecoturismo.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/concesionmaderable.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/concesionmanejofaunasilvestre.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/concesionreforestacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/humedales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/perdida2012.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/perdida2013.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/perdida2014.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/perdida2015.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/perdida2016.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/reservascomunales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/CUSCO/reservasterritoriales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/areaconservacionprivada.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/areaconservacionregional.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/areanaturalprotegida.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/bosqueproduccionpermanante.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/comunidadescampesinas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/comunidadesnativas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/concesioncastana.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/concesionconservacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/concesionecoturismo.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/concesionmaderable.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/concesionmanejofaunasilvestre.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/concesionreforestacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/humedales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/perdida2012.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/perdida2013.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/perdida2014.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/perdida2015.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/perdida2016.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/reservascomunales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANCAVELICA/reservasterritoriales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/areaconservacionprivada.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/areaconservacionregional.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/areanaturalprotegida.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/bosqueproduccionpermanante.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/comunidadescampesinas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/comunidadesnativas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/concesioncastana.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/concesionconservacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/concesionecoturismo.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/concesionmaderable.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/concesionmanejofaunasilvestre.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/concesionreforestacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/humedales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/perdida2012.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/perdida2013.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/perdida2014.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/perdida2015.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/perdida2016.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/reservascomunales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/HUANUCO/reservasterritoriales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/areaconservacionprivada.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/areaconservacionregional.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/areanaturalprotegida.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/bosqueproduccionpermanante.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/comunidadescampesinas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/comunidadesnativas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/concesioncastana.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/concesionconservacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/concesionecoturismo.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/concesionmaderable.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/concesionmanejofaunasilvestre.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/concesionreforestacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/humedales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/perdida2012.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/perdida2013.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/perdida2014.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/perdida2015.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/perdida2016.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/reservascomunales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JUNIN/reservasterritoriales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/areaconservacionprivada.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/areaconservacionregional.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/areanaturalprotegida.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/bosqueproduccionpermanante.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/comunidadescampesinas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/comunidadesnativas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/concesioncastana.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/concesionconservacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/concesionecoturismo.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/concesionmaderable.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/concesionmanejofaunasilvestre.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/concesionreforestacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/humedales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/perdida2012.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/perdida2013.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/perdida2014.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/perdida2015.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/perdida2016.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/reservascomunales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_A/reservasterritoriales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/areaconservacionprivada.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/areaconservacionregional.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/areanaturalprotegida.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/bosqueproduccionpermanante.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/comunidadescampesinas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/comunidadesnativas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/concesioncastana.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/concesionconservacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/concesionecoturismo.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/concesionmaderable.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/concesionmanejofaunasilvestre.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/concesionreforestacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/humedales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/perdida2012.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/perdida2013.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/perdida2014.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/perdida2015.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/perdida2016.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/reservascomunales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/LORETO_B/reservasterritoriales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/areaconservacionprivada.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/areaconservacionregional.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/areanaturalprotegida.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/bosqueproduccionpermanante.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/comunidadescampesinas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/comunidadesnativas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/concesioncastana.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/concesionconservacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/concesionecoturismo.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/concesionmaderable.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/concesionmanejofaunasilvestre.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/concesionreforestacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/humedales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/perdida2012.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/perdida2013.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/perdida2014.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/perdida2015.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/perdida2016.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/reservascomunales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/MADRE_DE_DIOS/reservasterritoriales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/areaconservacionprivada.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/areaconservacionregional.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/areanaturalprotegida.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/bosqueproduccionpermanante.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/comunidadescampesinas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/comunidadesnativas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/concesioncastana.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/concesionconservacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/concesionecoturismo.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/concesionmaderable.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/concesionmanejofaunasilvestre.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/concesionreforestacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/humedales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/perdida2012.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/perdida2013.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/perdida2014.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/perdida2015.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/perdida2016.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/reservascomunales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PASCO/reservasterritoriales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/areaconservacionprivada.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/areaconservacionregional.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/areanaturalprotegida.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/bosqueproduccionpermanante.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/comunidadescampesinas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/comunidadesnativas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/concesioncastana.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/concesionconservacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/concesionecoturismo.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/concesionmaderable.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/concesionmanejofaunasilvestre.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/concesionreforestacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/humedales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/perdida2012.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/perdida2013.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/perdida2014.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/perdida2015.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/perdida2016.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/reservascomunales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA/reservasterritoriales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/areaconservacionprivada.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/areaconservacionregional.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/areanaturalprotegida.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/bosqueproduccionpermanante.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/comunidadescampesinas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/comunidadesnativas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/concesioncastana.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/concesionconservacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/concesionecoturismo.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/concesionmaderable.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/concesionmanejofaunasilvestre.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/concesionreforestacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/humedales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/perdida2012.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/perdida2013.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/perdida2014.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/perdida2015.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/perdida2016.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/reservascomunales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PIURA_2/reservasterritoriales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/areaconservacionprivada.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/areaconservacionregional.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/areanaturalprotegida.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/bosqueproduccionpermanante.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/comunidadescampesinas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/comunidadesnativas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/concesioncastana.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/concesionconservacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/concesionecoturismo.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/concesionmaderable.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/concesionmanejofaunasilvestre.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/concesionreforestacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/humedales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/perdida2012.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/perdida2013.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/perdida2014.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/perdida2015.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/perdida2016.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/reservascomunales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/PUNO/reservasterritoriales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/areaconservacionprivada.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/areaconservacionregional.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/areanaturalprotegida.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/bosqueproduccionpermanante.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/comunidadescampesinas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/comunidadesnativas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/concesioncastana.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/concesionconservacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/concesionecoturismo.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/concesionmaderable.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/concesionmanejofaunasilvestre.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/concesionreforestacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/humedales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/perdida2012.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/perdida2013.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/perdida2014.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/perdida2015.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/perdida2016.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/reservascomunales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/SAN_MARTIN/reservasterritoriales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/areaconservacionprivada.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/areaconservacionregional.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/areanaturalprotegida.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/bosqueproduccionpermanante.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/comunidadescampesinas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/comunidadesnativas.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/concesioncastana.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/concesionconservacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/concesionecoturismo.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/concesionmaderable.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/concesionmanejofaunasilvestre.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/concesionreforestacion.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/humedales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/perdida2012.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/perdida2013.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/perdida2014.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/perdida2015.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/perdida2016.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/reservascomunales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/UCAYALI/reservasterritoriales.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/MapaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/MapaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/PhotoActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/PhotoActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/food_sqlite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <ignored path="FoodSQLiteDemo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -546,21 +186,25 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="java" value="3" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="3" />
+          <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="80" />
+          <entry key="xml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="80" />
+          <entry key="XML" value="13" />
         </counts>
       </usages-collector>
     </session>
@@ -610,11 +254,39 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/PhotoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="497" selection-start-line="497" selection-end-line="498" selection-end-column="50" />
+            <state relative-caret-position="157">
+              <caret line="240" column="38" selection-start-line="240" selection-start-column="38" selection-end-line="240" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ExtraMapUtils-v1.2.0.aar/8e1f64f9c2ed6a8b5600be11b3443c38/res/values/values.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -2894,7 +2566,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/FoodList.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/food_list_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/FoodListAdapter.java" />
@@ -2945,6 +2616,7 @@
         <option value="$PROJECT_DIR$/../../AmazoniaResilientes/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/MapaActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/MapaActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/PhotoActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       </list>
     </option>
   </component>
@@ -3024,6 +2696,11 @@
             <path>
               <item name="AMAZONIA-VERSION-2" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="AMAZONIA-VERSION-2" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
             </path>
             <path>
               <item name="AMAZONIA-VERSION-2" type="1abcf292:AndroidViewProjectNode" />
@@ -3362,18 +3039,18 @@
       <window_info id="Nl-Palette" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32879046" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4981075" visible="true" weight="0.29642248" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4981075" weight="0.63202727" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32879046" />
       <window_info anchor="bottom" id="Gradle Console" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Android Monitor" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4988645" weight="0.318569" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5018925" side_tool="true" visible="true" weight="0.29642248" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4988645" visible="true" weight="0.318569" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5034065" side_tool="true" weight="0.439523" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="12" />
-      <window_info anchor="bottom" id="Build" order="13" sideWeight="0.49735048" weight="0.439523" />
+      <window_info anchor="bottom" id="Build" order="13" sideWeight="0.49659348" weight="0.439523" />
       <window_info anchor="bottom" id="Android Profiler" order="14" />
       <window_info anchor="bottom" id="Logcat" order="15" weight="0.0" />
       <window_info anchor="bottom" id="Flutter Performance" order="16" side_tool="true" />
@@ -3384,7 +3061,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Preview" order="5" weight="0.28787878" />
       <window_info anchor="right" id="Android Model" order="6" side_tool="true" />
-      <window_info anchor="right" id="Gradle" order="7" visible="true" weight="0.07494322" />
+      <window_info anchor="right" id="Gradle" order="7" visible="true" weight="0.17183952" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Flutter Inspector" order="10" />
@@ -3449,15 +3126,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_save_client.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Login/VolleySingleton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-236">
@@ -3686,14 +3354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="39" column="55" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/fondo.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -3786,8 +3446,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/amazoniaresilientes/durand/josue/amazoniaresiliente/Inicio/PhotoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="497" selection-start-line="497" selection-end-line="498" selection-end-column="50" />
+        <state relative-caret-position="157">
+          <caret line="240" column="38" selection-start-line="240" selection-start-column="38" selection-end-line="240" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ExtraMapUtils-v1.2.0.aar/8e1f64f9c2ed6a8b5600be11b3443c38/res/values/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
         </state>
       </provider>
     </entry>
