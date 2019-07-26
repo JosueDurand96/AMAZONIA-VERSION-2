@@ -1,8 +1,0 @@
-{
-"type": "FeatureCollection",
-"name": "concesionmanejofaunasilvestre",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "OBJECTID": 2, "BENEFICIAR": "PERUFISH AQUARIUM EIRL", "TITULAR": "PERUFISH AQUARIUM EIRL", "CATEGORIA": "CONCESIONES PARA MANEJO DE FAUNA SILVESTRE", "Shape_Leng": 11644.949626600001, "Shape_Area": 7290572.1695999997 }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -73.689694984328824, -4.27676560561514 ], [ -73.689702664056142, -4.272243391809852 ], [ -73.695594137886815, -4.269984549898923 ], [ -73.695625956601361, -4.251047637221358 ], [ -73.669488435280911, -4.261473407478241 ], [ -73.669472870029182, -4.27051776303711 ], [ -73.668189311489911, -4.285445083387271 ], [ -73.689694984328824, -4.27676560561514 ] ] ] ] } }
-]
-}

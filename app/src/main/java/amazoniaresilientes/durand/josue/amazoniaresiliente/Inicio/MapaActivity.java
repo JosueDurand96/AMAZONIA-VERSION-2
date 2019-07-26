@@ -177,29 +177,26 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        loadGeoJson(regionSeleccionado, "areaconservacionprivada");
-                        loadGeoJson2(regionSeleccionado, "areaconservacionregional");
-                        loadGeoJson3(regionSeleccionado, "areanaturalprotegida");
-                        loadGeoJson4(regionSeleccionado, "bosqueproduccionpermanante");
-                        loadGeoJson5(regionSeleccionado, "comunidadescampesinas");
-                        loadGeoJson6(regionSeleccionado, "comunidadesnativas");
-                        loadGeoJson7(regionSeleccionado, "concesioncastana");
-                        loadGeoJson8(regionSeleccionado, "concesionconservacion");
-                        loadGeoJson9(regionSeleccionado, "concesionecoturismo");
-                        loadGeoJson10(regionSeleccionado, "concesionmaderable");
-                        loadGeoJson11(regionSeleccionado, "concesionmanejofaunasilvestre");
-                        loadGeoJson12(regionSeleccionado, "concesionreforestacion");
-                        loadGeoJson13(regionSeleccionado, "humedales");
-//
-                        //       loadGeoJson14(regionSeleccionado, "perdida2012");
-//            loadGeoJson15(regionSeleccionado, "perdida2013");
-//            loadGeoJson16(regionSeleccionado, "perdida2014");
-//            loadGeoJson17(regionSeleccionado, "perdida2015");
-                        //    loadGeoJson18(regionSeleccionado, "perdida2016");
-//
-//
-                        loadGeoJson19(regionSeleccionado, "reservascomunales");
-                        loadGeoJson20(regionSeleccionado, "reservasterritoriales");
+//                        loadGeoJson(regionSeleccionado, "areaconservacionprivada");
+//                        loadGeoJson2(regionSeleccionado, "areaconservacionregional");
+//                        loadGeoJson3(regionSeleccionado, "areanaturalprotegida");
+//                        loadGeoJson4(regionSeleccionado, "bosqueproduccionpermanante");
+//                        loadGeoJson5(regionSeleccionado, "comunidadescampesinas");
+//                        loadGeoJson6(regionSeleccionado, "comunidadesnativas");
+//                        loadGeoJson7(regionSeleccionado, "concesioncastana");
+//                        loadGeoJson8(regionSeleccionado, "concesionconservacion");
+//                        loadGeoJson9(regionSeleccionado, "concesionecoturismo");
+//                        loadGeoJson10(regionSeleccionado, "concesionmaderable");
+//                        loadGeoJson11(regionSeleccionado, "concesionmanejofaunasilvestre");
+//                        loadGeoJson12(regionSeleccionado, "concesionreforestacion");
+//                        loadGeoJson13(regionSeleccionado, "humedales");
+//                        loadGeoJson14(regionSeleccionado, "perdida2012");
+//                        loadGeoJson15(regionSeleccionado, "perdida2013");
+//                        loadGeoJson16(regionSeleccionado, "perdida2014");
+//                        loadGeoJson17(regionSeleccionado, "perdida2015");
+//                        loadGeoJson18(regionSeleccionado, "perdida2016");
+//                        loadGeoJson19(regionSeleccionado, "reservascomunales");
+//                        loadGeoJson20(regionSeleccionado, "reservasterritoriales");
 
                     }
                 });

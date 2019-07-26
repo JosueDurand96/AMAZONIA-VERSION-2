@@ -1,8 +1,0 @@
-{
-"type": "FeatureCollection",
-"name": "comunidadescampesinas",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "OBJECTID": 4659, "CODUCC": "08020800", "NOMBCC": "Mendosayoc", "IDDIST": "080408", "NODIST": "Yanatile", "IDPROV": null, "NOPROV": "Calca", "IDDPTO": null, "NODPTO": "Cusco", "TIPOCC": "PRINCIPAL", "FUENTE": "COFOPRI-SERNANP", "OBSERV": null, "AREAHA": 5015.2200633700004, "Shape_Leng": 0.38152764746599999, "Shape_Le_1": 41705.062212999997, "Shape_Area": 50152200.616800003, "CATEGORIA": "COMUNIDAD CAMPESINA" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -71.957271837100734, -12.693621709659318 ], [ -71.957348606835779, -12.693705855139511 ], [ -71.957757856822681, -12.693927730478761 ], [ -71.958244417891308, -12.693880574247 ], [ -71.957271837100734, -12.693621709659318 ] ] ] ] } }
-]
-}

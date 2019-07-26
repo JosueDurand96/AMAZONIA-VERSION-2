@@ -495,8 +495,8 @@ public class PhotoActivity extends AppCompatActivity implements GoogleApiClient.
                                     ecotipo
                             );
                             Toast.makeText(getApplicationContext(), "AGREGADO!", Toast.LENGTH_SHORT).show();
-//                            Intent intent = new Intent(PhotoActivity.this, SincronizarPoligono.class);
-//                            startActivity(intent);
+                            Intent intent = new Intent(PhotoActivity.this, SincronizarPoligono.class);
+                            startActivity(intent);
 
                            // imageView.setImageResource(R.mipmap.ic_launcher);
                         }

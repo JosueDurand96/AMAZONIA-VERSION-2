@@ -1,8 +1,0 @@
-{
-"type": "FeatureCollection",
-"name": "bosqueproduccionpermanante",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "ID": 9.0, "CATEGORIA": "BOSQUE DE PRODUCCIÓN PERMANENTE", "Shape_Leng": 384707.49568599998, "Shape_Area": 3299132164.1 }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -77.161856292278856, -6.375741395724191 ], [ -77.162884125006087, -6.377288587719783 ], [ -77.162872452320229, -6.376638361224832 ], [ -77.1623459416477, -6.375790822787567 ], [ -77.161856292278856, -6.375741395724191 ] ] ] ] } }
-]
-}
